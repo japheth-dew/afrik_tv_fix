@@ -5,6 +5,10 @@
 | Codebase              |      Description          |
 | :-------------------- | :-----------------------: |
 | Frontend  |     React / Tailwind  / MUX       |
+
+### Figma 
+
+https://www.figma.com/file/96D6iJx9pC74VyefmAkXX1/Afrik-TV?node-id=3%3A44&t=EEXg8B4NcbQ3mLTH-0
   
 ## Getting Started
 Make sure you have nodejs installed by running the following command:
