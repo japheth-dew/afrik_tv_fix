@@ -1,4 +1,5 @@
 import React from "react";
+import './style.css';
 
 function Homepage() {
   return (
@@ -23,10 +24,10 @@ function Homepage() {
             </button>
           </div>
         </div>
-      </nav>
+      </nav> 
 
-      <div className="container">
-        <div className="grid grid-rows-6 grid-flow-col gap-4">
+      {/* <div className="">
+        <div className="">
           <h2 className="big-text">
             AfrikTV is a movie streaming platform for African Movies
             <div className="wrapper">
@@ -53,8 +54,39 @@ function Homepage() {
           </h2>
         </div>
 
-        <div className="grid grid-rows-6 grid-flow-col gap-4">
+        <div className="">
           <img src="src/assets/first-img.png" />
+        </div>
+      </div> */}
+
+    
+
+      <div className="grid-cols-2 items-center justify-around flex w-full">
+        <div className="w-[500px] bg-[red]">
+          <h2 className="big-text">
+              AfrikTV is a movie streaming platform for African Movies
+          </h2>
+
+          <div>
+            <button>
+              <img
+                      src="src/assets/google-play-badge.png"
+                      className="google-play"
+                      width="200px"
+                    />
+            </button>
+            <button>
+              <img
+                      src="src/assets/appstore-badge.png"
+                      className="google-play"
+                      width="200px"
+                    />
+            </button>
+          </div>
+        </div>
+
+        <div className="bg-[green]">
+         <img src="src/assets/first-img.png" />
         </div>
       </div>
     </div>
