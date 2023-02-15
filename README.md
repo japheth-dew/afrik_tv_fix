@@ -39,10 +39,15 @@ npm run dev
 npm build
 ```
 
-## Contribute to our project
+### Contribute to our project
 Clone or fork the repo.
+If you've cloned before just pull with 
+``` "git pull" ```
 Pull request should be made to the main branch and nowhere else!
-Commit message must be descriptive. Example {commitType:} {commitDescription}
+Commit message must be descriptive.
+
+
+Example {commitType:} {commitDescription}
 
 | Type     |                          | Description                                                                                                 |
 |----------|--------------------------|-------------------------------------------------------------------------------------------------------------|
