@@ -133,31 +133,73 @@ passion of blacks in the industries</p>
 
     <footer class="flex justify-center px-4 text-gray-800 bg-white dark:text-white dark:bg-gray-900">
     <div class="container px-6 py-6">
-        <h1 class="text-lg font-bold text-center lg:text-2xl">
-            Join 31,000+ other and never miss <br /> out on new tips, tutorials, and more.
+        <h1 class="text-lg font-bold text-center lg:text-5xl">
+Frequently Asked questions
         </h1>
+<br />
 
-        <div class="flex flex-col justify-center mx-auto mt-6 space-y-3 md:space-y-0 md:flex-row">
-            <input id="email" type="text" class="px-4 py-2 text-gray-700 bg-white border rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-opacity-40 focus:ring-blue-300" placeholder="Email Address" />
+
+        <br/>
+
+        <div class="mx-auto max-w-lg">
+  <div class="space-y-6">
+    <details class="group rounded-xl shadow-[0_10px_100px_10px_rgba(0,0,0,0.05)]">
+      <summary class="flex cursor-pointer list-none items-center justify-between p-6 text-lg font-medium text-secondary-900">
+What is AfrikTV?
+        <div class="text-secondary-500">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="block h-5 w-5 transition-all duration-300 group-open:-rotate-90">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+          </svg>
+        </div>
+      </summary>
+      <div class="px-6 pb-6 text-secondary-500">We're looking for a description here.</div>
+    </details>
+    <details class="group rounded-xl shadow-[0_10px_100px_10px_rgba(0,0,0,0.05)]">
+      <summary class="flex cursor-pointer list-none items-center justify-between p-6 text-lg font-medium text-secondary-900">
+       What can I watch on AfrikTV
+        <div className="text-secondary-500">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="block h-5 w-5 transition-all duration-300 group-open:-rotate-90">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+          </svg>
+        </div>
+      </summary>
+      <div className="px-6 pb-6 text-secondary-500">We're looking for a description here.</div>
+    </details>
+    <details className="group rounded-xl shadow-[0_10px_100px_10px_rgba(0,0,0,0.05)]">
+      <summary className="flex cursor-pointer list-none items-center justify-between p-6 text-lg font-medium text-secondary-900">
+        How much does AfrikTV cost?
+        <div className="text-secondary-500">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="block h-5 w-5 transition-all duration-300 group-open:-rotate-90">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+          </svg>
+        </div>
+      </summary>
+      <div className="px-6 pb-6 text-secondary-500">We're looking a description here.</div>
+    </details>
+  </div>
+</div>
+
+
+<div className="flex flex-col justify-center mx-auto mt-6 space-y-3 md:space-y-0 md:flex-row">
+            <input id="email" type="text" className="px-4 py-2 text-gray-700 bg-white border rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-opacity-40 focus:ring-blue-300" placeholder="Email Address" />
     
-            <button class="w-full px-6 py-2.5 text-sm font-medium tracking-wider text-white transition-colors duration-300 transform md:w-auto md:mx-4 focus:outline-none bg-gray-800 rounded-lg hover:bg-gray-700 focus:ring focus:ring-gray-300 focus:ring-opacity-80">
-                Subscribe
+            <button className="w-full px-6 py-2.5 text-sm font-medium tracking-wider text-white transition-colors duration-300 transform md:w-auto md:mx-4 focus:outline-none bg-gray-800 rounded-lg hover:bg-gray-700 focus:ring focus:ring-gray-300 focus:ring-opacity-80">
+                Subscribe for updates 🚀
             </button>
         </div>
+    
 
-        <hr class="h-px bg-gray-200 border-none my-7 dark:bg-gray-700" />
+        <hr className="h-px bg-gray-200 border-none my-7 dark:bg-gray-700" />
 
-        <div class="flex flex-col items-center justify-between md:flex-row">
+        <div className="flex flex-col items-center justify-between md:flex-row">
             <a href="#">
-                <img class="w-auto h-7" src="https://merakiui.com/images/full-logo.svg" alt="" />
+                <img className="w-auto h-7" src="src/assets/afriklogo.png" alt="" />
             </a>
 
-            <div class="flex mt-4 md:m-0">
-                <div class="-mx-4">
-                    <a href="#" class="px-4 text-sm text-gray-600 transition-colors duration-300 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 hover:underline">About</a>
-                    <a href="#" class="px-4 text-sm text-gray-600 transition-colors duration-300 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 hover:underline">Blog</a>
-                    <a href="#" class="px-4 text-sm text-gray-600 transition-colors duration-300 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 hover:underline">News</a>
-                    <a href="#" class="px-4 text-sm text-gray-600 transition-colors duration-300 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 hover:underline">Contact</a>
+            <div className="flex mt-4 md:m-0">
+                <div className="-mx-4">
+                    <a href="#" className="px-4 text-sm text-gray-600 transition-colors duration-300 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 hover:underline">Contact Us 📧</a>
+                    <a href="#" className="px-4 text-sm text-gray-600 transition-colors duration-300 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 hover:underline">We're hiring ✨</a>
                 </div>
             </div>
         </div>
