@@ -5,14 +5,26 @@ import MoviePage from "./pages/Movies/index";
 import Movies from "./pages/Movies/lists/Movies";
 import Header from "./pages/Movies/Header";
 import Series from "./pages/Movies/lists/Series";
+import Signup from "./pages/Authentication/signup"
+import Signin from "./pages/Authentication/signin"
 
 function App() {
   return (
     <>
       <Routes>
         <Route path="/" element={<Homepage />} />
+
       </Routes>
 
+      <>
+     
+        <Routes>
+           <Route path="/signup" element={<Signup />} />
+          <Route path="/signin" element={<Signin />} />
+    
+        </Routes>
+      </>
+    
       <>
       {/* Moviepage navbar */}
         <Routes>
