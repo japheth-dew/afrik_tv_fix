@@ -4,6 +4,7 @@ import './style.css';
 function Homepage() {
   return (
     <div>
+
       <nav className="bg-white border-gray-200 px-2 sm:px-4 py-2.5">
         <div className="container flex flex-wrap items-center justify-between mx-auto">
           <a href="javascript:void(0)" className="flex items-center logo">
@@ -61,66 +62,72 @@ function Homepage() {
 
     
 
-<div class="overflow-hidden bg-white py-24 sm:py-32">
-  <div class="mx-auto max-w-7xl px-6 lg:px-8">
-    <div class="mx-auto grid max-w-2xl grid-cols-1 gap-y-16 gap-x-8 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
-      <div class="lg:pr-8 lg:pt-4">
-        <div class="lg:max-w-lg">
+<div className="overflow-hidden bg-white py-24 sm:py-32">
+  <div className="mx-auto max-w-7xl px-6 lg:px-8">
     
-          <p class="mt-2 text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">AfrikTV is a movie streaming platform for African Movies</p>
-          <p class="mt-6 text-lg leading-8 text-gray-600">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.</p>
+
+    <div className="mx-auto grid max-w-2xl grid-cols-1 gap-y-16 gap-x-8 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
+     <section className="hey_sec">
+      <div className="lg:pr-8 lg:pt-4">
+        <div className="lg:max-w-lg ">
+    
+          <p className="mt-2 text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">AfrikTV is a movie streaming platform for African Movies</p>
+          <p className="mt-6 text-lg leading-8 text-gray-600">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.</p>
      
-          <a class="btn right-btn" href="#">
-<img src="src/assets/google-play-badge.png" class="google-play" width="200px"/>
+          <a className="btn right-btn" href="#">
+<img src="src/assets/google-play-badge.png" className="google-play" width="200px"/>
       </a>
 
-      <a class="btn right-btn" href="#">
+      <a className="btn right-btn" href="#">
 
-<img src="src/assets/appstore-badge.png" class="google-play" width="200px"/>
+<img src="src/assets/appstore-badge.png" className="google-play" width="200px"/>
       </a>
       
         </div>
       </div>
+      </section>
 
-      <p class="contain">
-      <img src="src/assets/first-img.png" alt="Product screenshot" class="img-real down"/>
-      <img src="src/assets/second-img.png" alt="Product screenshot" class="img-real" />
+      <p className="contain">
+      <img src="src/assets/first-img.png" alt="Product screenshot" className="img-real down"/>
+      <img src="src/assets/second-img.png" alt="Product screenshot" className="img-real" />
    </p>
+
     </div>
+    
   </div>
 </div>
 
-<div class="text-center">
-          <h1 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-5xl">Get Unlimited access to African
+<div className="text-center">
+          <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-5xl">Get Unlimited access to African
 movies</h1>
           </div>
           
-          <div class="min-h-screen ">
+          <div className="min-h-screen ">
   
-        <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-3 p-5">
-        <img class="p-10 rounded-lg" src="src/assets/woman-touch.png"/>
-        <img class="p-10 rounded-lg" src="src/assets/woman-touch.png"/>
-        <img class="p-10 rounded-lg" src="src/assets/woman-touch.png"/>
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-3 p-5">
+        <img className="p-10 rounded-lg" src="src/assets/woman-touch.png"/>
+        <img className="p-10 rounded-lg" src="src/assets/woman-touch.png"/>
+        <img className="p-10 rounded-lg" src="src/assets/woman-touch.png"/>
         </div>
 
-        <div class="overflow-hidden bg-white py-24 sm:py-32">
-  <div class="mx-auto max-w-7xl px-6 lg:px-8">
-    <div class="mx-auto grid max-w-2xl grid-cols-1 gap-y-16 gap-x-8 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
-      <div class="lg:pr-8 lg:pt-4">
-        <div class="lg:max-w-lg">
+        <div className="overflow-hidden bg-white py-24 sm:py-32">
+  <div className="mx-auto max-w-7xl px-6 lg:px-8">
+    <div className="mx-auto grid max-w-2xl grid-cols-1 gap-y-16 gap-x-8 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
+      <div className="lg:pr-8 lg:pt-4">
+        <div className="lg:max-w-lg">
     
-          <p class="mt-2 text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">Discover the best entertainment movies</p>
-          <p class="mt-6 text-lg leading-8 text-gray-600">Whether you want to stream live TV or catch up on your
+          <p className="mt-2 text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">Discover the best entertainment movies</p>
+          <p className="mt-6 text-lg leading-8 text-gray-600">Whether you want to stream live TV or catch up on your
 missed shows, binge watch your favourite series with
 AfrikTV. Catch up with the fun in African movies and feel the
 passion of blacks in the industries</p>
     <br/>
-<button type="button" class="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700">Start Watching</button>
+<button type="button" className="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700">Start Watching</button>
       
         </div>
         </div>
 
-        <p class="contain-right">
+        <p className="contain-right">
         <img src="src/assets/after-hero.png" alt="Product screenshot"/>
 </p>
 
@@ -131,9 +138,9 @@ passion of blacks in the industries</p>
 
    
 
-    <footer class="flex justify-center px-4 text-gray-800 bg-white dark:text-white dark:bg-gray-900">
-    <div class="container px-6 py-6">
-        <h1 class="text-lg font-bold text-center lg:text-5xl">
+    <footer className="flex justify-center px-4 text-gray-800 bg-white dark:text-white dark:bg-gray-900">
+    <div className="container px-6 py-6">
+        <h1 className="text-lg font-bold text-center lg:text-5xl">
 Frequently Asked questions
         </h1>
 <br />
@@ -141,21 +148,21 @@ Frequently Asked questions
 
         <br/>
 
-        <div class="mx-auto max-w-lg">
-  <div class="space-y-6">
-    <details class="group rounded-xl shadow-[0_10px_100px_10px_rgba(0,0,0,0.05)]">
-      <summary class="flex cursor-pointer list-none items-center justify-between p-6 text-lg font-medium text-secondary-900">
+        <div className="mx-auto max-w-lg">
+  <div className="space-y-6">
+    <details className="group rounded-xl shadow-[0_10px_100px_10px_rgba(0,0,0,0.05)]">
+      <summary className="flex cursor-pointer list-none items-center justify-between p-6 text-lg font-medium text-secondary-900">
 What is AfrikTV?
-        <div class="text-secondary-500">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="block h-5 w-5 transition-all duration-300 group-open:-rotate-90">
+        <div className="text-secondary-500">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="block h-5 w-5 transition-all duration-300 group-open:-rotate-90">
             <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
           </svg>
         </div>
       </summary>
-      <div class="px-6 pb-6 text-secondary-500">We're looking for a description here.</div>
+      <div className="px-6 pb-6 text-secondary-500">We're looking for a description here.</div>
     </details>
-    <details class="group rounded-xl shadow-[0_10px_100px_10px_rgba(0,0,0,0.05)]">
-      <summary class="flex cursor-pointer list-none items-center justify-between p-6 text-lg font-medium text-secondary-900">
+    <details className="group rounded-xl shadow-[0_10px_100px_10px_rgba(0,0,0,0.05)]">
+      <summary className="flex cursor-pointer list-none items-center justify-between p-6 text-lg font-medium text-secondary-900">
        What can I watch on AfrikTV
         <div className="text-secondary-500">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="block h-5 w-5 transition-all duration-300 group-open:-rotate-90">
@@ -198,6 +205,9 @@ What is AfrikTV?
 
             <div className="flex mt-4 md:m-0">
                 <div className="-mx-4">
+                <a href="#" className="px-4 text-sm text-gray-600 transition-colors duration-300 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 hover:underline">Twitter</a>
+                <a href="#" className="px-4 text-sm text-gray-600 transition-colors duration-300 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 hover:underline">Instagram</a>
+                <a href="#" className="px-4 text-sm text-gray-600 transition-colors duration-300 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 hover:underline">Partners</a>
                     <a href="#" className="px-4 text-sm text-gray-600 transition-colors duration-300 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 hover:underline">Contact Us 📧</a>
                     <a href="#" className="px-4 text-sm text-gray-600 transition-colors duration-300 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 hover:underline">We're hiring ✨</a>
                 </div>
@@ -206,8 +216,8 @@ What is AfrikTV?
     </div>
 </footer>
 
-
 </div>
+
 
     
   );

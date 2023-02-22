@@ -5,10 +5,6 @@
 | Codebase              |      Description          |
 | :-------------------- | :-----------------------: |
 | Frontend  |     React / Tailwind  / MUX       |
-
-### Figma 
-
-https://www.figma.com/file/96D6iJx9pC74VyefmAkXX1/Afrik-TV?node-id=3%3A44&t=EEXg8B4NcbQ3mLTH-0
   
 ## Getting Started
 Make sure you have nodejs installed by running the following command:
@@ -39,15 +35,10 @@ npm run dev
 npm build
 ```
 
-### Contribute to our project
+## Contribute to our project
 Clone or fork the repo.
-If you've cloned before just pull with 
-``` "git pull" ```
 Pull request should be made to the main branch and nowhere else!
-Commit message must be descriptive.
-
-
-Example {commitType:} {commitDescription}
+Commit message must be descriptive. Example {commitType:} {commitDescription}
 
 | Type     |                          | Description                                                                                                 |
 |----------|--------------------------|-------------------------------------------------------------------------------------------------------------|
