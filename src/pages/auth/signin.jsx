@@ -15,7 +15,7 @@ const SignIn = () => {
 		<div class="hidden lg:relative lg:block lg:p-12 contain-in">
 		  <a class="block text-white" href="/">
 			<span class="sr-only">Home</span>
-			<img src="src/assets/closed-mouth.gif" width="10%" />
+			<img src="https://res.cloudinary.com/dwdb9tvii/image/upload/v1677147437/closed-mouth_nne5ys.png" width="10%" />
 		  </a>
   
 		  <h2 class="mt-6 text-2xl font-bold text-white sm:text-3xl md:text-4xl">
@@ -39,7 +39,7 @@ Sign In to your AfrikTV account
 			  href="/"
 			>
 			  <span class="sr-only">Home</span>
-			<img src="src/assets/star_struck.gif"/>
+			<img src="https://res.cloudinary.com/dwdb9tvii/image/upload/v1677147401/star_struck_b88r2l.gif"/>
 			</a>
   
 			<h1
@@ -95,7 +95,7 @@ Sign In to your AfrikTV account
   
 			<div class="col-span-6 sm:flex sm:items-center sm:gap-4">
 			  <button
-				class="inline-block shrink-0 rounded-md border border-blue-600 bg-blue-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-transparent hover:text-blue-600 focus:outline-none focus:ring active:text-blue-500"
+				class="inline-block shrink-0 login-btn rounded-md border  px-12 py-3 text-sm font-medium text-white transition focus:outline-none "
 			  >
 				Sign In
 			  </button>
