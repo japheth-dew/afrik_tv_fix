@@ -1,5 +1,5 @@
-import React from 'react'
-
+import React from 'react';
+import './style.css';
 
 const SignUp = () => {
   return (
@@ -15,23 +15,22 @@ const SignUp = () => {
 		<div class="hidden lg:relative lg:block lg:p-12 contain-in">
 		  <a class="block text-white" href="/">
 			<span class="sr-only">Home</span>
-			<img src="src/assets/closed-mouth.gif" width="10%" />
+			<img src="https://res.cloudinary.com/dwdb9tvii/image/upload/v1677231750/face-with-spiral-eyes_1f635-200d-1f4ab_lqjdgp.png" width="10%" />
 		  </a>
   
 		  <h2 class="mt-6 text-2xl font-bold text-white sm:text-3xl md:text-4xl">
-Sign In to your AfrikTV account
+Create your AfrikTV account
 		  </h2>
   
 		  <p class="mt-4 leading-relaxed text-white/90">
-		We're excited to see you here again...
+		You can now create your AfrikTV account, shhhhh... your secret is safe 😅
 		  </p>
 		</div>
 	  </section>
   
 	  <main
 		aria-label="Main"
-		class="flex items-center justify-center px-8 py-8 sm:px-12 lg:col-span-7 lg:py-12 lg:px-16 xl:col-span-6"
-	  >
+		class="flex items-center justify-center px-8 py-8 sm:px-12 lg:col-span-7 lg:py-12 lg:px-16 xl:col-span-6 contain-all">
 		<div class="max-w-xl lg:max-w-3xl">
 		  <div class="relative -mt-16">
 			<a
@@ -39,17 +38,17 @@ Sign In to your AfrikTV account
 			  href="/"
 			>
 			  <span class="sr-only">Home</span>
-			<img src="src/assets/star_struck.gif"/>
+			<img src="https://res.cloudinary.com/dwdb9tvii/image/upload/v1677231936/rocket_1f680_l8dux0.png"/>
 			</a>
   
 			<h1
 			  class="mt-2 text-2xl font-bold text-gray-900 sm:text-3xl md:text-4xl"
 			>
-		Connect with African Movies 😅🍿
+				Let's create a new AfrikTV account
 			</h1>
   
 			<p class="mt-4 leading-relaxed text-gray-500">
-			Now, sign in to your AfrikTV account to watch the best African Blockbuster movies...
+			Now, fill in the required credentials to get started with AfrikTV
 			</p>
 		  </div>
   
@@ -70,21 +69,22 @@ Sign In to your AfrikTV account
 			  />
 			</div>
   
-			<div class="col-span-6 sm:col-span-3">
+			<div class="col-span-6">
 			  <label
 				for="LastName"
 				class="block text-sm font-medium text-gray-700"
 			  >
 				Last Name
 			  </label>
-  
+		
+
 			  <input
 				type="text"
 				id="LastName"
 				name="last_name"
 				class="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
 			  />
-			</div>
+			  </div>
   
 			<div class="col-span-6">
 			  <label for="Email" class="block text-sm font-medium text-gray-700">
@@ -99,7 +99,7 @@ Sign In to your AfrikTV account
 			  />
 			</div>
   
-			<div class="col-span-6 sm:col-span-3">
+			<div class="col-span-6">
 			  <label
 				for="Password"
 				class="block text-sm font-medium text-gray-700"
@@ -115,7 +115,7 @@ Sign In to your AfrikTV account
 			  />
 			</div>
   
-			<div class="col-span-6 sm:col-span-3">
+			<div class="col-span-6">
 			  <label
 				for="PasswordConfirmation"
 				class="block text-sm font-medium text-gray-700"
@@ -141,34 +141,26 @@ Sign In to your AfrikTV account
 				/>
   
 				<span class="text-sm text-gray-700">
-				  I want to receive emails about events, product updates and
-				  company announcements.
+				By creating an account, you agree to our <a href="#" class="text-gray-700 underline">terms and conditions
+				</a> and <a href="#" class="text-gray-700 underline">privacy policy</a>.
 				</span>
 			  </label>
-			</div>
-  
-			<div class="col-span-6">
-			  <p class="text-sm text-gray-500">
-				By creating an account, you agree to our
-				<a href="#" class="text-gray-700 underline">
-				  terms and conditions
-				</a>
-				and
-				<a href="#" class="text-gray-700 underline">privacy policy</a>.
+<br />
+			  <p class="text-sm text-gray-700">
+				Already have an account? <a href="#" class="text-gray-700 underline">Log in</a>.
 			  </p>
 			</div>
   
+			
+
 			<div class="col-span-6 sm:flex sm:items-center sm:gap-4">
 			  <button
-				class="inline-block shrink-0 rounded-md border border-blue-600 bg-blue-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-transparent hover:text-blue-600 focus:outline-none focus:ring active:text-blue-500"
+				class="login-btn inline-block shrink-0 rounded-md border px-12 py-3 text-sm font-medium text-white transition focus:outline-none focus:ring"
 			  >
 				Create an account
 			  </button>
   
-			  <p class="mt-4 text-sm text-gray-500 sm:mt-0">
-				Already have an account?
-				<a href="#" class="text-gray-700 underline">Log in</a>.
-			  </p>
+			
 			</div>
 		  </form>
 		</div>
@@ -181,4 +173,4 @@ Sign In to your AfrikTV account
     )
 }
 
-export default SignIn
+export default SignUp
