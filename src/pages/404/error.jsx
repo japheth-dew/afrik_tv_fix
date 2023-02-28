@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-const nopagee = () => {
+const nop = () => {
   return (
 
 <section class="bg-white dark:bg-gray-900">
@@ -18,4 +18,4 @@ const nopagee = () => {
 );
 }
 
-export default App;
+export default Nop;
