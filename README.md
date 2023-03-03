@@ -4,7 +4,7 @@
 
 | Codebase              |      Description          |
 | :-------------------- | :-----------------------: |
-| Frontend  |     React / Tailwind  / MUX       |
+| Frontend  |     React / Tailwind  / api.video       |
   
 ## Getting Started
 Make sure you have nodejs installed by running the following command:
