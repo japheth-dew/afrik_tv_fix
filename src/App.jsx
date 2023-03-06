@@ -5,7 +5,8 @@ import SignIn from "./pages/auth/signin";
 import SignUp from "./pages/auth/signup";
 import Otp from "./pages/auth/otp";
 import Forgotpassword from "./pages/auth/forgotpassword";
-
+import Dashboard from "./pages/userdashboard/billing";
+import Planform from "./pages/auth/planform"
 
 
 function App() {
@@ -35,6 +36,20 @@ function App() {
         <Route path="/auth/forgotpassword" element={<Forgotpassword />} />
       </Routes>
 
+    </>
+
+    <>
+      <Routes>
+        <Route path="/userdashboard/billing" element={<Dashboard />} />
+      </Routes>
+
+
+      <>
+      <Routes>
+        <Route path="auth/planform/" element={<Planform />} />
+      </Routes>
+
+    </>
     </>
 
     </>
