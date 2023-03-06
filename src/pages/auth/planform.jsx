@@ -36,6 +36,7 @@ const planform = () => {
                     </p>
                 </div>
       
+  
                 <div className="min-h-screen ">
   
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-3 p-5">
@@ -47,7 +48,7 @@ const planform = () => {
                             <span class="text-3xl font-semibold">3.99</span>
                             <span class="text-black-400 font-medium">/mo</span>
                         </p>
-                        <hr class="mt-4 border-1" />
+                <br/>
                         <div class="pt-8">
                             <p class="font-semibold text-black-400 text-left">
                                 <span class="material-icons align-middle">
@@ -69,7 +70,7 @@ const planform = () => {
                             </p>
     
                             <a href="#" class="">
-                                <p class="w-full py-4 login-btn mt-8 rounded-xl text-white">
+                                <p class="w-full py-4 login-btn mt-8 rounded-xl text-white text-center">
                                     <span class="font-medium">
                                         Choose Plan
                                     </span>
@@ -86,7 +87,6 @@ const planform = () => {
                             <span class="text-3xl font-semibold">5.30</span>
                             <span class="text-white-400 font-medium">/mo</span>
                         </p>
-                        <hr class="mt-4 border-1 border-white-600" />
                         <div class="pt-8">
                         <p class="font-semibold text-white-400 text-left pt-5">
                                 <span class="material-icons align-middle">
@@ -123,10 +123,10 @@ const planform = () => {
                         <h1 class="text-white font-semibold text-2xl">Premium</h1>
                         <p class="pt-2 tracking-wide">
                             <span class="text-white-400 align-top">$ </span>
-                            <span class="text-3xl font-semibold">5.30</span>
+                            <span class="text-3xl font-semibold">7.99</span>
                             <span class="text-white-400 font-medium">/mo</span>
                         </p>
-                        <hr class="mt-4 border-1 border-white-600" />
+                   
                         <div class="pt-8">
                         <p class="font-semibold text-white-400 text-left pt-5">
                                 <span class="material-icons align-middle">
@@ -147,7 +147,7 @@ const planform = () => {
                                 </p>
     
                             <a href="#" class="">
-                                <p class="w-full py-4 login-btn mt-8 rounded-xl text-white">
+                                <p class="w-full py-4 login-btn mt-8 rounded-xl text-white text-center">
                                     <span class="font-medium">
                                         Choose Plan
                                     </span>
