@@ -5,8 +5,13 @@ import SignIn from "./pages/auth/signin";
 import SignUp from "./pages/auth/signup";
 import Otp from "./pages/auth/otp";
 import Forgotpassword from "./pages/auth/forgotpassword";
+
+import Manageprofile from "./pages/Profile/manageprofile";
+import ProfileEdit from "./pages/Profile/profileedit";
+
 import Dashboard from "./pages/userdashboard/billing";
-import Planform from "./pages/auth/planform"
+import Planform from "./pages/auth/planform";
+import Billing from "./pages/auth/billing"
 
 
 function App() {
@@ -17,19 +22,44 @@ function App() {
       </Routes>
 
       <>
-      <Routes>
-        <Route path="/auth/signin" element={<SignIn />} />
-      </Routes>
+        <Routes>
+          <Route path="/auth/signin" element={<SignIn />} />
+        </Routes>
 
-      <>
-      <Routes>
-        <Route path="/auth/signup" element={<SignUp />} />
-      </Routes>
+        <>
+          <Routes>
+            <Route path="/auth/signup" element={<SignUp />} />
+          </Routes>
 
-      <>
-      <Routes>
-        <Route path="/auth/otp" element={<Otp />} />
-      </Routes>
+          <>
+            <Routes>
+              <Route path="/auth/otp" element={<Otp />} />
+            </Routes>
+
+
+            <>
+              <Routes>
+                <Route
+                  path="/auth/forgotpassword"
+                  element={<Forgotpassword />}
+                />
+              </Routes>
+              <>
+                <Routes>
+                  <Route
+                    path="/Profile/manageprofile"
+                    element={<Manageprofile />}
+                  />
+                </Routes>
+                <>
+                  <Routes>
+                    <Route
+                      path="/Profile/profileedit"
+                      element={<ProfileEdit />}
+                    />
+                  </Routes>
+                </>
+              </>
 
       <>
       <Routes>
@@ -49,16 +79,25 @@ function App() {
         <Route path="auth/planform/" element={<Planform />} />
       </Routes>
 
+      <>
+      <Routes>
+        <Route path="auth/billing/" element={<Billing />} />
+      </Routes>
+
+    </>
+
     </>
     </>
 
     </>
       </>
+
             </>
+          </>
+        </>
+      </>
     </>
   );
 }
-
-
 
 export default App;
