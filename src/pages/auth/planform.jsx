@@ -26,7 +26,7 @@ const planform = () => {
   </nav> 
 
         <div class="min-h-screen flex justify-center items-center">
-            <div class="">
+            <div class="all-page">
                 <div class="text-center font-semibold">
                     <h1 class="text-3xl">
                         <span>Choose your plan</span>
@@ -41,7 +41,7 @@ const planform = () => {
   
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-3 p-5">
            
-                    <div class="w-80 p-8 bg-white rounded-3xl pr-16 shadow-xl">
+                    <div class="p-8 bg-white rounded-3xl pr-16 shadow-xl">
                         <h1 class="text-black font-semibold text-2xl">Basic</h1>
                         <p class="pt-2 tracking-wide">
                             <span class="text-black-400 align-top">$ </span>
@@ -80,7 +80,7 @@ const planform = () => {
                     </div>
 
 
-                    <div class="w-80 p-8 bg-gray-900 rounded-3xl text-white  ">
+                    <div class="p-8 bg-gray-900 rounded-3xl text-white  ">
                         <h1 class="text-white font-semibold text-2xl">Standard</h1>
                         <p class="pt-2 tracking-wide">
                             <span class="text-white-400 align-top">$ </span>
@@ -119,7 +119,7 @@ const planform = () => {
                     </div>
 
 
-                    <div class="w-80 p-8 bg-gradient-to-br from-purple-600 to-blue-500 rounded-3xl text-white ">
+                    <div class="p-8 bg-gradient-to-br from-purple-600 to-blue-500 rounded-3xl text-white ">
                         <h1 class="text-white font-semibold text-2xl">Premium</h1>
                         <p class="pt-2 tracking-wide">
                             <span class="text-white-400 align-top">$ </span>
@@ -164,6 +164,29 @@ const planform = () => {
         </div>
 
 </div>
+
+<footer className="flex justify-center px-4 text-gray-800 bg-white dark:text-white dark:bg-gray-900">
+    <div className="container px-6 py-6">
+
+  
+        <div className="flex flex-col items-center justify-between md:flex-row">
+            <a href="#">
+                <img className="w-auto h-7" src="https://res.cloudinary.com/dwdb9tvii/image/upload/v1677147398/afriklogo_tbhtt5.png" alt="" />
+            </a>
+
+            <div className="flex mt-4 md:m-0">
+                <div className="-mx-4">
+                <a href="#" className="px-4 text-sm text-gray-600 transition-colors duration-300 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 hover:underline">Twitter</a>
+                <a href="#" className="px-4 text-sm text-gray-600 transition-colors duration-300 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 hover:underline">Instagram</a>
+                <a href="#" className="px-4 text-sm text-gray-600 transition-colors duration-300 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 hover:underline">Partners</a>
+                    <a href="#" className="px-4 text-sm text-gray-600 transition-colors duration-300 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 hover:underline">Contact Us 📧</a>
+                    <a href="#" className="px-4 text-sm text-gray-600 transition-colors duration-300 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 hover:underline">We're hiring ✨</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
 </div>
     )
 }
