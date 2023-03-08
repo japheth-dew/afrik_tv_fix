@@ -15,7 +15,7 @@ const forgotpassword = () => {
 		<div class="hidden lg:relative lg:block lg:p-12 contain-in">
 		  <a class="block text-white" href="/">
 			<span class="sr-only">Home</span>
-			<img src="https://res.cloudinary.com/dwdb9tvii/image/upload/v1677147437/closed-mouth_nne5ys.png" width="10%" />
+			<img src="https://res.cloudinary.com/dwdb9tvii/image/upload/v1677597898/confused-face_1f615_ze6k7l.png" width="10%" />
 		  </a>
   
 		  <h2 class="mt-6 text-2xl font-bold text-white sm:text-3xl md:text-4xl">
@@ -39,17 +39,17 @@ Urgh, just input your email address in the input field - we're here to help you 
 			  href="/"
 			>
 			  <span class="sr-only">Home</span>
-			<img src="https://res.cloudinary.com/dwdb9tvii/image/upload/v1677147401/star_struck_b88r2l.gif"/>
+			<img src="https://res.cloudinary.com/dwdb9tvii/image/upload/v1677599882/cloud-with-lightning-and-rain_26c8-fe0f_rnk5sp.png"/>
 			</a>
   
 			<h1
 			  class="mt-2 text-2xl font-bold text-gray-900 sm:text-3xl md:text-4xl"
 			>
-		Connect with African Movies 😅🍿
+	Forgot your AfrikTV password?
 			</h1>
   
 			<p class="mt-4 leading-relaxed text-gray-500">
-			Now, sign in to your AfrikTV account to watch the best African Blockbuster movies...
+Don't worry - we're here to help. Fill in the form with your registered email address.
 			</p>
 		  </div>
   
@@ -69,27 +69,9 @@ Urgh, just input your email address in the input field - we're here to help you 
 			  />
 			</div>
   
-			<div class="col-span-6 sm:col-span-3">
-			  <label
-				for="Password"
-				class="block text-sm font-medium text-gray-700"
-			  >
-				Password
-			  </label>
+	
   
-			  <input
-				type="password"
-				id="Password"
-				name="password"
-				class="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
-			  />
-			</div>
-  
-			<div class="col-span-6">
-			<p class="mt-4 text-sm text-gray-500 sm:mt-0">
-				<a href="#" class="text-gray-700 underline">Forgotten Password?</a>
-			  </p>
-			</div>
+	
   
 
   
@@ -97,7 +79,7 @@ Urgh, just input your email address in the input field - we're here to help you 
 			  <button
 				class="inline-block shrink-0 login-btn rounded-md border  px-12 py-3 text-sm font-medium text-white transition focus:outline-none "
 			  >
-				Sign In
+				Forgotten Password
 			  </button>
   
 			
