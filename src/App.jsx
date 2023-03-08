@@ -8,12 +8,10 @@ import Forgotpassword from "./pages/auth/forgotpassword";
 
 import Manageprofile from "./pages/Profile/manageprofile";
 import ProfileEdit from "./pages/Profile/profileedit";
-import Test from "./pages/Profile/test";
 import Newprofile from "./pages/Profile/newprofile";
 
 import Dashboard from "./pages/userdashboard/billing";
-import Planform from "./pages/auth/planform"
-
+import Planform from "./pages/auth/planform";
 
 function App() {
   return (
@@ -36,7 +34,6 @@ function App() {
             <Routes>
               <Route path="/auth/otp" element={<Otp />} />
             </Routes>
-
 
             <>
               <Routes>
@@ -61,41 +58,25 @@ function App() {
                   </Routes>
                   <>
                     <Routes>
-                      <Route path="/profile/test" element={<Test />} />
+                      <Route path="/profile/new" element={<Newprofile />} />
                     </Routes>
                     <>
                       <Routes>
-                        <Route path="/profile/new" element={<Newprofile />} />
+                        <Route
+                          path="/userdashboard/billing"
+                          element={<Dashboard />}
+                        />
                       </Routes>
+
+                      <>
+                        <Routes>
+                          <Route path="auth/planform/" element={<Planform />} />
+                        </Routes>
+                      </>
                     </>
                   </>
                 </>
               </>
-
-      <>
-      <Routes>
-        <Route path="/auth/forgotpassword" element={<Forgotpassword />} />
-      </Routes>
-
-    </>
-
-    <>
-      <Routes>
-        <Route path="/userdashboard/billing" element={<Dashboard />} />
-      </Routes>
-
-
-      <>
-      <Routes>
-        <Route path="auth/planform/" element={<Planform />} />
-      </Routes>
-
-    </>
-    </>
-
-    </>
-      </>
-
             </>
           </>
         </>
