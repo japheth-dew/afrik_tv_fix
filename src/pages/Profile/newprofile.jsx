@@ -1,28 +1,36 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import vector from "../../assets/vector.png";
+import Modal from "../../components/Modal";
 
 function Newprofile() {
   const [hover, setHover] = useState(false);
+  const [isClicked, setIsClicked] = useState(false);
 
   return (
     <div>
-      <div className="flex flex-col justify-center items-center h-screen">
+      <div
+        className={`flex flex-col items-center h-screen ${
+          isClicked ? "bg-gray-400" : "bg-white"
+        }`}
+      >
         <div className="w-[521px]">
-          <div className="mb-16 text-3xl font-black">Edit Profiles</div>
+          <div className="mb-16 text-3xl font-black mt-11">New Profiles</div>
           <div className="flex justify-between items-center mb-11">
-            <Link to={"/"}>
-              <div
-                className="w-28 h-28 bg-[#F39C11] flex justify-center items-center hover:bg-[#6a4407]"
-                onMouseOver={() => setHover(true)}
-                onMouseOut={() => setHover(false)}
-              >
-                🤡
-                {hover && (
-                  <img className="absolute" src={vector} alt="Vector Image" />
-                )}
-              </div>
-            </Link>
+            <button
+              className="w-28 h-28 bg-[#F39C11] flex justify-center items-center hover:bg-[#6a4407]"
+              onMouseOver={() => setHover(true)}
+              onMouseOut={() => setHover(false)}
+              onClick={() => {
+                setIsClicked(true);
+              }}
+            >
+              🤡
+              {hover && (
+                <img className="absolute" src={vector} alt="Vector Image" />
+              )}
+            </button>
+
             <input
               className="w-80 h-16 rounded-lg bg-[##FAFAFA] outline-none py-5 px-4 border border-[#E3E0E0]"
               type="text"
@@ -43,6 +51,7 @@ function Newprofile() {
             </button>
           </div>
         </div>
+        {isClicked && <Modal />}
       </div>
     </div>
   );
