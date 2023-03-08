@@ -27,7 +27,7 @@ function Manageprofile() {
             </div>
           </Link>
           <div className="w-52 h-48 bg-inherit flex justify-center items-center text-4xl">
-            <Link to={"/Profile/profileedit"}>
+            <Link to={"/profile/profileedit"}>
               <div>
                 <div className="text-center ">
                   <AddIcon style={{ fontSize: 60 }} />

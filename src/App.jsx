@@ -7,6 +7,8 @@ import Otp from "./pages/auth/otp";
 import Forgotpassword from "./pages/auth/forgotpassword";
 import Manageprofile from "./pages/Profile/manageprofile";
 import ProfileEdit from "./pages/Profile/profileedit";
+import Test from "./pages/Profile/test";
+import Newprofile from "./pages/Profile/newprofile";
 
 function App() {
   return (
@@ -40,17 +42,27 @@ function App() {
               <>
                 <Routes>
                   <Route
-                    path="/Profile/manageprofile"
+                    path="/profile/manageprofile"
                     element={<Manageprofile />}
                   />
                 </Routes>
                 <>
                   <Routes>
                     <Route
-                      path="/Profile/profileedit"
+                      path="/profile/profileedit"
                       element={<ProfileEdit />}
                     />
                   </Routes>
+                  <>
+                    <Routes>
+                      <Route path="/profile/test" element={<Test />} />
+                    </Routes>
+                    <>
+                      <Routes>
+                        <Route path="/profile/new" element={<Newprofile />} />
+                      </Routes>
+                    </>
+                  </>
                 </>
               </>
             </>
