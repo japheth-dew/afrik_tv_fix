@@ -13,6 +13,10 @@ import Newprofile from "./pages/Profile/newprofile";
 import Dashboard from "./pages/userdashboard/billing";
 import Planform from "./pages/auth/planform";
 
+import Billing from "./pages/auth/billing"
+
+
+
 function App() {
   return (
     <>
@@ -72,17 +76,16 @@ function App() {
                         <Routes>
                           <Route path="auth/planform/" element={<Planform />} />
                         </Routes>
+                         <>
+      <Routes>
+        <Route path="auth/billing/" element={<Billing />} />
+      </Routes>
+
+    </>
                       </>
                     </>
                   </>
                 </>
               </>
-            </>
-          </>
-        </>
-      </>
-    </>
-  );
-}
 
 export default App;
