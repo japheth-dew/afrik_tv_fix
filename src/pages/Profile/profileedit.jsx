@@ -2,6 +2,7 @@ import React from "react";
 
 function ProfileEdit() {
   const languages = ["English", "French", "Spanish", "Yoruba"];
+
   return (
     <div>
       <div className="flex flex-col justify-center items-center h-screen">
@@ -51,18 +52,16 @@ function ProfileEdit() {
             </div>
           </div>
         </div>
-        <div className="w-[600px]">
-          <div className="flex justify-between">
-            <button className="bg-[#060825] text-white py-2 px-4 text-lg font-bold rounded-xl">
-              Save Changes
-            </button>
-            <button className="bg-inherit text-[#060825] border-[#060825] border-2 py-3 px-6 text-lg font-bold rounded-xl">
-              Cancel
-            </button>
-            <button className="bg-inherit text-[#060825] border-[#060825] border-2 py-3 px-6 text-lg font-bold rounded-xl">
-              Delete Profile
-            </button>
-          </div>
+        <div className="flex justify-between h-[40px] w-[600px]">
+          <button className="bg-[#060825] text-white flex justify-center items-center px-3 text-lg font-bold rounded-xl">
+            Save Changes
+          </button>
+          <button className="bg-inherit text-[#060825] border-[#060825] border-2  px-3 text-lg font-bold rounded-xl flex justify-center items-center">
+            Cancel
+          </button>
+          <button className="bg-inherit text-[#060825] border-[#060825] border-2  px-3 text-lg font-bold rounded-xl flex justify-center items-center">
+            Delete Profile
+          </button>
         </div>
       </div>
     </div>
