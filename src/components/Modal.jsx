@@ -1,10 +1,14 @@
 import React from "react";
+import CloseIcon from '@mui/icons-material/Close';
 
-function Modal() {
+function Modal({click}) {
   return (
     <div className="absolute">
       <div className="flex flex-col justify-center items-center h-screen">
-        <div className="w-[549px] h-[365px] flex flex-col justify-center items-center border border-[gray] rounded-[20px] bg-white">
+        <div className="w-[549px] h-[365px] flex flex-col justify-center items-center border border-[gray] rounded-[20px] bg-white relative">
+          <button onClick={click}>
+            <CloseIcon className="absolute top-3 right-3" style={{color: "#060825"}}/>
+          </button>
           <p className="font-bold mb-4">Update Profile Icon</p>
 
           <p>Choose an image from your device</p>

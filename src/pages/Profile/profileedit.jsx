@@ -1,7 +1,9 @@
-import React from "react";
+import React, {useState} from "react";
 
 function ProfileEdit() {
   const languages = ["English", "French", "Spanish", "Yoruba"];
+  const [userName, setUserName] = useState("");
+  const [active, setActive] = useState("");
 
   return (
     <div>
@@ -16,7 +18,8 @@ function ProfileEdit() {
               <input
                 className="h-16 rounded-lg bg-[##FAFAFA] outline-none py-5 px-4 border border-[#E3E0E0]"
                 type="text"
-                value={"Opemipo"}
+                value={userName}
+                onChange={(e) => {setUserName(e.target.value)}}
               />
               <p>Language:</p>
             </div>
@@ -53,13 +56,22 @@ function ProfileEdit() {
           </div>
         </div>
         <div className="flex justify-between h-[40px] w-[600px]">
-          <button className="bg-[#060825] text-white flex justify-center items-center px-3 text-lg font-bold rounded-xl">
+          <button 
+          className={` flex justify-center items-center px-3 text-lg font-bold rounded-xl ${active === "1" ? "bg-[#060825] text-white" : "bg-white text-[#060825] border-[#060825] border-2 rounded-xl"}`} 
+          id="1"
+          onClick={(e) => {setActive(e.target.id)}}>
             Save Changes
           </button>
-          <button className="bg-inherit text-[#060825] border-[#060825] border-2  px-3 text-lg font-bold rounded-xl flex justify-center items-center">
+          <button 
+          className={`border-2  px-3 text-lg font-bold rounded-xl flex justify-center items-center  ${active === "2" ? "bg-[#060825] text-white" : "bg-white text-[#060825] border-[#060825] border-2 rounded-xl"}`}
+          id="2"
+          onClick={(e) => {setActive(e.target.id)}}>
             Cancel
           </button>
-          <button className="bg-inherit text-[#060825] border-[#060825] border-2  px-3 text-lg font-bold rounded-xl flex justify-center items-center">
+          <button 
+          className={`border-2  px-3 text-lg font-bold rounded-xl flex justify-center items-center  ${active === "3" ? "bg-[#060825] text-white" : "bg-white text-[#060825] border-[#060825] border-2 rounded-xl"}`}
+          id="3"
+          onClick={(e) => {setActive(e.target.id)}}>
             Delete Profile
           </button>
         </div>

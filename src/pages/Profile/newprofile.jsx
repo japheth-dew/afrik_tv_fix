@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-// import { Link } from "react-router-dom";
-import vector from "../../assets/vector.png";
 import Modal from "../../components/Modal";
+import EditIcon from '@mui/icons-material/Edit';
 
 function Newprofile() {
   const [hover, setHover] = useState(false);
@@ -18,17 +17,15 @@ function Newprofile() {
           <div className="mb-16 text-3xl font-black mt-11">New Profiles</div>
           <div className="flex justify-between items-center mb-11">
             <button
-              className="w-28 h-28 bg-[#F39C11] flex justify-center items-center hover:bg-[#6a4407]"
+              className="w-28 h-28 bg-[#F39C11] flex justify-center items-center hover:bg-[#6a4407] "
               onMouseOver={() => setHover(true)}
               onMouseOut={() => setHover(false)}
               onClick={() => {
                 setIsClicked(true);
               }}
             >
-              🤡
-              {hover && (
-                <img className="absolute" src={vector} alt="Vector Image" />
-              )}
+              <div>🤡</div>
+              {hover && <EditIcon className="absolute" style={{color: "white", width: "60px"}}/>} 
             </button>
 
             <input
@@ -41,7 +38,6 @@ function Newprofile() {
             <input className="mr-3" type="checkbox" name="" id="" />
             <span>This is a child's profile</span>
           </div>
-          <div className="border w-full border-[#E9E9E9] mb-14"></div>
           <div className="flex justify-between w-72">
             <button className="bg-[#060825] text-white flex justify-center items-center py-2 px-3 text-lg font-bold rounded-xl">
               Add Profile
@@ -51,7 +47,7 @@ function Newprofile() {
             </button>
           </div>
         </div>
-        {isClicked && <Modal />}
+        {isClicked && <Modal click={() => {setIsClicked(false)}}/>}
       </div>
     </div>
   );
