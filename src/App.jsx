@@ -77,15 +77,19 @@ function App() {
                           <Route path="auth/planform/" element={<Planform />} />
                         </Routes>
                          <>
-      <Routes>
-        <Route path="auth/billing/" element={<Billing />} />
-      </Routes>
-
-    </>
+                            <Routes>
+                            <Route path="auth/billing/" element={<Billing />} />
+                            </Routes>
+                          </>
                       </>
                     </>
                   </>
-                </>
+                </>           
               </>
-
+            </>
+          </>
+        </>
+      </>
+    </>
+  )}
 export default App;
