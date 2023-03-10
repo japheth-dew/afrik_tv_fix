@@ -43,22 +43,19 @@ function App() {
               <Routes>
                 <Route
                   path="/auth/forgotpassword"
-                  element={<Forgotpassword />}
-                />
+                  element={<Forgotpassword />} />
               </Routes>
               <>
                 <Routes>
                   <Route
                     path="/profile/manageprofile"
-                    element={<Manageprofile />}
-                  />
+                    element={<Manageprofile />}  />
                 </Routes>
                 <>
                   <Routes>
                     <Route
                       path="/profile/profileedit"
-                      element={<ProfileEdit />}
-                    />
+                      element={<ProfileEdit />} />
                   </Routes>
                   <>
                     <Routes>
@@ -92,4 +89,5 @@ function App() {
       </>
     </>
   )}
+
 export default App;
