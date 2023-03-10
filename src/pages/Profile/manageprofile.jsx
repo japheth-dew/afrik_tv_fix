@@ -12,7 +12,7 @@ function Manageprofile() {
         <div className="grid grid-cols-3 gap-16 w-[751px] justify-items-center">
           <Link to={"/"}>
             <div>
-              <div className="w-52 h-48 bg-black flex justify-center items-center text-4xl">
+              <div className="w-52 h-48 bg-gray-900 flex justify-center items-center text-4xl">
                 😊
               </div>
               <p className="text-3xl text-center font-bold mt-4">Obiabo</p>
@@ -27,7 +27,7 @@ function Manageprofile() {
             </div>
           </Link>
           <div className="w-52 h-48 bg-inherit flex justify-center items-center text-4xl">
-            <Link to={"/profile/profileedit"}>
+            <Link to={"/profile/newprofile"}>
               <div>
                 <div className="text-center ">
                   <AddIcon style={{ fontSize: 60 }} />
