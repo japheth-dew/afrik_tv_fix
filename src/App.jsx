@@ -58,12 +58,12 @@ function App() {
                       <Route path="/profile/new" element={<Newprofile />} />
                     </Routes>
                     <>
-                      <Routes>
+                      {/* <Routes>
                         <Route
                           path="/userdashboard/billing"
                           element={<Dashboard />}
                         />
-                      </Routes>
+                      </Routes> */}
 
                       <>
                         <Routes>
