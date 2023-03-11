@@ -9,7 +9,8 @@ import Manageprofile from "./pages/Profile/manageprofile";
 import ProfileEdit from "./pages/Profile/profileedit";
 import Newprofile from "./pages/Profile/newprofile";
 import Planform from "./pages/auth/planform";
-import Billing from "./pages/auth/billing"
+import Billing from "./pages/auth/billing";
+import ResetPassword from "./pages/auth/resetpassword";
 
 
 
@@ -41,6 +42,14 @@ function App() {
                   path="/auth/forgotpassword"
                   element={<Forgotpassword />} />
               </Routes>
+
+              <>
+                <Routes>
+                  <Route
+                    path="/auth/resetpassword"
+                    element={<ResetPassword />}  />
+                </Routes>
+                
               <>
                 <Routes>
                   <Route
@@ -53,6 +62,9 @@ function App() {
                       path="/profile/profileedit"
                       element={<ProfileEdit />} />
                   </Routes>
+
+          
+
                   <>
                     <Routes>
                       <Route path="/profile/new" element={<Newprofile />} />
@@ -83,6 +95,7 @@ function App() {
           </>
         </>
       </>
+    </>
     </>
   )}
 
