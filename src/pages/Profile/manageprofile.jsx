@@ -8,8 +8,8 @@ function Manageprofile() {
   return (
     <div>
       <div className="flex flex-col justify-center items-center h-screen">
-        <div className="mb-16 text-3xl font-black">Manage Profiles</div>
-        <div className="grid grid-cols-3 gap-16 w-[751px] justify-items-center">
+        <div className="mb-16 text-3xl font-black">Choose Profile</div>
+        <div className="grid md:grid-cols-3 grid-cols-2 gap-16 w-[80%] justify-items-center">
           <Link to={"/"}>
             <div>
               <div className="w-52 h-48 bg-gray-900 flex justify-center items-center text-4xl">
@@ -27,7 +27,7 @@ function Manageprofile() {
             </div>
           </Link>
           <div className="w-52 h-48 bg-inherit flex justify-center items-center text-4xl">
-            <Link to={"/profile/newprofile"}>
+            <Link to={"/profile/new"}>
               <div>
                 <div className="text-center ">
                   <AddIcon style={{ fontSize: 60 }} />

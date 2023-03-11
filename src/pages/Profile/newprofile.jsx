@@ -13,7 +13,7 @@ function Newprofile() {
           isClicked ? "bg-gray-400" : "bg-white"
         }`}
       >
-        <div className="w-[521px]">
+        <div className="w-[350px] md:w-[521px] ">
           <div className="mb-16 text-3xl font-black mt-11">New Profiles</div>
           <div className="flex justify-between items-center mb-11">
             <button
@@ -29,7 +29,7 @@ function Newprofile() {
             </button>
 
             <input
-              className="w-80 h-16 rounded-lg bg-[##FAFAFA] outline-none py-5 px-4 border border-[#E3E0E0]"
+              className="w-44 md:w-80 h-16 rounded-lg bg-[##FAFAFA] outline-none py-5 px-4 border border-[#E3E0E0]"
               type="text"
               placeholder="Name"
             />
