@@ -19,6 +19,10 @@ import Planform from './pages/auth/planform'
 import Billing from './pages/auth/billing'
 import { Root as In, Dashboard as InDashboard, Billing as InBilling, Settings, Activities, WatchLater } from './pages/In'
 import Nop from './pages/404/error'
+import Newprofile from "./pages/Profile/newprofile";
+import ResetPassword from "./pages/auth/resetpassword";
+
+
 
 const router = createBrowserRouter(
 	createRoutesFromElements(
@@ -30,6 +34,7 @@ const router = createBrowserRouter(
 			<Route path="/auth/forgotpassword" element={<Forgotpassword />} />
 			<Route path="/profile/manageprofile" element={<Manageprofile />} />
 			<Route path="/profile/profileedit" element={<ProfileEdit />} />
+			<Route path="/profile/new" element={<Newprofile />} />
 			<Route path="/userdashboard/billing" element={<Dashboard />} />
 			<Route path="/auth/planform" element={<Planform />} />
 			<Route path="/auth/billing" element={<Billing />} />
