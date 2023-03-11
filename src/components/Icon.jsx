@@ -6,6 +6,7 @@ import { ReactComponent as TV } from "../assets/icons/tv.svg"
 import { ReactComponent as Clock } from "../assets/icons/clock.svg"
 import { ReactComponent as PlayBox } from "../assets/icons/play-box.svg"
 import { ReactComponent as Back } from "../assets/icons/back.svg"
+import { ReactComponent as Wave } from "../assets/icons/wave.svg"
 
 const ICONS = {
   home: Home,
@@ -16,6 +17,7 @@ const ICONS = {
   clock: Clock,
   playBox: PlayBox,
   back: Back,
+  wave: Wave,
 }
 
 const Oops = () => (
