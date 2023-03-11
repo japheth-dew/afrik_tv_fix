@@ -51,86 +51,38 @@ Create your AfrikTV account
 			Now, fill in the required credentials to get started with AfrikTV
 			</p>
 		  </div>
+  <br />
+		  <form action="#">
+		  <div class="relative z-0 w-full mb-6 group">
+      <input type="text" name="floating_fname" id="fname" class="block py-2.5 px-0 w-full text-sm text-black  bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-dark dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
+      <label for="floating_fname" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">First Name</label>
+      </div>
+		
   
-		  <form action="#" class="mt-8 grid grid-cols-6 gap-6">
-			<div class="col-span-6 sm:col-span-3">
-			  <label
-				for="FirstName"
-				class="block text-sm font-medium text-gray-700"
-			  >
-				First Name
-			  </label>
-  
-			  <input
-				type="text"
-				id="FirstName"
-				name="first_name"
-				class="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
-			  />
-			</div>
-  
-			<div class="col-span-6">
-			  <label
-				for="LastName"
-				class="block text-sm font-medium text-gray-700"
-			  >
-				Last Name
-			  </label>
+	  <div class="relative z-0 w-full mb-6 group">
+      <input type="text" name="floating_lname" id="lname" class="block py-2.5 px-0 w-full text-sm text-black  bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-dark dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
+      <label for="floating_lname" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Last Name</label>
+      </div>
 		
 
-			  <input
-				type="text"
-				id="LastName"
-				name="last_name"
-				class="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
-			  />
-			  </div>
+
+	  <div class="relative z-0 w-full mb-6 group">
+      <input type="email" name="floating_email" id="email" class="block py-2.5 px-0 w-full text-sm text-black  bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-dark dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
+      <label for="floating_email" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Email Address</label>
+      </div>
+		
   
-			<div class="col-span-6">
-			  <label for="Email" class="block text-sm font-medium text-gray-700">
-				Email
-			  </label>
+	  <div class="relative z-0 w-full mb-6 group">
+      <input type="password" name="floating_pwd" id="password" class="block py-2.5 px-0 w-full text-sm text-black  bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-dark dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
+      <label for="floating_pwd" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Password</label>
+      </div>
+		
   
-			  <input
-				type="email"
-				id="Email"
-				name="email"
-				class="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
-			  />
-			</div>
-  
-			<div class="col-span-6">
-			  <label
-				for="Password"
-				class="block text-sm font-medium text-gray-700"
-			  >
-				Password
-			  </label>
-  
-			  <input
-				type="password"
-				id="Password"
-				name="password"
-				class="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
-			  />
-			</div>
-  
-			<div class="col-span-6">
-			  <label
-				for="PasswordConfirmation"
-				class="block text-sm font-medium text-gray-700"
-			  >
-				Password Confirmation
-			  </label>
-  
-			  <input
-				type="password"
-				id="PasswordConfirmation"
-				name="password_confirmation"
-				class="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
-			  />
-			</div>
-  
+	  <div class="relative z-0 w-full mb-6 group">
+      <input type="password" name="floating_repwd" id="repeatpassword" class="block py-2.5 px-0 w-full text-sm text-black  bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-dark dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
+      <label for="floating_repwd" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Confirm Password</label>
+      </div>
+
 			<div class="col-span-6">
 			  <label for="MarketingAccept" class="flex gap-4">
 				<input
@@ -150,7 +102,7 @@ Create your AfrikTV account
 				Already have an account? <a href="#" class="text-gray-700 underline">Log in</a>.
 			  </p>
 			</div>
-  
+  <br />
 			
 
 			<div class="col-span-6 sm:flex sm:items-center sm:gap-4">
