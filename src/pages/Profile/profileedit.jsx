@@ -7,8 +7,8 @@ function ProfileEdit() {
 
   return (
     <div>
-      <div className="flex flex-col justify-center items-center h-screen">
-        <div className="w-[451px] mb-8">
+      <div className="flex flex-col justify-center items-center mx-4 md:mx-0 h-screen">
+        <div className="md:w-[451px] w-full mb-8">
           <div className="mb-16 text-3xl font-black">Edit Profiles</div>
           <div className="grid grid-cols-2 gap-4">
             <div className="w-28 h-28 bg-[#F39C11] flex justify-center items-center">
@@ -26,7 +26,7 @@ function ProfileEdit() {
             <button className="w-28 border outline-none border-[#E9E9E9] p-2 rounded">
               Update Icon
             </button>
-            <select className="w-44 h-10 border-2 border-[#E9E9E9] rounded outline-none">
+            <select className="w-42 h-10 border-2 border-[#E9E9E9] rounded outline-none">
               {languages.map((lang) => (
                 <option>{lang}</option>
               ))}
@@ -55,21 +55,21 @@ function ProfileEdit() {
             </div>
           </div>
         </div>
-        <div className="flex justify-between h-[40px] w-[600px]">
+        <div className="flex justify-between h-[40px] w-full md:w-[600px]">
           <button 
-          className={` flex justify-center items-center px-3 text-lg font-bold rounded-xl ${active === "1" ? "bg-[#060825] text-white" : "bg-white text-[#060825] border-[#060825] border-2 rounded-xl"}`} 
+          className={`text-sm flex justify-center items-center px-3 md:text-lg font-bold rounded-xl ${active === "1" ? "bg-[#060825] text-white" : "bg-white text-[#060825] border-[#060825] border-2 rounded-xl"}`} 
           id="1"
           onClick={(e) => {setActive(e.target.id)}}>
             Save Changes
           </button>
           <button 
-          className={`border-2  px-3 text-lg font-bold rounded-xl flex justify-center items-center  ${active === "2" ? "bg-[#060825] text-white" : "bg-white text-[#060825] border-[#060825] border-2 rounded-xl"}`}
+          className={`text-sm border-2  px-3 md:text-lg font-bold rounded-xl flex justify-center items-center  ${active === "2" ? "bg-[#060825] text-white" : "bg-white text-[#060825] border-[#060825] border-2 rounded-xl"}`}
           id="2"
           onClick={(e) => {setActive(e.target.id)}}>
             Cancel
           </button>
           <button 
-          className={`border-2  px-3 text-lg font-bold rounded-xl flex justify-center items-center  ${active === "3" ? "bg-[#060825] text-white" : "bg-white text-[#060825] border-[#060825] border-2 rounded-xl"}`}
+          className={`text-sm border-2  px-3 md:text-lg font-bold rounded-xl flex justify-center items-center  ${active === "3" ? "bg-[#060825] text-white" : "bg-white text-[#060825] border-[#060825] border-2 rounded-xl"}`}
           id="3"
           onClick={(e) => {setActive(e.target.id)}}>
             Delete Profile
