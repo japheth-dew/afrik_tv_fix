@@ -8,12 +8,8 @@ function Newprofile() {
 
   return (
     <div>
-      <div
-        className={`flex flex-col items-center h-screen ${
-          isClicked ? "bg-gray-400" : "bg-white"
-        }`}
-      >
-        <div className="w-[350px] md:w-[521px] ">
+      <div className={`flex flex-col items-center h-screen `}>
+        <div className={`w-[350px] md:w-[521px] ${isClicked && "opacity-60"}`}>
           <div className="mb-16 text-3xl font-black mt-11">New Profiles</div>
           <div className="flex justify-between items-center mb-11">
             <button
