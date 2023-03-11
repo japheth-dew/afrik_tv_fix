@@ -4,3 +4,4 @@ export * from './Activities';
 export * from './Settings';
 export * from './Root';
 export * from './WatchLater';
+export * from './RecentlyWatched';

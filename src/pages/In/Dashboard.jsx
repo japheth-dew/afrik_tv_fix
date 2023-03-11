@@ -27,12 +27,12 @@ export const Dashboard = () => {
                 </span>
                 Watch Later
               </NavLink>
-              <div className="px-5 py-3 rounded flex gap-4 items-center cursor-pointer hover:bg-white">
+              <NavLink to="/in/recently-watched" className="px-5 py-3 rounded flex gap-4 items-center cursor-pointer hover:bg-white">
                 <span className="bg-[#F0F1FE] p-2 justify-center items-center rounded-md">
                   <Icon name="tv" />
                 </span>
                 Recently watched
-              </div>
+              </NavLink>
               <div className="px-5 py-3 rounded flex gap-4 items-center cursor-pointer hover:bg-white">
                 <span className="bg-[#F0F1FE] p-2 justify-center items-center rounded-md">
                   <Icon name="clock" />

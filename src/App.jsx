@@ -17,7 +17,7 @@ import ProfileEdit from './pages/Profile/profileedit'
 import Dashboard from './pages/userdashboard/billing'
 import Planform from './pages/auth/planform'
 import Billing from './pages/auth/billing'
-import { Root as In, Dashboard as InDashboard, Billing as InBilling, Settings, Activities, WatchLater } from './pages/In'
+import { Root as In, Dashboard as InDashboard, Billing as InBilling, Settings, Activities, WatchLater, RecentlyWatched } from './pages/In'
 import Nop from './pages/404/error'
 import Newprofile from "./pages/Profile/newprofile";
 import ResetPassword from "./pages/auth/resetpassword";
@@ -44,6 +44,7 @@ const router = createBrowserRouter(
 				<Route path="activities" element={<Activities />} />
 				<Route path="settings" element={<Settings />} />
 				<Route path="watch-later" element={<WatchLater />} />
+				<Route path="recently-watched" element={<RecentlyWatched />} />
 			</Route>
 			<Route path="*" element={<Nop />} />
 		</Route>
