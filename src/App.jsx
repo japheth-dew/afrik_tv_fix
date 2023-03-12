@@ -11,6 +11,7 @@ import Newprofile from "./pages/Profile/newprofile";
 import Planform from "./pages/auth/planform";
 import Billing from "./pages/auth/billing";
 import ResetPassword from "./pages/auth/resetpassword";
+import Chooseprofile from "./pages/Profile/chooseprofile";
 
 
 
@@ -63,6 +64,10 @@ function App() {
                       path="/profile/profileedit"
                       element={<ProfileEdit />} />
                   </Routes>
+                  <>
+                    <Routes>
+                    <Route path="/profile/chooseprofile" element={<Chooseprofile />} />
+                    </Routes>
 
           
 
@@ -86,6 +91,8 @@ function App() {
                             <Routes>
                             <Route path="auth/billing/" element={<Billing />} />
                             </Routes>
+                            
+                          </>
                           </>
                       </>
                     </>

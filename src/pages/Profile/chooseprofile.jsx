@@ -4,11 +4,11 @@ import AddIcon from "@mui/icons-material/Add";
 import { Link } from "react-router-dom";
 // import Select from "react-dropdown-select";
 
-function Manageprofile() {
+function Chooseprofile() {
   return (
     <div>
       <div className="flex flex-col justify-center items-center h-screen">
-        <div className="mb-16 text-3xl font-black">Manage Profile</div>
+        <div className="mb-16 text-3xl font-black">Choose Profile</div>
         <div className="grid md:grid-cols-3 grid-cols-2 gap-16 w-[80%] justify-items-center">
           <Link to={"/"}>
             <div>
@@ -43,4 +43,4 @@ function Manageprofile() {
   );
 }
 
-export default Manageprofile;
+export default Chooseprofile;
