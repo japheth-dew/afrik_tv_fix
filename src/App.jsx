@@ -1,103 +1,58 @@
-import React from "react";
-import { Routes, Route } from "react-router-dom";
-import Homepage from "./pages/Home/homepage";
-import SignIn from "./pages/auth/signin";
-import SignUp from "./pages/auth/signup";
-import Otp from "./pages/auth/otp";
-import Forgotpassword from "./pages/auth/forgotpassword";
-import Manageprofile from "./pages/Profile/manageprofile";
-import ProfileEdit from "./pages/Profile/profileedit";
+import React from 'react'
+import {
+	createRoutesFromElements,
+	createBrowserRouter,
+	RouterProvider,
+	Route,
+} from 'react-router-dom'
+import Homepage from './pages/Home/homepage'
+import SignIn from './pages/auth/signin'
+import SignUp from './pages/auth/signup'
+import Otp from './pages/auth/otp'
+import Forgotpassword from './pages/auth/forgotpassword'
+
+import Manageprofile from './pages/Profile/manageprofile'
+import ProfileEdit from './pages/Profile/profileedit'
+
+import Dashboard from './pages/userdashboard/billing'
+import Planform from './pages/auth/planform'
+import Billing from './pages/auth/billing'
+import { Root as In, Dashboard as InDashboard, Billing as InBilling, Settings, Activities, WatchLater, RecentlyWatched } from './pages/In'
+import Nop from './pages/404/error'
 import Newprofile from "./pages/Profile/newprofile";
-import Planform from "./pages/auth/planform";
-import Billing from "./pages/auth/billing";
 import ResetPassword from "./pages/auth/resetpassword";
 
 
 
+const router = createBrowserRouter(
+	createRoutesFromElements(
+		<Route>
+			<Route path="/" element={<Homepage />} />
+			<Route path="/auth/signin" element={<SignIn />} />
+			<Route path="/auth/signup" element={<SignUp />} />
+			<Route path="/auth/otp" element={<Otp />} />
+			<Route path="/auth/forgotpassword" element={<Forgotpassword />} />
+			<Route path="/profile/manageprofile" element={<Manageprofile />} />
+			<Route path="/profile/profileedit" element={<ProfileEdit />} />
+			<Route path="/profile/new" element={<Newprofile />} />
+			<Route path="/userdashboard/billing" element={<Dashboard />} />
+			<Route path="/auth/planform" element={<Planform />} />
+			<Route path="/auth/billing" element={<Billing />} />
+			<Route path="in" element={<In />}>
+				<Route path="" element={<InDashboard />} />
+				<Route path="billing" element={<InBilling />} />
+				<Route path="activities" element={<Activities />} />
+				<Route path="settings" element={<Settings />} />
+				<Route path="watch-later" element={<WatchLater />} />
+				<Route path="recently-watched" element={<RecentlyWatched />} />
+			</Route>
+			<Route path="*" element={<Nop />} />
+		</Route>
+	)
+)
 
 function App() {
-  return (
-    <>
-      <Routes>
-        <Route path="/" element={<Homepage />} />
-      </Routes>
+	return <RouterProvider router={router} />
+}
 
-      <>
-        <Routes>
-          <Route path="/auth/signin" element={<SignIn />} />
-        </Routes>
-
-        <>
-          <Routes>
-            <Route path="/auth/signup" element={<SignUp />} />
-          </Routes>
-
-          <>
-            <Routes>
-              <Route path="/auth/otp" element={<Otp />} />
-            </Routes>
-
-            <>
-              <Routes>
-                <Route
-                  path="/auth/forgotpassword"
-                  element={<Forgotpassword />} />
-              </Routes>
-
-              <>
-                <Routes>
-                  <Route
-                    path="/auth/resetpassword"
-                    element={<ResetPassword />}  />
-                </Routes>
-                
-              <>
-                <Routes>
-                  <Route
-                    path="/profile/manageprofile"
-                    element={<Manageprofile />}  />
-                </Routes>
-                <>
-                  <Routes>
-                    <Route
-                      path="/profile/profileedit"
-                      element={<ProfileEdit />} />
-                  </Routes>
-
-          
-
-                  <>
-                    <Routes>
-                      <Route path="/profile/new" element={<Newprofile />} />
-                    </Routes>
-                    <>
-                      {/* <Routes>
-                        <Route
-                          path="/userdashboard/billing"
-                          element={<Dashboard />}
-                        />
-                      </Routes> */}
-
-                      <>
-                        <Routes>
-                          <Route path="auth/planform/" element={<Planform />} />
-                        </Routes>
-                         <>
-                            <Routes>
-                            <Route path="auth/billing/" element={<Billing />} />
-                            </Routes>
-                          </>
-                      </>
-                    </>
-                  </>
-                </>           
-              </>
-            </>
-          </>
-        </>
-      </>
-    </>
-    </>
-  )}
-
-export default App;
+export default App

@@ -83,4 +83,4 @@ function ProfileEdit() {
   );
 }
 
-export default ProfileEdit;
+export default ProfileEdit

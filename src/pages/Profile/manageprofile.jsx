@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react'
 // import AddIcon from '@mui/icons-material/Add';
-import AddIcon from "@mui/icons-material/Add";
-import { Link } from "react-router-dom";
+import AddIcon from '@mui/icons-material/Add'
+import { Link } from 'react-router-dom'
 // import Select from "react-dropdown-select";
 
 function Manageprofile() {
@@ -33,14 +33,14 @@ function Manageprofile() {
                   <AddIcon style={{ fontSize: 60 }} />
                 </div>
 
-                <p className="text-base text-center font-bold">Add user</p>
-              </div>
-            </Link>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
+								<p className="text-base text-center font-bold">Add user</p>
+							</div>
+						</Link>
+					</div>
+				</div>
+			</div>
+		</div>
+	)
 }
 
-export default Manageprofile;
+export default Manageprofile
