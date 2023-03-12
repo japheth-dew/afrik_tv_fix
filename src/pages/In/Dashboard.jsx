@@ -13,7 +13,7 @@ export const Dashboard = () => {
 			<div className="flex flex-col-reverse md:flex-row md:flex-wrap gap-8 my-16">
 				<div className="flex-1 w-full md:max-w-[400px]">
 					<div className="rounded-md px-4 md:px-12 py-4">
-						<h3 className="text-xl font-bold">Premium</h3>
+						<h3 className="text-xl font-bold">Active Users</h3>
 						<div className="mt-8 h-[200px] bg-[#FFFFFF]/[0.4] rounded-lg"></div>
 					</div>
 				</div>

@@ -16,12 +16,13 @@ const planform = () => {
 						/>
 					</a>
 					<div className="flex md:order-2">
-						<a href="/auth/signin">
+					<a href="/auth/signin">
+							{' '}
 							<button
 								type="button"
-								className="text-blue-700 border border-gray-700  focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm p-2.5 text-center inline-flex items-center mr-2 dark:border-gray-500 dark:text-gray-500 dark:focus:ring-blue-800"
+								className="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700"
 							>
-								Sign out
+								Sign Out
 							</button>
 						</a>
 					</div>
