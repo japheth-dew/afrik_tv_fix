@@ -11,6 +11,7 @@ import SignUp from './pages/auth/signup'
 import Otp from './pages/auth/otp'
 import Forgotpassword from './pages/auth/forgotpassword'
 
+
 import Manageprofile from './pages/Profile/manageprofile'
 import ProfileEdit from './pages/Profile/profileedit'
 

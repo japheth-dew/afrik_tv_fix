@@ -32,7 +32,6 @@ function Manageprofile() {
 								<div className="text-center ">
 									<AddIcon style={{ fontSize: 60 }} />
 								</div>
-
 								<p className="text-base text-center font-bold">Add user</p>
 							</div>
 						</Link>
