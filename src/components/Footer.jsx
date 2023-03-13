@@ -1,11 +1,11 @@
-import React from "react";
-import Faq from "./Faq";
+import React from 'react'
+import Faq from './Faq'
 function Footer() {
-  return (
-    <div>
-      <Faq/>
-    </div>
-  )
+	return (
+		<div>
+			<Faq />
+		</div>
+	)
 }
 
-export default Footer;
+export default Footer
