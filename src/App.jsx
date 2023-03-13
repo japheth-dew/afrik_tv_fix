@@ -11,7 +11,6 @@ import SignUp from './pages/auth/signup'
 import Otp from './pages/auth/otp'
 import Forgotpassword from './pages/auth/forgotpassword'
 
-
 import Manageprofile from './pages/Profile/manageprofile'
 import ProfileEdit from './pages/Profile/profileedit'
 
@@ -29,7 +28,8 @@ import {
 } from './pages/In'
 import Nop from './pages/404/error'
 import Newprofile from './pages/Profile/newprofile'
-import ResetPassword from './pages/auth/resetpassword'
+// import ResetPassword from './pages/auth/resetpassword'
+import Chooseprofile from './pages/Profile/chooseprofile'
 
 const router = createBrowserRouter(
 	createRoutesFromElements(
@@ -40,6 +40,7 @@ const router = createBrowserRouter(
 			<Route path="/auth/otp" element={<Otp />} />
 			<Route path="/auth/forgotpassword" element={<Forgotpassword />} />
 			<Route path="/profile/manageprofile" element={<Manageprofile />} />
+			<Route path="/profile/chooseprofile" element={<Chooseprofile />} />
 			<Route path="/profile/profileedit" element={<ProfileEdit />} />
 			<Route path="/profile/new" element={<Newprofile />} />
 			<Route path="/userdashboard/billing" element={<Dashboard />} />
