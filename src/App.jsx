@@ -13,6 +13,10 @@ import Forgotpassword from './pages/auth/forgotpassword'
 
 import Manageprofile from './pages/Profile/manageprofile'
 import ProfileEdit from './pages/Profile/profileedit'
+import Chooseprofile from './pages/Profile/chooseprofile'
+import Newprofile from './pages/Profile/newprofile'
+
+import Moviepage from './pages/Movies/moviepage'
 
 import Dashboard from './pages/userdashboard/billing'
 import Planform from './pages/auth/planform'
@@ -27,9 +31,8 @@ import {
 	RecentlyWatched,
 } from './pages/In'
 import Nop from './pages/404/error'
-import Newprofile from './pages/Profile/newprofile'
+
 // import ResetPassword from './pages/auth/resetpassword'
-import Chooseprofile from './pages/Profile/chooseprofile'
 
 const router = createBrowserRouter(
 	createRoutesFromElements(
@@ -46,6 +49,7 @@ const router = createBrowserRouter(
 			<Route path="/userdashboard/billing" element={<Dashboard />} />
 			<Route path="/auth/planform" element={<Planform />} />
 			<Route path="/auth/billing" element={<Billing />} />
+			<Route path="/movie/moviepage" element={<Moviepage />} />
 			<Route path="in" element={<In />}>
 				<Route path="" element={<InDashboard />} />
 				<Route path="billing" element={<InBilling />} />
