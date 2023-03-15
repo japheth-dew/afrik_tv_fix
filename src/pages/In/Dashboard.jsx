@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom'
-import Plan from '../../components/Card'
+import Plan from '../../components/Plan'
 import Icon from '../../components/Icon'
 
 export const Dashboard = () => {

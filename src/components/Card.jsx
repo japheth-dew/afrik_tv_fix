@@ -1,15 +1,11 @@
 import Icon from './Icon'
 
-const Plan = ({ className }) => {
+const Card = ({ className, children }) => {
 	return (
 		<div
-			className={`relative w-80 h-40 px-8 py-6 flex justify-between rounded-xl ${className}`}
+			className={`relative w-80 h-40 px-8 py-6 rounded-xl ${className}`}
 		>
-			<div>
-				<h1 className="text-lg font-semibold">Current Plan</h1>
-				<h4 className="mt-5">N2500</h4>
-			</div>
-			<span>Kids</span>
+			{children}
 			<div className="absolute w-full -left-4 z-100 bottom-4">
 				<Icon name="wave" />
 			</div>
@@ -17,4 +13,4 @@ const Plan = ({ className }) => {
 	)
 }
 
-export default Plan
+export default Card
