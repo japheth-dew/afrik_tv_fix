@@ -157,9 +157,11 @@ const billing = () => {
 							</label>
 
 							<br />
+							<a href="/profile/new">
 							<button className="login-btn inline-block shrink-0 rounded-md border px-12 py-3 text-sm font-medium text-white transition focus:outline-none focus:ring">
 								Pay Now
 							</button>
+							</a>
 						</form>
 					</div>
 				</main>

@@ -70,9 +70,9 @@ function Navbar() {
 							className="shadow px-5 py-4"
 							PaperProps={PAPER_PROPS}
 						>
-							<div className="px-5 py-4 flex flex-col gap-4">
+							<div className="flex flex-col gap-4">
 								{new Array(5).fill(0).map((_, i) => (
-									<div className="flex gap-4" key={i}>
+									<div className="flex px-5 py-2 gap-4 cursor-pointer hover:bg-[#f5f5f5]" key={i}>
 										<img src="/src/assets/venge.png" className="w-20 h-20 rounded-xl" />
 										<div className="flex flex-col">
 											<h2 className="font-light">Reminder: new arrival</h2>
