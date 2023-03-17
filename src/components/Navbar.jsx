@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import PlayArrowIcon from '@mui/icons-material/PlayArrow'
 
 function Navbar() {
 	const [buttonOne, setButtonOne] = useState(false)
@@ -20,7 +21,7 @@ function Navbar() {
 					<button
 						id="dropdownNotificationButton"
 						data-dropdown-toggle="dropdownNotification"
-						class="inline-flex items-center text-sm font-medium text-center text-gray-500 hover:text-gray-900 focus:outline-none dark:hover:text-white dark:text-gray-400"
+						class="inline-flex items-center text-sm rounded-lg font-medium text-center text-gray-500 hover:text-gray-900 focus:outline-none dark:hover:text-white dark:text-gray-400"
 						type="button"
 						onClick={() => {
 							setButtonTwo(!buttonTwo)
@@ -260,7 +261,7 @@ function Navbar() {
 					<button
 						id="dropdownUserAvatarButton"
 						data-dropdown-toggle="dropdownAvatar"
-						class="flex bg-white mx-3 text-sm bg-gray-800 rounded-full md:mr-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
+						class="flex bg-white mx-4 text-lg md:mr-0"
 						type="button"
 						onClick={() => {
 							setButtonOne(!buttonOne)
@@ -268,7 +269,7 @@ function Navbar() {
 						}}
 					>
 						<span class="sr-only">Open user menu</span>
-						<img class="w-8 h-8 rounded-full" src="./src/assets/stassss" />
+						<img class="w-8 h-8 rounded-lg" src="/src/assets/second-img.png" />
 					</button>
 					<div
 						id="dropdownAvatar"

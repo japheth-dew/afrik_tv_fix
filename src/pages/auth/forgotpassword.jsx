@@ -69,9 +69,11 @@ const forgotpassword = () => {
 							</div>
 
 							<div class="col-span-6 sm:flex sm:items-center sm:gap-4">
+								<a href="resetpassword">
 								<button class="inline-block shrink-0 login-btn rounded-md border  px-12 py-3 text-sm font-medium text-white transition focus:outline-none ">
 									Forgotten Password
 								</button>
+								</a>
 							</div>
 						</form>
 					</div>

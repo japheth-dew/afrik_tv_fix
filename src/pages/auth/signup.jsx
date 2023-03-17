@@ -127,15 +127,15 @@ const SignUp = () => {
 										id="MarketingAccept"
 										name="marketing_accept"
 										class="h-5 w-5 rounded-md border-gray-200 bg-white shadow-sm"
-									/>
+									required />
 
 									<span class="text-sm text-gray-700">
 										By creating an account, you agree to our{' '}
-										<a href="#" class="text-gray-700 underline">
+										<a href="#" class="text-gray-700">
 											terms and conditions
 										</a>{' '}
 										and{' '}
-										<a href="#" class="text-gray-700 underline">
+										<a href="#" class="text-gray-700">
 											privacy policy
 										</a>
 										.
@@ -144,7 +144,7 @@ const SignUp = () => {
 								<br />
 								<p class="text-sm text-gray-700">
 									Already have an account?{' '}
-									<a href="#" class="text-gray-700 underline">
+									<a href="signin" class="text-gray-700">
 										Log in
 									</a>
 									.
@@ -153,9 +153,11 @@ const SignUp = () => {
 							<br />
 
 							<div class="col-span-6 sm:flex sm:items-center sm:gap-4">
+								<a href="otp">
 								<button class="login-btn inline-block shrink-0 rounded-md border px-12 py-3 text-sm font-medium text-white transition focus:outline-none focus:ring">
 									Create an account
 								</button>
+								</a>
 							</div>
 						</form>
 					</div>
