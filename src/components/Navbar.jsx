@@ -17,7 +17,7 @@ function Navbar() {
 				<div className="flex md:order-2">
 
         <button id="dropdownNotificationButton" data-dropdown-toggle="dropdownNotification" class="inline-flex items-center text-sm font-medium text-center text-gray-500 hover:text-gray-900 focus:outline-none dark:hover:text-white dark:text-gray-400" type="button"> 
-<img src="./src/assets/icons/notification.png" class="w-6 h-6" aria-hidden="true" />
+<img src="/src/assets/icons/notification.png" class="w-6 h-6" aria-hidden="true" />
 <div class="relative flex">
 </div>
 </button>
@@ -101,7 +101,7 @@ function Navbar() {
 					<button
 						id="dropdownUserAvatarButton"
 						data-dropdown-toggle="dropdownAvatar"
-						class="flex mx-3 text-sm bg-gray-800 rounded-full md:mr-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
+						class="flex bg-white mx-3 text-sm bg-gray-800 rounded-full md:mr-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
 						type="button"
 						onClick={() => {
 							setToggle(!toggle)
@@ -115,7 +115,7 @@ function Navbar() {
 					</button>
 					<div
 						id="dropdownAvatar"
-						class={`z-10 absolute right-5 top-12 bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600 ${
+						class={`z-10 absolute right-5 top-12 bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-600 dark:divide-gray-600 ${
 							!toggle ? 'block' : 'hidden'
 						}`}
 					>
