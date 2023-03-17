@@ -35,7 +35,7 @@ function Navbar() {
         </div>
       </div>
       <div class="w-full pl-3">
-          <div class="text-gray-500 text-sm mb-1.5 dark:text-gray-400">New message from <span class="font-semibold text-gray-900 dark:text-white">Jese Leos</span>: "Hey, what's up? All set for the presentation?"</div>
+          <div class="text-gray-500 text-sm mb-1.5 dark:text-gray-400">New movie from <span class="font-semibold text-gray-900 dark:text-white">AfrikTV</span>: Bla bla bla</div>
           <div class="text-xs text-blue-600 dark:text-blue-500">a few moments ago</div>
       </div>
     </a>
@@ -47,7 +47,7 @@ function Navbar() {
         </div>
       </div>
       <div class="w-full pl-3">
-          <div class="text-gray-500 text-sm mb-1.5 dark:text-gray-400"><span class="font-semibold text-gray-900 dark:text-white">Joseph Mcfall</span> and <span class="font-medium text-gray-900 dark:text-white">5 others</span> started following you.</div>
+          <div class="text-gray-500 text-sm mb-1.5 dark:text-gray-400"><span class="font-semibold text-gray-900 dark:text-white">Opemipo</span> bla bla <span class="font-medium text-gray-900 dark:text-white">moviee</span> just dropped</div>
           <div class="text-xs text-blue-600 dark:text-blue-500">10 minutes ago</div>
       </div>
     </a>
@@ -59,7 +59,7 @@ function Navbar() {
         </div>
       </div>
       <div class="w-full pl-3">
-          <div class="text-gray-500 text-sm mb-1.5 dark:text-gray-400"><span class="font-semibold text-gray-900 dark:text-white">Bonnie Green</span> and <span class="font-medium text-gray-900 dark:text-white">141 others</span> love your story. See it and view more stories.</div>
+          <div class="text-gray-500 text-sm mb-1.5 dark:text-gray-400"><span class="font-semibold text-gray-900 dark:text-white">Watch later</span> hdwnsqejwiwfi <span class="font-medium text-gray-900 dark:text-white">hsjqdhdhhn</span> lgededjdiqdiqj</div>
           <div class="text-xs text-blue-600 dark:text-blue-500">44 minutes ago</div>
       </div>
     </a>
@@ -71,7 +71,7 @@ function Navbar() {
         </div>
       </div>
       <div class="w-full pl-3">
-          <div class="text-gray-500 text-sm mb-1.5 dark:text-gray-400"><span class="font-semibold text-gray-900 dark:text-white">Leslie Livingston</span> mentioned you in a comment: <span class="font-medium text-blue-500" href="#">@bonnie.green</span> what do you say?</div>
+          <div class="text-gray-500 text-sm mb-1.5 dark:text-gray-400"><span class="font-semibold text-gray-900 dark:text-white">Recently added</span> movies bla bla</div>
           <div class="text-xs text-blue-600 dark:text-blue-500">1 hour ago</div>
       </div>
     </a>
@@ -83,7 +83,7 @@ function Navbar() {
         </div>
       </div>
       <div class="w-full pl-3">
-          <div class="text-gray-500 text-sm mb-1.5 dark:text-gray-400"><span class="font-semibold text-gray-900 dark:text-white">Robert Brown</span> posted a new video: Glassmorphism - learn how to implement the new design trend.</div>
+          <div class="text-gray-500 text-sm mb-1.5 dark:text-gray-400"><span class="font-semibold text-gray-900 dark:text-white">Opemipo</span> added movie</div>
           <div class="text-xs text-blue-600 dark:text-blue-500">3 hours ago</div>
       </div>
     </a>
