@@ -34,7 +34,7 @@ function Navbar() {
 					<div
 						id="dropdownAvatar"
 						class={`z-10 absolute right-5 top-12 bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600 ${
-							!toggle ? 'block' : 'hidden'
+							toggle ? 'block' : 'hidden'
 						}`}
 					>
 						<div class="px-4 py-3 text-sm text-gray-900 dark:text-white">
