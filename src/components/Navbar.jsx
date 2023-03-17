@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 function Navbar() {
+	const [toggle, setToggle] = useState(false)
 	return (
-		<nav className="bg-white border-gray-200 px-2 sm:px-4 py-2.5">
+		<nav className="sticky top-0 bg-white border-gray-200 px-2 sm:px-4 py-2.5">
 			<div className="container flex flex-wrap items-center justify-between mx-auto">
 				<a href="javascript:void(0)" className="flex items-center logo">
 					<img
@@ -14,12 +15,14 @@ function Navbar() {
 					/>
 				</a>
 				<div className="flex md:order-2">
-					{' '}
 					<button
 						id="dropdownUserAvatarButton"
 						data-dropdown-toggle="dropdownAvatar"
 						class="flex mx-3 text-sm bg-gray-800 rounded-full md:mr-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
 						type="button"
+						onClick={() => {
+							setToggle(!toggle)
+						}}
 					>
 						<span class="sr-only">Open user menu</span>
 						<img
@@ -30,7 +33,9 @@ function Navbar() {
 					</button>
 					<div
 						id="dropdownAvatar"
-						class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
+						class={`z-10 absolute right-5 top-12 bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600 ${
+							!toggle ? 'block' : 'hidden'
+						}`}
 					>
 						<div class="px-4 py-3 text-sm text-gray-900 dark:text-white">
 							<div>Username</div>
