@@ -5,7 +5,7 @@ function Navbar() {
   const [buttonTwo, setButtonTwo] = useState(false)
 
 	return (
-		<nav className="sticky top-0 bg-white border-gray-200 px-2 sm:px-4 py-2.5">
+		<nav className="sticky top-0 z-10 bg-white border-gray-200 px-2 sm:px-4 py-2.5">
 			<div className="container flex flex-wrap items-center justify-between mx-auto">
 				<a href="javascript:void(0)" className="flex items-center logo">
 					<img
