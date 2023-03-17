@@ -29,6 +29,8 @@ import {
 	Activities,
 	WatchLater,
 	RecentlyWatched,
+	AccountSettings,
+	ParentalControl,
 } from './pages/In'
 import Nop from './pages/404/error'
 
@@ -54,7 +56,10 @@ const router = createBrowserRouter(
 				<Route path="" element={<InDashboard />} />
 				<Route path="billing" element={<InBilling />} />
 				<Route path="activities" element={<Activities />} />
-				<Route path="settings" element={<Settings />} />
+				<Route path="settings" element={<Settings />}>
+					<Route path="" element={<AccountSettings />} />
+					<Route path="parental" element={<ParentalControl />} />
+				</Route>
 				<Route path="watch-later" element={<WatchLater />} />
 				<Route path="recently-watched" element={<RecentlyWatched />} />
 			</Route>

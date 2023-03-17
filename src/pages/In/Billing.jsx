@@ -10,7 +10,7 @@ const pricing = [
 
 export const Billing = () => {
 	return (
-		<section>
+		<section className="max-w-4xl">
 			<header className="flex flex-gap items-center gap-6 justify-between">
 				<div className="flex flex-gap items-center gap-6">
 					<NavLink to="/in">
@@ -18,7 +18,7 @@ export const Billing = () => {
 					</NavLink>
 					<h2 className="font-bold text-xl">Billings</h2>
 				</div>
-				<button>Add Card</button>
+				<button className="border border-[#E9E9E9] py-2 px-7 rounded-md">Add Card</button>
 			</header>
 			<div className="mt-8">
 				<span>Active card</span>
@@ -34,7 +34,7 @@ export const Billing = () => {
 				<span>Pricing</span>
 				<div className="flex flex-wrap gap-8 mt-4">
 					{pricing.map((plan) => (
-						<div className="px-16 py-8 rounded-2xl afr-shadow">
+						<div className="px-16 py-8 rounded-2xl afr-shadow cursor-pointer" key={plan.type}>
 							<h2 className="text-xl font-bold capitalize text-center">{plan.type}</h2>
 							<div className="capitalize text-center mt-4">
 								N{plan.price}<br />Per <span className="capitalize">{plan.per}</span>

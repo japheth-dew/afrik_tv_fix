@@ -7,6 +7,9 @@ import { ReactComponent as Clock } from '../assets/icons/clock.svg'
 import { ReactComponent as PlayBox } from '../assets/icons/play-box.svg'
 import { ReactComponent as Back } from '../assets/icons/back.svg'
 import { ReactComponent as Wave } from '../assets/icons/wave.svg'
+import { ReactComponent as Bell } from '../assets/icons/bell.svg'
+import { ReactComponent as Person } from '../assets/icons/person.svg'
+import { ReactComponent as ChevronRight } from '../assets/icons/chevron-right.svg'
 
 const ICONS = {
 	home: Home,
@@ -18,6 +21,9 @@ const ICONS = {
 	playBox: PlayBox,
 	back: Back,
 	wave: Wave,
+	bell: Bell,
+	person: Person,
+	chevronRight: ChevronRight,
 }
 
 const Oops = () => (
