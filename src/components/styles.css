@@ -1,0 +1,3 @@
+.card__posters::-webkit-scrollbar{
+    display: none;
+}

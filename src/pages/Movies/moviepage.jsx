@@ -28,11 +28,11 @@ function Moviepage() {
 						<div></div>
 					</div>
 				</div>
-				<Moviecard title={'Top 10 movies in Africa Today'} shows={6} />
-				<Moviecard title={'Continue Watching'} shows={2} />
-				<Moviecard title={'Adult Animations'} shows={5} />
-				<Moviecard title={'Anime'} shows={6} />
-				<Moviecard title={'Crime and TV shows'} shows={4} />
+				<Moviecard title={'Top 10 movies in Africa Today'} />
+				<Moviecard title={'Trending Now'}/>
+				<Moviecard title={'Action Movies'}/>
+				<Moviecard title={'Korean Drama Series'}/>
+				<Moviecard title={'Romance and Comedy Movies'}/>
 			</div>
 		</div>
 	)
