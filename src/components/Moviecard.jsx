@@ -28,23 +28,27 @@ function Moviecard({title}) {
 		<div className='ml-5 mt-12'>
 		<h2 className='text-4xl font-semibold'>{title}</h2>
 		<div className='flex overflow-y-hidden overflow-x-scroll p-5 card__posters transition-transform '>
-			<div className='h-[150px] min-w-[250px] mr-2.5 duration-500 hover:scale-105 hover:opacity-100 bg-[yellow]'></div>
-			<div className='h-[150px] min-w-[250px] mr-2.5 duration-500 hover:scale-105 hover:opacity-100 bg-[black]'></div>
-			<div className='h-[150px] min-w-[250px] mr-2.5 duration-500 hover:scale-105 hover:opacity-100  bg-[red]'></div>
-			<div className='h-[150px] min-w-[250px] mr-2.5 duration-500 hover:scale-105 hover:opacity-100  bg-[purple]'></div>
-			<div className='h-[150px] min-w-[250px] mr-2.5 duration-500 hover:scale-105 hover:opacity-100  bg-[orange]'></div>
-			<div className='h-[150px] min-w-[250px] mr-2.5 duration-500 hover:scale-105 hover:opacity-100  bg-[gold]'></div>
-			<div className='h-[150px] min-w-[250px] mr-2.5 duration-500 hover:scale-105 hover:opacity-100  bg-[purple]'></div>
-			<div className='h-[150px] min-w-[250px] mr-2.5 duration-500 hover:scale-105 hover:opacity-100  bg-[brown]'></div>
-			<div className='h-[150px] min-w-[250px] mr-2.5 duration-500 hover:scale-105 hover:opacity-100  bg-[gray]'></div>
-			<div className='h-[150px] min-w-[250px] mr-2.5 duration-500 hover:scale-105 hover:opacity-100  bg-[yellow]'></div>
-			<div className='h-[150px] min-w-[250px] mr-2.5 duration-500 hover:scale-105 hover:opacity-100  bg-[orange]'></div>
-			<div className='h-[150px] min-w-[250px] mr-2.5 duration-500 hover:scale-105 hover:opacity-100  bg-[pink]'></div>
-			<div className='h-[150px] min-w-[250px] mr-2.5 duration-500 hover:scale-105 hover:opacity-100  bg-[red]'></div>
-			<div className='h-[150px] min-w-[250px] mr-2.5 duration-500 hover:scale-105 hover:opacity-100  bg-[purple]'></div>
-			<div className='h-[150px] min-w-[250px] mr-2.5 duration-500 hover:scale-105 hover:opacity-100  bg-[red]'></div>
-			<div className='h-[150px] min-w-[250px] mr-2.5 duration-500 hover:scale-105 hover:opacity-100  bg-[black]'></div>
-			<div className='h-[150px] min-w-[250px] mr-2.5 duration-500 hover:scale-105 hover:opacity-100  bg-[orange]'></div>
+		<img className='h-[150px] mr-2.5 duration-500 hover:scale-105 hover:opacity-100 object-contain' src="https://i.pinimg.com/474x/9a/b3/b5/9ab3b59541a9e257306d53170968f5f4.jpg" alt="" />
+		<img className='h-[150px] mr-2.5 duration-500 hover:scale-105 hover:opacity-100 object-contain' src="https://i.pinimg.com/474x/9a/b3/b5/9ab3b59541a9e257306d53170968f5f4.jpg" alt="" />
+		<img className='h-[150px] mr-2.5 duration-500 hover:scale-105 hover:opacity-100 object-contain' src="https://i.pinimg.com/474x/9a/b3/b5/9ab3b59541a9e257306d53170968f5f4.jpg" alt="" />
+		<img className='h-[150px] mr-2.5 duration-500 hover:scale-105 hover:opacity-100 object-contain' src="https://i.pinimg.com/474x/9a/b3/b5/9ab3b59541a9e257306d53170968f5f4.jpg" alt="" />
+		<img className='h-[150px] mr-2.5 duration-500 hover:scale-105 hover:opacity-100 object-contain' src="https://i.pinimg.com/474x/9a/b3/b5/9ab3b59541a9e257306d53170968f5f4.jpg" alt="" />
+		<img className='h-[150px] mr-2.5 duration-500 hover:scale-105 hover:opacity-100 object-contain' src="https://i.pinimg.com/474x/9a/b3/b5/9ab3b59541a9e257306d53170968f5f4.jpg" alt="" />
+		<img className='h-[150px] mr-2.5 duration-500 hover:scale-105 hover:opacity-100 object-contain' src="https://i.pinimg.com/474x/9a/b3/b5/9ab3b59541a9e257306d53170968f5f4.jpg" alt="" />
+		<img className='h-[150px] mr-2.5 duration-500 hover:scale-105 hover:opacity-100 object-contain' src="https://i.pinimg.com/474x/9a/b3/b5/9ab3b59541a9e257306d53170968f5f4.jpg" alt="" />
+		<img className='h-[150px] mr-2.5 duration-500 hover:scale-105 hover:opacity-100 object-contain' src="https://i.pinimg.com/474x/9a/b3/b5/9ab3b59541a9e257306d53170968f5f4.jpg" alt="" />
+		<img className='h-[150px] mr-2.5 duration-500 hover:scale-105 hover:opacity-100 object-contain' src="https://i.pinimg.com/474x/9a/b3/b5/9ab3b59541a9e257306d53170968f5f4.jpg" alt="" />
+		<img className='h-[150px] mr-2.5 duration-500 hover:scale-105 hover:opacity-100 object-contain' src="https://i.pinimg.com/474x/9a/b3/b5/9ab3b59541a9e257306d53170968f5f4.jpg" alt="" />
+		<img className='h-[150px] mr-2.5 duration-500 hover:scale-105 hover:opacity-100 object-contain' src="https://i.pinimg.com/474x/9a/b3/b5/9ab3b59541a9e257306d53170968f5f4.jpg" alt="" />
+		<img className='h-[150px] mr-2.5 duration-500 hover:scale-105 hover:opacity-100 object-contain' src="https://i.pinimg.com/474x/9a/b3/b5/9ab3b59541a9e257306d53170968f5f4.jpg" alt="" />
+		<img className='h-[150px] mr-2.5 duration-500 hover:scale-105 hover:opacity-100 object-contain' src="https://i.pinimg.com/474x/9a/b3/b5/9ab3b59541a9e257306d53170968f5f4.jpg" alt="" />
+		<img className='h-[150px] mr-2.5 duration-500 hover:scale-105 hover:opacity-100 object-contain' src="https://i.pinimg.com/474x/9a/b3/b5/9ab3b59541a9e257306d53170968f5f4.jpg" alt="" />
+		<img className='h-[150px] mr-2.5 duration-500 hover:scale-105 hover:opacity-100 object-contain' src="https://i.pinimg.com/474x/9a/b3/b5/9ab3b59541a9e257306d53170968f5f4.jpg" alt="" />
+		<img className='h-[150px] mr-2.5 duration-500 hover:scale-105 hover:opacity-100 object-contain' src="https://i.pinimg.com/474x/9a/b3/b5/9ab3b59541a9e257306d53170968f5f4.jpg" alt="" />
+		<img className='h-[150px] mr-2.5 duration-500 hover:scale-105 hover:opacity-100 object-contain' src="https://i.pinimg.com/474x/9a/b3/b5/9ab3b59541a9e257306d53170968f5f4.jpg" alt="" />
+			
+			{/* <div className='h-[150px] min-w-[250px] mr-2.5 duration-500 hover:scale-105 hover:opacity-100  bg-[orange]'></div> */}
+			
 		</div>
 
 		</div>
