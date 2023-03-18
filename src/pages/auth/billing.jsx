@@ -66,7 +66,7 @@ const billing = () => {
 									id="card-number"
 									className="block py-2.5 px-0 w-full text-sm text-black  bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-dark dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
 									placeholder=" "
-									required
+						
 								/>
 								<label
 									htmlFor="floating_cardnum"
@@ -85,7 +85,7 @@ const billing = () => {
 									id="expirydate"
 									className="block py-2.5 px-0 w-full text-sm text-black  bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-dark dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
 									placeholder=" "
-									required
+							
 								/>
 								<label
 									htmlFor="floating_expirydate"
@@ -104,7 +104,7 @@ const billing = () => {
 									id="expirydate"
 									className="block py-2.5 px-0 w-full text-sm text-black  bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-dark dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
 									placeholder=" "
-									required
+						
 								/>
 								<label
 									htmlFor="floating_expirydate"

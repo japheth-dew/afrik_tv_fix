@@ -50,7 +50,7 @@ const SignUp = () => {
 							</p>
 						</div>
 						<br />
-						<form action="#">
+						<form>
 							<div class="relative z-0 w-full mb-6 group">
 								<input
 									type="text"
@@ -58,7 +58,7 @@ const SignUp = () => {
 									id="fullname"
 									class="block py-2.5 px-0 w-full text-sm text-black  bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-dark dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
 									placeholder=" "
-									required
+							
 								/>
 								<label
 									for="floating_fname"
@@ -76,7 +76,6 @@ const SignUp = () => {
 									id="email"
 									class="block py-2.5 px-0 w-full text-sm text-black  bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-dark dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
 									placeholder=" "
-									required
 								/>
 								<label
 									for="floating_email"
@@ -93,7 +92,6 @@ const SignUp = () => {
 									id="password"
 									class="block py-2.5 px-0 w-full text-sm text-black  bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-dark dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
 									placeholder=" "
-									required
 								/>
 								<label
 									for="floating_pwd"
@@ -110,7 +108,7 @@ const SignUp = () => {
 									id="repeatpassword"
 									class="block py-2.5 px-0 w-full text-sm text-black  bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-dark dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
 									placeholder=" "
-									required
+									
 								/>
 								<label
 									for="floating_repwd"
@@ -127,7 +125,7 @@ const SignUp = () => {
 										id="MarketingAccept"
 										name="marketing_accept"
 										class="h-5 w-5 rounded-md border-gray-200 bg-white shadow-sm"
-									required />
+								 />
 
 									<span class="text-sm text-gray-700">
 										By creating an account, you agree to our{' '}
