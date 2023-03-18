@@ -50,7 +50,7 @@ const SignUp = () => {
 							</p>
 						</div>
 						<br />
-						<form action="#">
+						<form>
 							<div class="relative z-0 w-full mb-6 group">
 								<input
 									type="text"
@@ -58,7 +58,7 @@ const SignUp = () => {
 									id="fullname"
 									class="block py-2.5 px-0 w-full text-sm text-black  bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-dark dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
 									placeholder=" "
-									required
+							
 								/>
 								<label
 									for="floating_fname"
@@ -76,7 +76,6 @@ const SignUp = () => {
 									id="email"
 									class="block py-2.5 px-0 w-full text-sm text-black  bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-dark dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
 									placeholder=" "
-									required
 								/>
 								<label
 									for="floating_email"
@@ -93,7 +92,6 @@ const SignUp = () => {
 									id="password"
 									class="block py-2.5 px-0 w-full text-sm text-black  bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-dark dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
 									placeholder=" "
-									required
 								/>
 								<label
 									for="floating_pwd"
@@ -110,7 +108,7 @@ const SignUp = () => {
 									id="repeatpassword"
 									class="block py-2.5 px-0 w-full text-sm text-black  bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-dark dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
 									placeholder=" "
-									required
+									
 								/>
 								<label
 									for="floating_repwd"
@@ -127,15 +125,15 @@ const SignUp = () => {
 										id="MarketingAccept"
 										name="marketing_accept"
 										class="h-5 w-5 rounded-md border-gray-200 bg-white shadow-sm"
-									/>
+								 />
 
 									<span class="text-sm text-gray-700">
 										By creating an account, you agree to our{' '}
-										<a href="#" class="text-gray-700 underline">
+										<a href="#" class="text-gray-700">
 											terms and conditions
 										</a>{' '}
 										and{' '}
-										<a href="#" class="text-gray-700 underline">
+										<a href="#" class="text-gray-700">
 											privacy policy
 										</a>
 										.
@@ -144,7 +142,7 @@ const SignUp = () => {
 								<br />
 								<p class="text-sm text-gray-700">
 									Already have an account?{' '}
-									<a href="#" class="text-gray-700 underline">
+									<a href="signin" class="text-gray-700">
 										Log in
 									</a>
 									.
@@ -153,9 +151,11 @@ const SignUp = () => {
 							<br />
 
 							<div class="col-span-6 sm:flex sm:items-center sm:gap-4">
+								<a href="otp">
 								<button class="login-btn inline-block shrink-0 rounded-md border px-12 py-3 text-sm font-medium text-white transition focus:outline-none focus:ring">
 									Create an account
 								</button>
+								</a>
 							</div>
 						</form>
 					</div>

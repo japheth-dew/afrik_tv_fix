@@ -50,7 +50,7 @@ const forgotpassword = () => {
 							</p>
 						</div>
 						<br />
-						<form action="#">
+						<form>
 							<div class="relative z-0 w-full mb-6 group">
 								<input
 									type="email"
@@ -58,7 +58,6 @@ const forgotpassword = () => {
 									id="email"
 									class="block py-2.5 px-0 w-full text-sm text-black  bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-dark dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
 									placeholder=" "
-									required
 								/>
 								<label
 									for="floating_email"
@@ -69,9 +68,11 @@ const forgotpassword = () => {
 							</div>
 
 							<div class="col-span-6 sm:flex sm:items-center sm:gap-4">
+								<a href="resetpassword">
 								<button class="inline-block shrink-0 login-btn rounded-md border  px-12 py-3 text-sm font-medium text-white transition focus:outline-none ">
 									Forgotten Password
 								</button>
+								</a>
 							</div>
 						</form>
 					</div>

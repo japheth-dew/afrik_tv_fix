@@ -10,6 +10,8 @@ import SignIn from './pages/auth/signin'
 import SignUp from './pages/auth/signup'
 import Otp from './pages/auth/otp'
 import Forgotpassword from './pages/auth/forgotpassword'
+import Repassword from './pages/auth/resetpassword'
+
 
 import Manageprofile from './pages/Profile/manageprofile'
 import ProfileEdit from './pages/Profile/profileedit'
@@ -29,6 +31,8 @@ import {
 	Activities,
 	WatchLater,
 	RecentlyWatched,
+	AccountSettings,
+	ParentalControl,
 } from './pages/In'
 import Nop from './pages/404/error'
 
@@ -41,6 +45,7 @@ const router = createBrowserRouter(
 			<Route path="/auth/signin" element={<SignIn />} />
 			<Route path="/auth/signup" element={<SignUp />} />
 			<Route path="/auth/otp" element={<Otp />} />
+			<Route path="/auth/resetpassword" element={<Repassword />} />
 			<Route path="/auth/forgotpassword" element={<Forgotpassword />} />
 			<Route path="/profile/manageprofile" element={<Manageprofile />} />
 			<Route path="/profile/chooseprofile" element={<Chooseprofile />} />
@@ -54,7 +59,10 @@ const router = createBrowserRouter(
 				<Route path="" element={<InDashboard />} />
 				<Route path="billing" element={<InBilling />} />
 				<Route path="activities" element={<Activities />} />
-				<Route path="settings" element={<Settings />} />
+				<Route path="settings" element={<Settings />}>
+					<Route path="" element={<AccountSettings />} />
+					<Route path="parental" element={<ParentalControl />} />
+				</Route>
 				<Route path="watch-later" element={<WatchLater />} />
 				<Route path="recently-watched" element={<RecentlyWatched />} />
 			</Route>

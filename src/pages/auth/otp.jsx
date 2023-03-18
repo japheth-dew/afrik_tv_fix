@@ -59,7 +59,7 @@ const otp = () => {
 													type="text"
 													name=""
 													id=""
-												/>
+												required />
 											</div>
 											<div className="w-16 h-16 ">
 												<input
@@ -67,7 +67,7 @@ const otp = () => {
 													type="text"
 													name=""
 													id=""
-												/>
+												required />
 											</div>
 											<div className="w-16 h-16 ">
 												<input
@@ -75,7 +75,7 @@ const otp = () => {
 													type="text"
 													name=""
 													id=""
-												/>
+												required />
 											</div>
 											<div className="w-16 h-16 ">
 												<input
@@ -83,15 +83,17 @@ const otp = () => {
 													type="text"
 													name=""
 													id=""
-												/>
+												required />
 											</div>
 										</div>
 
 										<div className="flex flex-col space-y-5">
 											<div>
+												<a href="/auth/planform">
 												<button className="flex flex-row items-center justify-center text-center w-full border rounded-xl outline-none py-5 login-btn border-none text-white text-sm shadow-sm ">
 													Verify Account
 												</button>
+												</a>
 											</div>
 										</div>
 

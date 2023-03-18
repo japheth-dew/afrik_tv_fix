@@ -49,7 +49,7 @@ const SignIn = () => {
 							</p>
 						</div>
 						<br />
-						<form action="#">
+						<form>
 							<div class="relative z-0 w-full mb-6 group">
 								<input
 									type="email"
@@ -57,7 +57,6 @@ const SignIn = () => {
 									id="email"
 									class="block py-2.5 px-0 w-full text-sm text-black  bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-dark dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
 									placeholder=" "
-									required
 								/>
 								<label
 									for="floating_email"
@@ -70,33 +69,38 @@ const SignIn = () => {
 							<div class="relative z-0 w-full mb-6 group">
 								<input
 									type="password"
-									name="floating_repwd"
-									id="repeatpassword"
+									name="floating_pwd"
+									id="password"
 									class="block py-2.5 px-0 w-full text-sm text-black  bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-dark dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
 									placeholder=" "
-									required
 								/>
 								<label
-									for="floating_repwd"
+									for="floating_pwd"
 									class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
 								>
-									Confirm Password
+									 Password
 								</label>
 							</div>
 
 							<div class="col-span-6">
 								<p class="mt-4 text-sm text-gray-500 sm:mt-0">
-									<a href="#" class="text-gray-700 underline">
+									<a href="/auth/forgotpassword" class="text-gray-700">
 										Forgotten Password?
+									</a>
+								</p>
+
+								<p class="mt-4 text-sm text-gray-500 sm:mt-0"> New to AfrikTV <a href="/auth/signup" class="text-gray-700">Sign Up now
 									</a>
 								</p>
 							</div>
 							<br />
 
 							<div class="col-span-6 sm:flex sm:items-center sm:gap-4">
+								<a href="/profile/chooseprofile">
 								<button class="inline-block shrink-0 login-btn rounded-md border  px-12 py-3 text-sm font-medium text-white transition focus:outline-none ">
 									Sign In
 								</button>
+								</a>
 							</div>
 						</form>
 					</div>

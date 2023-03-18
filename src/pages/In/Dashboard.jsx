@@ -25,7 +25,7 @@ export const Dashboard = () => {
 								to="/in/watch-later"
 								className="px-5 py-3 rounded flex gap-4 items-center cursor-pointer hover:bg-white"
 							>
-								<span className="bg-[#F0F1FE] p-2 justify-center items-center rounded-md">
+								<span className="bg-[#F0F1FE] w-8 h-8 flex justify-center items-center rounded-lg">
 									<Icon name="playBox" />
 								</span>
 								Watch Later
@@ -34,13 +34,13 @@ export const Dashboard = () => {
 								to="/in/recently-watched"
 								className="px-5 py-3 rounded flex gap-4 items-center cursor-pointer hover:bg-white"
 							>
-								<span className="bg-[#F0F1FE] p-2 justify-center items-center rounded-md">
+								<span className="bg-[#F0F1FE] w-8 h-8 flex justify-center items-center rounded-lg">
 									<Icon name="tv" />
 								</span>
 								Recently watched
 							</NavLink>
 							<div className="px-5 py-3 rounded flex gap-4 items-center cursor-pointer hover:bg-white">
-								<span className="bg-[#F0F1FE] p-2 justify-center items-center rounded-md">
+								<span className="bg-[#F0F1FE] w-8 h-8 flex justify-center items-center rounded-lg">
 									<Icon name="clock" />
 								</span>
 								Recently played

@@ -16,7 +16,7 @@ const planform = () => {
 						/>
 					</a>
 					<div className="flex md:order-2">
-					<a href="/auth/signin">
+					<a href="#">
 							{' '}
 							<button
 								type="button"
@@ -68,7 +68,7 @@ const planform = () => {
 										</span>
 									</p>
 
-									<a href="#" className="">
+									<a href="billing" className="">
 										<p className="w-full py-4 login-btn mt-8 rounded-xl text-white text-center">
 											<span className="font-medium">Choose Plan</span>
 										</p>
@@ -102,7 +102,7 @@ const planform = () => {
 										</span>
 									</p>
 									
-									<a href="#" className="">
+									<a href="billing" className="">
 										<p className="w-full py-4 border border-gray-800 mt-8 rounded-xl text-white text-center">
 											<span className="font-medium">Choose Plan</span>
 										</p>
@@ -137,7 +137,7 @@ const planform = () => {
 										</span>
 									</p>
 
-									<a href="#" className="">
+									<a href="billing" className="">
 										<p className="w-full py-4 login-btn mt-8 rounded-xl text-white text-center">
 											<span className="font-medium">Choose Plan</span>
 										</p>
