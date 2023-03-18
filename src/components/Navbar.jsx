@@ -64,7 +64,7 @@ function Navbar() {
 </form>
 
 
-					<div>
+					<div className='flex items-center'>
 						<button
 							id="basic-button"
 							className="p-0"
@@ -98,7 +98,7 @@ function Navbar() {
 							</div>
 						</Menu>
 					</div>
-					<div>
+					<div className='flex items-center'>
 						<button
 							id="basic-button"
 							aria-controls={openUser ? 'basic-menu' : undefined}
