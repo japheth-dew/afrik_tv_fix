@@ -1,14 +1,46 @@
+import { Button, Menu, MenuItem } from '@mui/material'
 import React, { useState } from 'react'
-import PlayArrowIcon from '@mui/icons-material/PlayArrow'
+import useMenu from '../hooks/useMenu'
+import Icon from './Icon'
+
+const ITEM_HEIGHT = 80;
+const PAPER_PROPS = {
+	style: {
+		maxHeight: ITEM_HEIGHT * 4.5,
+	},
+	elevation: 0,
+	sx: {
+		boxShadow: '0px 4px 34px 0px rgba(117, 121, 132, 0.19)',
+		mt: 1.5,
+		'& .MuiAvatar-root': {
+			width: 32,
+			height: 32,
+			ml: -0.5,
+			mr: 1,
+		},
+		'&:before': {
+			content: '""',
+			display: 'block',
+			position: 'absolute',
+			top: 0,
+			right: 14,
+			width: 10,
+			height: 10,
+			bgcolor: 'background.paper',
+			transform: 'translateY(-50%) rotate(45deg)',
+			zIndex: 0,
+		},
+	},
+}
 
 function Navbar() {
-	const [buttonOne, setButtonOne] = useState(false)
-  const [buttonTwo, setButtonTwo] = useState(false)
+	const [openBell, bellMenu, handleBellClick, handleBellClose] = useMenu();
+	const [openUser, userMenu, handleUserClick, handleUserClose] = useMenu();
 
 	return (
 		<nav className="sticky top-0 z-10 bg-white border-gray-200 px-2 sm:px-4 py-2.5">
-			<div className="container flex flex-wrap items-center justify-between mx-auto">
-				<a href="javascript:void(0)" className="flex items-center logo">
+			<div className="max-w-8xl flex flex-wrap items-center justify-between mx-auto">
+				<span className="flex items-center logo cursor-pointer">
 					<img
 						src="/src/assets/afriklogo.png"
 						className=""
@@ -16,308 +48,77 @@ function Navbar() {
 						width=""
 						alt="AfrikTV Logo"
 					/>
-				</a>
-				<div className="flex md:order-2">
-					<button
-						id="dropdownNotificationButton"
-						data-dropdown-toggle="dropdownNotification"
-						class="inline-flex items-center text-sm rounded-lg font-medium text-center text-gray-500 hover:text-gray-900 focus:outline-none dark:hover:text-white dark:text-gray-400"
-						type="button"
-						onClick={() => {
-							setButtonTwo(!buttonTwo)
-              setButtonOne(false)
-						}}
-					>
-						<img
-							src="/src/assets/icons/notification.png"
-							class="w-6 h-6"
-							aria-hidden="true"
-						/>
-						<div class="relative flex"></div>
-					</button>
-
-					<div
-						id="dropdownNotification"
-						class={`z-20 absolute right-16 top-12 w-full max-w-sm bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-800 dark:divide-gray-700 ${buttonTwo ? "block" : "hidden"}`}
-						aria-labelledby="dropdownNotificationButton"
-					>
-						<div class="block px-4 py-2 font-medium text-center text-gray-700 rounded-t-lg bg-gray-50 dark:bg-gray-800 dark:text-white">
-							Notifications
-						</div>
-						<div class="divide-y divide-gray-100 dark:divide-gray-700">
-							<a
-								href="#"
-								class="flex px-4 py-3 hover:bg-gray-100 dark:hover:bg-gray-700"
-							>
-								<div class="flex-shrink-0">
-									<img
-										class="rounded-full w-11 h-11"
-										src="/docs/images/people/profile-picture-1.jpg"
-										alt="Jese image"
-									/>
-									<div class="absolute flex items-center justify-center w-5 h-5 ml-6 -mt-5 bg-blue-600 border border-white rounded-full dark:border-gray-800">
-										<svg
-											class="w-3 h-3 text-white"
-											aria-hidden="true"
-											fill="currentColor"
-											viewBox="0 0 20 20"
-											xmlns="http://www.w3.org/2000/svg"
-										>
-											<path d="M8.707 7.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l2-2a1 1 0 00-1.414-1.414L11 7.586V3a1 1 0 10-2 0v4.586l-.293-.293z"></path>
-											<path d="M3 5a2 2 0 012-2h1a1 1 0 010 2H5v7h2l1 2h4l1-2h2V5h-1a1 1 0 110-2h1a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2V5z"></path>
-										</svg>
-									</div>
-								</div>
-								<div class="w-full pl-3">
-									<div class="text-gray-500 text-sm mb-1.5 dark:text-gray-400">
-										New movie from{' '}
-										<span class="font-semibold text-gray-900 dark:text-white">
-											AfrikTV
-										</span>
-										: Bla bla bla
-									</div>
-									<div class="text-xs text-blue-600 dark:text-blue-500">
-										a few moments ago
-									</div>
-								</div>
-							</a>
-							<a
-								href="#"
-								class="flex px-4 py-3 hover:bg-gray-100 dark:hover:bg-gray-700"
-							>
-								<div class="flex-shrink-0">
-									<img
-										class="rounded-full w-11 h-11"
-										src="/docs/images/people/profile-picture-2.jpg"
-										alt="Joseph image"
-									/>
-									<div class="absolute flex items-center justify-center w-5 h-5 ml-6 -mt-5 bg-gray-900 border border-white rounded-full dark:border-gray-800">
-										<svg
-											class="w-3 h-3 text-white"
-											aria-hidden="true"
-											fill="currentColor"
-											viewBox="0 0 20 20"
-											xmlns="http://www.w3.org/2000/svg"
-										>
-											<path d="M8 9a3 3 0 100-6 3 3 0 000 6zM8 11a6 6 0 016 6H2a6 6 0 016-6zM16 7a1 1 0 10-2 0v1h-1a1 1 0 100 2h1v1a1 1 0 102 0v-1h1a1 1 0 100-2h-1V7z"></path>
-										</svg>
-									</div>
-								</div>
-								<div class="w-full pl-3">
-									<div class="text-gray-500 text-sm mb-1.5 dark:text-gray-400">
-										<span class="font-semibold text-gray-900 dark:text-white">
-											Opemipo
-										</span>{' '}
-										bla bla{' '}
-										<span class="font-medium text-gray-900 dark:text-white">
-											moviee
-										</span>{' '}
-										just dropped
-									</div>
-									<div class="text-xs text-blue-600 dark:text-blue-500">
-										10 minutes ago
-									</div>
-								</div>
-							</a>
-							<a
-								href="#"
-								class="flex px-4 py-3 hover:bg-gray-100 dark:hover:bg-gray-700"
-							>
-								<div class="flex-shrink-0">
-									<img
-										class="rounded-full w-11 h-11"
-										src="/docs/images/people/profile-picture-3.jpg"
-										alt="Bonnie image"
-									/>
-									<div class="absolute flex items-center justify-center w-5 h-5 ml-6 -mt-5 bg-red-600 border border-white rounded-full dark:border-gray-800">
-										<svg
-											class="w-3 h-3 text-white"
-											aria-hidden="true"
-											fill="currentColor"
-											viewBox="0 0 20 20"
-											xmlns="http://www.w3.org/2000/svg"
-										>
-											<path
-												fill-rule="evenodd"
-												d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
-												clip-rule="evenodd"
-											></path>
-										</svg>
-									</div>
-								</div>
-								<div class="w-full pl-3">
-									<div class="text-gray-500 text-sm mb-1.5 dark:text-gray-400">
-										<span class="font-semibold text-gray-900 dark:text-white">
-											Watch later
-										</span>{' '}
-										hdwnsqejwiwfi{' '}
-										<span class="font-medium text-gray-900 dark:text-white">
-											hsjqdhdhhn
-										</span>{' '}
-										lgededjdiqdiqj
-									</div>
-									<div class="text-xs text-blue-600 dark:text-blue-500">
-										44 minutes ago
-									</div>
-								</div>
-							</a>
-							<a
-								href="#"
-								class="flex px-4 py-3 hover:bg-gray-100 dark:hover:bg-gray-700"
-							>
-								<div class="flex-shrink-0">
-									<img
-										class="rounded-full w-11 h-11"
-										src="/docs/images/people/profile-picture-4.jpg"
-										alt="Leslie image"
-									/>
-									<div class="absolute flex items-center justify-center w-5 h-5 ml-6 -mt-5 bg-green-400 border border-white rounded-full dark:border-gray-800">
-										<svg
-											class="w-3 h-3 text-white"
-											aria-hidden="true"
-											fill="currentColor"
-											viewBox="0 0 20 20"
-											xmlns="http://www.w3.org/2000/svg"
-										>
-											<path
-												fill-rule="evenodd"
-												d="M18 13V5a2 2 0 00-2-2H4a2 2 0 00-2 2v8a2 2 0 002 2h3l3 3 3-3h3a2 2 0 002-2zM5 7a1 1 0 011-1h8a1 1 0 110 2H6a1 1 0 01-1-1zm1 3a1 1 0 100 2h3a1 1 0 100-2H6z"
-												clip-rule="evenodd"
-											></path>
-										</svg>
-									</div>
-								</div>
-								<div class="w-full pl-3">
-									<div class="text-gray-500 text-sm mb-1.5 dark:text-gray-400">
-										<span class="font-semibold text-gray-900 dark:text-white">
-											Recently added
-										</span>{' '}
-										movies bla bla
-									</div>
-									<div class="text-xs text-blue-600 dark:text-blue-500">
-										1 hour ago
-									</div>
-								</div>
-							</a>
-							<a
-								href="#"
-								class="flex px-4 py-3 hover:bg-gray-100 dark:hover:bg-gray-700"
-							>
-								<div class="flex-shrink-0">
-									<img
-										class="rounded-full w-11 h-11"
-										src="/docs/images/people/profile-picture-5.jpg"
-										alt="Robert image"
-									/>
-									<div class="absolute flex items-center justify-center w-5 h-5 ml-6 -mt-5 bg-purple-500 border border-white rounded-full dark:border-gray-800">
-										<svg
-											class="w-3 h-3 text-white"
-											aria-hidden="true"
-											fill="currentColor"
-											viewBox="0 0 20 20"
-											xmlns="http://www.w3.org/2000/svg"
-										>
-											<path d="M2 6a2 2 0 012-2h6a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6zM14.553 7.106A1 1 0 0014 8v4a1 1 0 00.553.894l2 1A1 1 0 0018 13V7a1 1 0 00-1.447-.894l-2 1z"></path>
-										</svg>
-									</div>
-								</div>
-								<div class="w-full pl-3">
-									<div class="text-gray-500 text-sm mb-1.5 dark:text-gray-400">
-										<span class="font-semibold text-gray-900 dark:text-white">
-											Opemipo
-										</span>{' '}
-										added movie
-									</div>
-									<div class="text-xs text-blue-600 dark:text-blue-500">
-										3 hours ago
-									</div>
-								</div>
-							</a>
-						</div>
-						<a
-							href="#"
-							class="block py-2 text-sm font-medium text-center text-gray-900 rounded-b-lg bg-gray-50 hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-700 dark:text-white"
+				</span>
+				<div className="flex gap-4 ml-auto">
+					<div>
+						<button
+							id="basic-button"
+							className="p-0"
+							aria-controls={openBell ? 'basic-menu' : undefined}
+							aria-haspopup="true"
+							aria-expanded={openBell ? 'true' : undefined}
+							onClick={handleBellClick}
 						>
-							<div class="inline-flex items-center ">
-								<svg
-									class="w-4 h-4 mr-2 text-gray-500 dark:text-gray-400"
-									aria-hidden="true"
-									fill="currentColor"
-									viewBox="0 0 20 20"
-									xmlns="http://www.w3.org/2000/svg"
-								>
-									<path d="M10 12a2 2 0 100-4 2 2 0 000 4z"></path>
-									<path
-										fill-rule="evenodd"
-										d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z"
-										clip-rule="evenodd"
-									></path>
-								</svg>
-								View all
+							<Icon name="bell" />
+						</button>
+						<Menu
+							id="basic-menu"
+							anchorEl={bellMenu}
+							open={openBell}
+							onClose={handleBellClose}
+							MenuListProps={{ 'aria-labelledby': 'basic-button' }}
+							className="shadow px-5 py-4"
+							PaperProps={PAPER_PROPS}
+						>
+							<div className="flex flex-col gap-4">
+								{new Array(5).fill(0).map((_, i) => (
+									<div className="flex px-5 py-2 gap-4 cursor-pointer hover:bg-[#f5f5f5]" key={i}>
+										<img src="/src/assets/venge.png" className="w-20 h-20 rounded-xl" />
+										<div className="flex flex-col">
+											<h2 className="font-light">Reminder: new arrival</h2>
+											<h2>Venge</h2>
+											<small className="mt-auto font-light">2 hrs ago</small>
+										</div>
+									</div>
+								))}
 							</div>
-						</a>
+						</Menu>
 					</div>
-
-					<button
-						id="dropdownUserAvatarButton"
-						data-dropdown-toggle="dropdownAvatar"
-						class="flex bg-white mx-4 text-lg md:mr-0"
-						type="button"
-						onClick={() => {
-							setButtonOne(!buttonOne)
-              setButtonTwo(false)
-						}}
-					>
-						<span class="sr-only">Open user menu</span>
-						<img class="w-8 h-8 rounded-lg" src="/src/assets/second-img.png" />
-					</button>
-					<div
-						id="dropdownAvatar"
-						class={`z-10 absolute right-5 top-12 bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-600 dark:divide-gray-600 ${
-							buttonOne ? 'block' : 'hidden'
-						}`}
-					>
-						<div class="px-4 py-3 text-sm text-gray-900 dark:text-white">
-							<div>Username</div>
-							<div class="font-medium truncate">Other information</div>
-						</div>
-						<ul
-							class="py-2 text-sm text-gray-700 dark:text-gray-200"
-							aria-labelledby="dropdownUserAvatarButton"
+					<div>
+						<button
+							id="basic-button"
+							aria-controls={openUser ? 'basic-menu' : undefined}
+							aria-haspopup="true"
+							aria-expanded={openUser ? 'true' : undefined}
+							onClick={handleUserClick}
 						>
-							<li>
-								<a
-									href="#"
-									class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-								>
-									Link
-								</a>
-							</li>
-							<li>
-								<a
-									href="#"
-									class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-								>
-									Link
-								</a>
-							</li>
-							<li>
-								<a
-									href="#"
-									class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-								>
-									Link
-								</a>
-							</li>
-						</ul>
-						<div class="py-2">
-							<a
-								href="#"
-								class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
-							>
-								Link
-							</a>
-						</div>
+							<img className="w-8 h-8 rounded-lg" src="/src/assets/profile.png" />
+						</button>
+						<Menu
+							id="basic-menu"
+							anchorEl={userMenu}
+							open={openUser}
+							onClose={handleUserClose}
+							MenuListProps={{
+								'aria-labelledby': 'basic-button',
+							}}
+							PaperProps={PAPER_PROPS}
+						>
+							<MenuItem onClick={handleUserClose} className="flex gap-4 hover:bg-transparent">
+								<img src="/src/assets/clown.png" className="w-8 h-8 rounded-lg" />
+								<h2 className="font-light">Anna</h2>
+							</MenuItem>
+							<MenuItem onClick={handleUserClose} className="flex gap-4">
+								<img src="/src/assets/clown.png" className="w-8 h-8 rounded-lg" />
+								<h2 className="font-light">Immanuel</h2>
+							</MenuItem>
+							<MenuItem onClick={handleUserClose} className="flex gap-4">
+								<img src="/src/assets/clown.png" className="w-8 h-8 rounded-lg" />
+								<h2 className="font-light">Opemipo</h2>
+							</MenuItem>
+							<MenuItem onClick={handleUserClose}>My account</MenuItem>
+							<MenuItem onClick={handleUserClose}>Logout</MenuItem>
+						</Menu>
 					</div>
 				</div>
 			</div>
