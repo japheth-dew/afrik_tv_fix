@@ -2,6 +2,8 @@ import React from 'react'
 import Navbar from '../../components/Navbar'
 import Moviecard from '../../components/Moviecard'
 import './moviestyle.css'
+import PlayArrowIcon from '@mui/icons-material/PlayArrow'
+import PlaylistAddIcon from '@mui/icons-material/PlaylistAdd'
 
 function Moviepage() {
 	return (
@@ -20,8 +22,8 @@ function Moviepage() {
 								facere.
 							</p>
 							<div className="flex ">
-							<button type="button" class="text-white-900 bg-white border movie-btn focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-800 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700">Play</button>
-							<button type="button" class="text-white-900 bg-white border movie-btn focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-800 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700">Watch Later</button>
+							<button type="button" class="text-white-900 bg-white border movie-btn focus:outline-none focus:ring-4 focus:ring-gray-200 font-medium text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-800  dark:hover:border-gray-800 dark:focus:ring-gray-700"><PlayArrowIcon />Play Now</button>
+							<button type="button" class="text-white-900 bg-white border movie-btn focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-800 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"> <PlaylistAddIcon />Watch Later</button>
 
 							</div>
 						</div>
