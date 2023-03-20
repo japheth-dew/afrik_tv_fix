@@ -7,7 +7,7 @@ import PlaylistAddIcon from '@mui/icons-material/PlaylistAdd'
 
 function Moviepage() {
 	return (
-		<div>
+	
 			<div>
 				<Navbar />
 				<div class="bg-neutral-100 p-6 text-neutral-700 shadow-lg dark:bg-neutral-600 dark:text-neutral-200 dark:shadow-black/30">
@@ -35,8 +35,15 @@ function Moviepage() {
 				<Moviecard title={'Action Movies'}/>
 				<Moviecard title={'Korean Drama Series'}/>
 				<Moviecard title={'Romance and Comedy Movies'}/>
-			</div>
-		</div>
+
+		
+
+
+<a href="#" className="gosearchbtn"><img src="https://em-content.zobj.net/thumbs/320/apple/325/face-with-monocle_1f9d0.png" className="search-emoji" /></a>
+				</div>
+		
+
+
 	)
 }
 
