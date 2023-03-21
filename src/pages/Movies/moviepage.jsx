@@ -1,11 +1,10 @@
 import React from 'react'
 import Navbar from '../../components/Navbar'
-import Moviecard from '../../components/Moviecard'
 import './moviestyle.css'
 import PlayArrowIcon from '@mui/icons-material/PlayArrow'
 import PlaylistAddIcon from '@mui/icons-material/PlaylistAdd'
-import Search from '../../components/Searchmodal'
-
+// import Search from '../../components/Searchmodal'
+import MovieCard from '../../components/MovieCard'
 
 function Moviepage() {
 	return (
@@ -32,18 +31,14 @@ function Moviepage() {
 						<div></div>
 					</div>
 				</div>
-				<Moviecard title={'Top 10 movies in Africa Today'} />
-				<Moviecard title={'Trending Now'}/>
-				<Moviecard title={'Action Movies'}/>
-				<Moviecard title={'Korean Drama Series'}/>
-				<Moviecard title={'Romance and Comedy Movies'}/>
-
-		
-
-
 			
-			
-			<Search />
+
+			<MovieCard title={"Top 10 Movies in Africa"} />
+			<MovieCard title={"Comedy and Romance"} />
+			<MovieCard title={"Action Movies"} />
+			<MovieCard title={"Family and Children Movies"} />
+			<MovieCard title={"Adventure Movies"} />
+			{/* <Search /> */}
 				</div>
 		
 
