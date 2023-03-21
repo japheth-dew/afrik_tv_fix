@@ -1,7 +1,7 @@
 import React from 'react'
 import CloseIcon from '@mui/icons-material/Close'
 
-function Modal({ click }) {
+function Moviemodal({ click }) {
 	return (
 				<div className="fixed top-[35%] left-[30%] w-[30em] h-[18em] flex flex-col justify-center items-center border border-[gray] rounded-[20px] bg-white">
 					<button onClick={click}>
@@ -32,4 +32,4 @@ function Modal({ click }) {
 	)
 }
 
-export default Modal
+export default Moviemodal
