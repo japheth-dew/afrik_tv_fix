@@ -2,7 +2,6 @@ import React from 'react'
 import Navbar from '../../components/Navbar'
 import Moviecard from '../../components/Moviecard'
 import './moviestyle.css'
-
 function Moviepage() {
 	return (
 		<div>
