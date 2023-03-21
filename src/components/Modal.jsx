@@ -1,6 +1,7 @@
 import React from 'react'
 import CloseIcon from '@mui/icons-material/Close'
 
+
 function Modal({ click, header, desc, button }) {
 	return (
 				<div className="fixed top-[35%] left-[35%] w-[30em] h-[18em] flex flex-col justify-center items-center border border-[gray] rounded-[20px] bg-white">
