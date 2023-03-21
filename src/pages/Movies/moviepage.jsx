@@ -4,6 +4,8 @@ import Moviecard from '../../components/Moviecard'
 import './moviestyle.css'
 import PlayArrowIcon from '@mui/icons-material/PlayArrow'
 import PlaylistAddIcon from '@mui/icons-material/PlaylistAdd'
+import Search from '../../components/Searchmodal'
+
 
 function Moviepage() {
 	return (
@@ -39,7 +41,9 @@ function Moviepage() {
 		
 
 
-<a href="#" className="gosearchbtn"><img src="https://em-content.zobj.net/thumbs/320/apple/325/face-with-monocle_1f9d0.png" className="search-emoji" /></a>
+			
+			
+			<Search />
 				</div>
 		
 
