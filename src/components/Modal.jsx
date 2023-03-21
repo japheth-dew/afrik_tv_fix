@@ -3,9 +3,7 @@ import CloseIcon from '@mui/icons-material/Close'
 
 function Modal({ click }) {
 	return (
-		<div className="absolute">
-			<div className="flex flex-col justify-center items-center h-screen">
-				<div className="w-[549px] h-[365px] flex flex-col justify-center items-center border border-[gray] rounded-[20px] bg-white relative">
+				<div className="fixed top-[35%] left-[30%] w-[30em] h-[18em] flex flex-col justify-center items-center border border-[gray] rounded-[20px] bg-white">
 					<button onClick={click}>
 						<CloseIcon
 							className="absolute top-3 right-3"
@@ -31,8 +29,6 @@ function Modal({ click }) {
 						/>
 					</label>
 				</div>
-			</div>
-		</div>
 	)
 }
 
