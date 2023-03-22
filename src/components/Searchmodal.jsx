@@ -15,7 +15,7 @@ export default function MyModal() {
 
   return (
     <>
-      <div className="fixed inset-0 flex items-center justify-center">
+      <div className="">
       <a href="#" className="gosearchbtn"
           onClick={openModal}
         >
