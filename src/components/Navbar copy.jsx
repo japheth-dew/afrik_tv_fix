@@ -42,7 +42,7 @@ function Navbar() {
 			<div className="max-w-8xl flex flex-wrap items-center justify-between mx-auto">
 				<span className="flex items-center logo cursor-pointer">
 					<img
-						src="/src/assets/afriklogo.png"
+						src="assets/afriklogo.png"
 						className=""
 						height="40px"
 						width=""
@@ -86,7 +86,7 @@ function Navbar() {
 							<div className="flex flex-col gap-4">
 								{new Array(5).fill(0).map((_, i) => (
 									<div className="flex px-5 py-2 gap-4 cursor-pointer hover:bg-[#f5f5f5]" key={i}>
-										<img src="/src/assets/venge.png" className="w-20 h-20 rounded-xl" />
+										<img src="assets/venge.png" className="w-20 h-20 rounded-xl" />
 										<div className="flex flex-col">
 											<h2 className="font-light">Reminder: new arrival</h2>
 											<h2>Venge</h2>
@@ -105,7 +105,7 @@ function Navbar() {
 							aria-expanded={openUser ? 'true' : undefined}
 							onClick={handleUserClick}
 						>
-							<img className="w-8 h-8 rounded-lg" src="/src/assets/profile.png" />
+							<img className="w-8 h-8 rounded-lg" src="assets/profile.png" />
 						</button>
 						<Menu
 							id="basic-menu"
@@ -118,15 +118,15 @@ function Navbar() {
 							PaperProps={PAPER_PROPS}
 						>
 							<MenuItem onClick={handleUserClose} className="flex gap-4 hover:bg-transparent">
-								<img src="/src/assets/clown.png" className="w-8 h-8 rounded-lg" />
+								<img src="assets/clown.png" className="w-8 h-8 rounded-lg" />
 								<h2 className="font-light">Anna</h2>
 							</MenuItem>
 							<MenuItem onClick={handleUserClose} className="flex gap-4">
-								<img src="/src/assets/clown.png" className="w-8 h-8 rounded-lg" />
+								<img src="assets/clown.png" className="w-8 h-8 rounded-lg" />
 								<h2 className="font-light">Immanuel</h2>
 							</MenuItem>
 							<MenuItem onClick={handleUserClose} className="flex gap-4">
-								<img src="/src/assets/clown.png" className="w-8 h-8 rounded-lg" />
+								<img src="assets/clown.png" className="w-8 h-8 rounded-lg" />
 								<h2 className="font-light">Opemipo</h2>
 							</MenuItem>
 							<MenuItem onClick={handleUserClose}>My account</MenuItem>

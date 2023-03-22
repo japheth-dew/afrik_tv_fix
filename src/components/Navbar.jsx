@@ -14,7 +14,7 @@ function Navbar() {
 			<div className="max-w-8xl flex flex-wrap items-center justify-between mx-auto">
 				<span className="flex items-center logo cursor-pointer">
 					<img
-						src="/src/assets/afriklogo.png"
+						src="assets/afriklogo.png"
 						className=""
 						height="40px"
 						width=""
@@ -41,7 +41,7 @@ function Navbar() {
 									<div className="bg-white overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
 										{new Array(5).fill(0).map((_, i) => (
 											<div className="flex px-5 py-2 gap-4 cursor-pointer hover:bg-[#f5f5f5]" key={i}>
-												<img src="/src/assets/venge.png" className="w-20 h-20 rounded-xl" />
+												<img src="assets/venge.png" className="w-20 h-20 rounded-xl" />
 												<div className="flex flex-col">
 													<h2 className="font-light">Reminder: new arrival</h2>
 													<h2>Venge</h2>
@@ -72,7 +72,7 @@ function Navbar() {
 									<Menu.Item key={i}>
 										{({ active }) => (
 											<div role="button" className={`${active ? 'bg-[#f5f5f5]' : ''} flex px-5 py-2 gap-4 cursor-pointer hover:bg-[#f5f5f5] w-full`}>
-												<img src="/src/assets/venge.png" className="w-20 h-20 rounded-xl" />
+												<img src="assets/venge.png" className="w-20 h-20 rounded-xl" />
 												<div className="flex flex-col">
 													<h2 className="font-light">Reminder: new arrival</h2>
 													<h2>Venge</h2>
@@ -88,7 +88,7 @@ function Navbar() {
 					{/* Account */}
 					<Menu as="div" className="relative inline-block text-left">
 						<Menu.Button className="focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
-							<img className="w-8 h-8 rounded-lg" src="/src/assets/profile.png" />
+							<img className="w-8 h-8 rounded-lg" src="assets/profile.png" />
 						</Menu.Button>
 						<Transition
 							as={Fragment}
@@ -107,7 +107,7 @@ function Navbar() {
 												<button
 													className={`${active ? 'bg-[#f5f5f5]' : ''} group flex gap-2 w-full items-center rounded-md px-2 py-2 text-sm`}
 												>
-													<img src="/src/assets/clown.png" className="w-8 h-7 rounded-lg" />
+													<img src="assets/clown.png" className="w-8 h-7 rounded-lg" />
 													<h2 className="font-base">{name}</h2>
 												</button>
 											)}

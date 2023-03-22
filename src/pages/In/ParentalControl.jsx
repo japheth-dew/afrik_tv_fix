@@ -18,7 +18,7 @@ export const ParentalControl = () => {
           <Disclosure>
             <Disclosure.Button className="py-2 w-full">
               <div className="flex flex-row gap-5 items-start gap-2 cursor-pointer">
-                <img className="w-16 h-16 rounded-lg cover" src="/src/assets/profile.png" />
+                <img className="w-16 h-16 rounded-lg cover" src="assets/profile.png" />
                 <div className="flex flex-col items-start gap-px grow">
                   <h2 className="font-bold text-lg">Opemipo Disu</h2>
                   <div className="text-[#757984]">All maturity ratings</div>
