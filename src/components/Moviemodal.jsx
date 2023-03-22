@@ -3,31 +3,20 @@ import CloseIcon from '@mui/icons-material/Close'
 
 function Moviemodal({ click }) {
 	return (
-				<div className="fixed top-[35%] left-[30%] w-[30em] h-[18em] flex flex-col justify-center items-center border border-[gray] rounded-[20px] bg-white">
+				<div className="fixed top-[25%] left-[15%] sm:left-[25%] w-3/4 sm:w-3/5 p-4 flex flex-col justify-center items-center border border-[gray]  bg-white z-10">
 					<button onClick={click}>
 						<CloseIcon
 							className="absolute top-3 right-3"
 							style={{ color: '#060825' }}
 						/>
 					</button>
-					<p className="font-bold mb-4">Update Profile Icon</p>
+					<div className='w-full mt-8 h-52 bg-yellow-100 flex justify-center items-center'>MOVIE TRAILER</div>
 
-					<p>Choose an image from your device</p>
-					<label
-						htmlFor="file-input"
-						className=" overflow-hidden relative inline-block cursor-pointer"
-					>
-						<span className="w-[300px] py-5 px-3 mt-9 bg-[#060825] text-white flex justify-center items-center  text-lg font-bold rounded-xl">
-							Upload an Image
-						</span>
-						<input
-							className="absolute top-0 right-0 m-0 p-0 cursor-pointer opacity-0 "
-							id="file-input"
-							type="file"
-							accept="image/*"
-							aria-label="Upload a Photo"
-						/>
-					</label>
+					<h1 className='w-full my-2 text-2xl sm:text-3xl font-medium'>Red Notice</h1>
+					<p className='text-base sm:text-lg'>After his parents were brutally murdered, David tries to find a way to exert revenge on those responsible for their deaths</p>
+					<div className='mt-2'>
+						<button className=' py-2.5 px-24 bg-[#060825] text-white flex justify-center items-center  text-lg font-bold rounded-xl'>Play</button>
+					</div>
 				</div>
 	)
 }
