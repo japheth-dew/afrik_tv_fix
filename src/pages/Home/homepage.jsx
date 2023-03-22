@@ -37,7 +37,7 @@ function Homepage() {
               <div>
                 <a className="btn" href="#">
                   <img
-                    src="src/assets/google-play-badge.png"
+                    src="assets/google-play-badge.png"
                     className="google-play"
                     width="200px"
                   />
@@ -47,7 +47,7 @@ function Homepage() {
               <div>
                 <a className="btn right-btn" href="#">
                   <img
-                    src="src/assets/appstore-badge.png"
+                    src="assets/appstore-badge.png"
                     className="google-play"
                     width="200px"
                   />
@@ -58,7 +58,7 @@ function Homepage() {
         </div>
 
         <div className="">
-          <img src="src/assets/first-img.png" />
+          <img src="assets/first-img.png" />
         </div>
       </div> */}
 
@@ -79,7 +79,7 @@ function Homepage() {
 
 									<a className="btn right-btn" href="#">
 										<img
-											src="src/assets/google-play-badge.png"
+											src="assets/google-play-badge.png"
 											className="google-play"
 											width="200px"
 										/>
@@ -87,7 +87,7 @@ function Homepage() {
 
 									<a className="btn right-btn" href="#">
 										<img
-											src="src/assets/appstore-badge.png"
+											src="assets/appstore-badge.png"
 											className="google-play"
 											width="200px"
 										/>
@@ -98,12 +98,12 @@ function Homepage() {
 
 						<p className="contain">
 							<img
-								src="src/assets/first-img.png"
+								src="assets/first-img.png"
 								alt="Product screenshot"
 								className="img-real down"
 							/>
 							<img
-								src="src/assets/second-img.png"
+								src="assets/second-img.png"
 								alt="Product screenshot"
 								className="img-real"
 							/>
@@ -120,9 +120,9 @@ function Homepage() {
 
 			<div className="min-h-screen ">
 				<div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-3 p-5">
-					<img className="p-10 rounded-lg" src="src/assets/woman-touch.png" />
-					<img className="p-10 rounded-lg" src="src/assets/woman-touch.png" />
-					<img className="p-10 rounded-lg" src="src/assets/woman-touch.png" />
+					<img className="p-10 rounded-lg" src="assets/woman-touch.png" />
+					<img className="p-10 rounded-lg" src="assets/woman-touch.png" />
+					<img className="p-10 rounded-lg" src="assets/woman-touch.png" />
 				</div>
 
 				<div className="overflow-hidden bg-white py-24 sm:py-32">
@@ -152,7 +152,7 @@ function Homepage() {
 							</div>
 
 							<p className="contain-right">
-								<img src="src/assets/after-hero.png" alt="Product screenshot" />
+								<img src="assets/after-hero.png" alt="Product screenshot" />
 							</p>
 						</div>
 					</div>
@@ -264,7 +264,7 @@ function Homepage() {
 						<a href="#">
 							<img
 								className="w-auto h-7"
-								src="src/assets/afriklogo.png"
+								src="assets/afriklogo.png"
 								alt=""
 							/>
 						</a>
