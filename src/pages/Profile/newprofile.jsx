@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Modal from '../../components/Modal'
 import EditIcon from '@mui/icons-material/Edit'
+import Navbar from '../../components/Navbar'
 
 function Newprofile() {
 	const [hover, setHover] = useState(false)
@@ -8,6 +9,8 @@ function Newprofile() {
 
 	return (
 		<div>
+
+			<Navbar />
 			<div className={`flex flex-col items-center h-screen `}>
 				<div className={`w-[350px] md:w-[521px] ${isClicked && 'opacity-60'}`}>
 					<div className="mb-16 text-3xl font-black mt-11">New Profiles</div>
@@ -40,9 +43,11 @@ function Newprofile() {
 						<span>This is a child's profile</span>
 					</div>
 					<div className="flex justify-between w-72">
+						<a href="/profile/chooseprofile">
 						<button className="bg-[#060825] text-white flex justify-center items-center py-2 px-3 text-lg font-bold rounded-xl">
 							Add Profile
 						</button>
+						</a>
 						<button className="bg-inherit text-[#060825] border-[#060825] border-2 py-2 px-3 text-lg font-bold rounded-xl flex justify-center items-center">
 							Cancel
 						</button>
