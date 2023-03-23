@@ -50,7 +50,7 @@ const SignUp = () => {
 							</p>
 						</div>
 						<br />
-						<form>
+				
 							<div class="relative z-0 w-full mb-6 group">
 								<input
 									type="text"
@@ -157,7 +157,7 @@ const SignUp = () => {
 								</button>
 								</a>
 							</div>
-						</form>
+				
 					</div>
 				</main>
 			</div>

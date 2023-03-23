@@ -58,7 +58,7 @@ const billing = () => {
 							</p>
 						</div>
 
-						<form action="#" className="">
+						
 							<div className="relative z-0 w-full mb-6 group">
 								<input
 									type="card_number"
@@ -162,7 +162,7 @@ const billing = () => {
 								Pay Now
 							</button>
 							</a>
-						</form>
+					
 					</div>
 				</main>
 			</div>
