@@ -2,6 +2,10 @@ import { Popover, Transition, Menu } from '@headlessui/react'
 import React, { Fragment } from 'react'
 import useMenu from '../hooks/useMenu'
 import Icon from './Icon'
+import logoImage from '../assets/afriklogo.png'
+import profileImage from '../assets/profile.png'
+import clownImage from '../assets/clown.png'
+import vengeImage from '../assets/venge.png'
 
 const ITEM_HEIGHT = 80;
 
@@ -13,13 +17,7 @@ function Navbar() {
 		<nav className="sticky top-0 z-10 bg-white border-gray-200 px-2 sm:px-4 py-2.5">
 			<div className="max-w-8xl flex flex-wrap items-center justify-between mx-auto">
 				<span className="flex items-center logo cursor-pointer">
-					<img
-						src="assets/afriklogo.png"
-						className=""
-						height="40px"
-						width=""
-						alt="AfrikTV Logo"
-					/>
+					<img src={logoImage} height="40px" alt="AfrikTV Logo" />
 				</span>
 				<div class="flex md:order-2 gap-6">
 					{/* Notifications */}
@@ -72,7 +70,7 @@ function Navbar() {
 									<Menu.Item key={i}>
 										{({ active }) => (
 											<div role="button" className={`${active ? 'bg-[#f5f5f5]' : ''} flex px-5 py-2 gap-4 cursor-pointer hover:bg-[#f5f5f5] w-full`}>
-												<img src="assets/venge.png" className="w-20 h-20 rounded-xl" />
+												<img src={vengeImage} className="w-20 h-20 rounded-xl" />
 												<div className="flex flex-col">
 													<h2 className="font-light">Reminder: new arrival</h2>
 													<h2>Venge</h2>
@@ -88,7 +86,7 @@ function Navbar() {
 					{/* Account */}
 					<Menu as="div" className="relative inline-block text-left">
 						<Menu.Button className="focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
-							<img className="w-8 h-8 rounded-lg" src="assets/profile.png" />
+							<img className="w-8 h-8 rounded-lg" src={profileImage} />
 						</Menu.Button>
 						<Transition
 							as={Fragment}
@@ -107,7 +105,7 @@ function Navbar() {
 												<button
 													className={`${active ? 'bg-[#f5f5f5]' : ''} group flex gap-2 w-full items-center rounded-md px-2 py-2 text-sm`}
 												>
-													<img src="assets/clown.png" className="w-8 h-7 rounded-lg" />
+													<img src={clownImage} className="w-8 h-7 rounded-lg" />
 													<h2 className="font-base">{name}</h2>
 												</button>
 											)}

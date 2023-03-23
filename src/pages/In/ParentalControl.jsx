@@ -2,14 +2,9 @@ import Checkbox from '@mui/material/Checkbox';
 import { useState } from "react"
 import Icon from "../../components/Icon"
 import { Disclosure, Transition } from '@headlessui/react'
-
-export const ExpandIcon = () => (
-  <span className="self-center rotate-90"><Icon name="chevronRight" /></span>
-)
+import profileImage from "../../assets/profile.png"
 
 export const ParentalControl = () => {
-  const [openIndex, setOpenIndex] = useState(0)
-
   return (
     <div className="md:max-w-lg">
       <h1 className="text-2xl font-bold">Parental Controls</h1>
@@ -18,7 +13,7 @@ export const ParentalControl = () => {
           <Disclosure>
             <Disclosure.Button className="py-2 w-full">
               <div className="flex flex-row gap-5 items-start gap-2 cursor-pointer">
-                <img className="w-16 h-16 rounded-lg cover" src="assets/profile.png" />
+                <img className="w-16 h-16 rounded-lg cover" src={profileImage} />
                 <div className="flex flex-col items-start gap-px grow">
                   <h2 className="font-bold text-lg">Opemipo Disu</h2>
                   <div className="text-[#757984]">All maturity ratings</div>
