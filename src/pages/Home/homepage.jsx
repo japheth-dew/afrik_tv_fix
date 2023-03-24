@@ -271,8 +271,8 @@ function Homepage() {
 						<a href="#">
 							<img
 								className="w-auto h-7"
-								src="assets/afriklogo.png"
-								alt=""
+								src={afrikLogo}
+								alt="AfrikTV Logo"
 							/>
 						</a>
 
