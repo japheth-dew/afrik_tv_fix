@@ -14,7 +14,7 @@ function Chooseprofile() {
 				<div className="grid md:grid-cols-3 grid-cols-2 gap-16 w-[80%] justify-items-center">
 					<Link to={'/movie/moviepage'}>
 						<div>
-							<div className="w-52 h-48 bg-gray-900 flex justify-center items-center text-4xl hover:bg-gray-700">
+							<div className="w-32 h-32 sm:w-48 sm:h-48 bg-gray-900 flex justify-center items-center text-4xl hover:bg-gray-700">
 								😊
 							</div>
 							<p className="text-3xl text-center font-bold mt-4">Obiabo</p>
@@ -22,7 +22,7 @@ function Chooseprofile() {
 					</Link>
 					<Link to={'/movie/moviepage'}>
 						<div>
-							<div className="w-52 h-48 bg-[#F39C11] hover:bg-[#6a4407] flex justify-center items-center text-4xl ">
+							<div className="w-32 h-32 sm:w-48 sm:h-48 bg-[#F39C11] hover:bg-[#6a4407] flex justify-center items-center text-4xl ">
 								🤡
 							</div>
 							<p className="text-3xl text-center font-bold mt-4">Disu</p>
