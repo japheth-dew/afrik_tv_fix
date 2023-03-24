@@ -111,21 +111,49 @@ function Navbar() {
 											)}
 										</Menu.Item>
 									))}
+
+<Menu.Item>
+										{({ active }) => (
+											<a href="/in">
+											<button
+												className={`${active ? 'bg-[#f5f5f5]' : ''} w-full rounded-md px-2 py-2 text-sm font-medium`}
+											>
+												Dashboard
+											</button>
+											</a>
+										)}
+									</Menu.Item>
+
 									<Menu.Item>
 										{({ active }) => (
+											<a href="/profile/manageprofile">
 											<button
 												className={`${active ? 'bg-[#f5f5f5]' : ''} w-full rounded-md px-2 py-2 text-sm font-medium`}
 											>
 												Manage profiles
 											</button>
+											</a>
 										)}
 									</Menu.Item>
+
+									<Menu.Item>
+										{({ active }) => (
+											<a href="/movie/moviepage">
+											<button
+												className={`${active ? 'bg-[#f5f5f5]' : ''} w-full rounded-md px-2 py-2 text-sm font-medium`}
+											>
+												Explore Movies 
+											</button>
+											</a>
+										)}
+									</Menu.Item>
+
 								</div>
 								<div className="px-1 py-1">
 									<Menu.Item>
 										{({ active }) => (
 											<button
-												className={`${active ? 'bg-[#f5f5f5]' : ''} w-full rounded-md px-2 py-2 text-sm font-medium`}
+												className={`${active ? 'bg-[#dc2626]' : ''} bg-red-700 text-white w-full rounded-md px-2 py-2 text-sm font-medium`}
 											>
 												Sign out
 											</button>
