@@ -50,7 +50,7 @@ const forgotpassword = () => {
 							</p>
 						</div>
 						<br />
-						<form>
+					
 							<div class="relative z-0 w-full mb-6 group">
 								<input
 									type="email"
@@ -74,7 +74,7 @@ const forgotpassword = () => {
 								</button>
 								</a>
 							</div>
-						</form>
+				
 					</div>
 				</main>
 			</div>

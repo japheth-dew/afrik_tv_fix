@@ -15,11 +15,13 @@
 		"@emotion/react": "^11.10.6",
 		"@emotion/styled": "^11.10.6",
 		"@headlessui/react": "^1.7.13",
+		"@headlessui/tailwindcss": "^0.1.2",
 		"@mui/icons-material": "^5.11.11",
 		"@mui/material": "^5.11.12",
 		"clsx": "^1.2.1",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
+		"react-merge-refs": "^2.0.1",
 		"react-router-dom": "^6.8.1",
 		"vite-plugin-svgr": "^2.4.0"
 	},

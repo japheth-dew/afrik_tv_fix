@@ -6,7 +6,7 @@ import { NavLink, useLocation } from 'react-router-dom'
 const LINKS = {
 	home: { icon: 'home', url: '/in' },
 	billing: { icon: 'billing', url: '/in/billing' },
-	activities: { icon: 'activities', url: '/in/activities' },
+	// activities: { icon: 'activities', url: '/in/activities' },
 	settings: { icon: 'cog', url: '/in/settings' },
 }
 

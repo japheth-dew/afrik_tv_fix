@@ -1,5 +1,12 @@
 import React from 'react'
 import './style.css'
+import googleBadge from '../../assets/google-play-badge.png'
+import appstoreBadge from '../../assets/appstore-badge.png'
+import afrikLogo from '../../assets/afriklogo.png'
+import firstImage from '../../assets/first-img.png'
+import secondImage from '../../assets/second-img.png'
+import womanTouchImage from '../../assets/woman-touch.png'
+import afterHeroImage from '../../assets/after-hero.png'
 
 function Homepage() {
 	return (
@@ -8,7 +15,7 @@ function Homepage() {
 				<div className="container flex flex-wrap items-center justify-between mx-auto">
 					<a href="javascript:void(0)" className="flex items-center logo">
 						<img
-							src="/src/assets/afriklogo.png"
+							src={afrikLogo}
 							className=""
 							height="40px"
 							width=""
@@ -37,7 +44,7 @@ function Homepage() {
               <div>
                 <a className="btn" href="#">
                   <img
-                    src="src/assets/google-play-badge.png"
+                    src="assets/google-play-badge.png"
                     className="google-play"
                     width="200px"
                   />
@@ -47,7 +54,7 @@ function Homepage() {
               <div>
                 <a className="btn right-btn" href="#">
                   <img
-                    src="src/assets/appstore-badge.png"
+                    src="assets/appstore-badge.png"
                     className="google-play"
                     width="200px"
                   />
@@ -58,7 +65,7 @@ function Homepage() {
         </div>
 
         <div className="">
-          <img src="src/assets/first-img.png" />
+          <img src="assets/first-img.png" />
         </div>
       </div> */}
 
@@ -79,7 +86,7 @@ function Homepage() {
 
 									<a className="btn right-btn" href="#">
 										<img
-											src="src/assets/google-play-badge.png"
+											src={googleBadge}
 											className="google-play"
 											width="200px"
 										/>
@@ -87,7 +94,7 @@ function Homepage() {
 
 									<a className="btn right-btn" href="#">
 										<img
-											src="src/assets/appstore-badge.png"
+											src={appstoreBadge}
 											className="google-play"
 											width="200px"
 										/>
@@ -98,12 +105,12 @@ function Homepage() {
 
 						<p className="contain">
 							<img
-								src="src/assets/first-img.png"
+								src={firstImage}
 								alt="Product screenshot"
 								className="img-real down"
 							/>
 							<img
-								src="src/assets/second-img.png"
+								src={secondImage}
 								alt="Product screenshot"
 								className="img-real"
 							/>
@@ -120,9 +127,9 @@ function Homepage() {
 
 			<div className="min-h-screen ">
 				<div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-3 p-5">
-					<img className="p-10 rounded-lg" src="src/assets/woman-touch.png" />
-					<img className="p-10 rounded-lg" src="src/assets/woman-touch.png" />
-					<img className="p-10 rounded-lg" src="src/assets/woman-touch.png" />
+					<img className="p-10 rounded-lg" src={womanTouchImage} />
+					<img className="p-10 rounded-lg" src={womanTouchImage} />
+					<img className="p-10 rounded-lg" src={womanTouchImage} />
 				</div>
 
 				<div className="overflow-hidden bg-white py-24 sm:py-32">
@@ -152,7 +159,7 @@ function Homepage() {
 							</div>
 
 							<p className="contain-right">
-								<img src="src/assets/after-hero.png" alt="Product screenshot" />
+								<img src={afterHeroImage} alt="Product screenshot" />
 							</p>
 						</div>
 					</div>
@@ -264,8 +271,8 @@ function Homepage() {
 						<a href="#">
 							<img
 								className="w-auto h-7"
-								src="src/assets/afriklogo.png"
-								alt=""
+								src={afrikLogo}
+								alt="AfrikTV Logo"
 							/>
 						</a>
 

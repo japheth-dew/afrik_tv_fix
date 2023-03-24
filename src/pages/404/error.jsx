@@ -9,7 +9,7 @@ const Nop = () => {
 				<div className="container flex flex-wrap items-center justify-between mx-auto">
 					<a href="/" className="flex items-center logo">
 						<img
-							src="/src/assets/afriklogo.png"
+							src="assets/afriklogo.png"
 							className=""
 							height="40px"
 							width=""

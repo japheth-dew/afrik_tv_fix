@@ -1,6 +1,8 @@
+import React, { useState } from 'react'
 import Icon from '../../components/Icon'
 import { NavLink } from "react-router-dom"
 import Card from '../../components/Card'
+import { Modal } from '../../components/ui'
 
 const pricing = [
 	{ type: 'normal', price: 2500, per: 'month' },
@@ -9,7 +11,9 @@ const pricing = [
 ]
 
 export const Billing = () => {
+	const [showModal, setShowModal] = useState(false)
 	return (
+		<>
 		<section className="max-w-4xl">
 			<header className="flex flex-gap items-center gap-6 justify-between">
 				<div className="flex flex-gap items-center gap-6">
@@ -18,7 +22,7 @@ export const Billing = () => {
 					</NavLink>
 					<h2 className="font-bold text-xl">Billings</h2>
 				</div>
-				<button className="border border-[#E9E9E9] py-2 px-7 rounded-md">Add Card</button>
+				<button onClick={() => setShowModal(true)} className="border border-[#E9E9E9] py-2 px-7 rounded-md">Add Card</button>
 			</header>
 			<div className="mt-8">
 				<span>Active card</span>
@@ -44,5 +48,19 @@ export const Billing = () => {
 				</div>
 			</div>
 		</section>
+		<Modal isOpen={showModal} closeModal={() => setShowModal(false)} title="Add Card">
+			<div className="mt-4">
+				<form className="mt-8 flex flex-col gap-6">
+					<input type="text" placeholder="Card Number" className="border border-[#E9E9E9] px-4 py-3 rounded-lg" />
+					<div className="flex flex-wrap gap-4">
+						<input type="text" placeholder="MM/YY" className="border border-[#E9E9E9] px-4 py-3 rounded-lg" />
+						<input type="text" placeholder="CVV" className="border border-[#E9E9E9] px-4 py-3 rounded-lg" />
+					</div>
+					<input type="text" placeholder="Name on Card" className="border border-[#E9E9E9] px-4 py-3 rounded-lg" />
+					<button className="bg-[#07092C] text-white py-3 rounded-lg">Add Card</button>
+				</form>
+			</div>
+		</Modal>
+		</>
 	)
 }

@@ -44,7 +44,7 @@ const resetpassword = () => {
 							</h1>
 						</div>
 						<br />
-						<form action="#">
+
 							<div class="relative z-0 w-full mb-6 group">
 								<input
 									type="password"
@@ -86,7 +86,7 @@ const resetpassword = () => {
 								</button>
 								</a>
 							</div>
-						</form>
+					
 					</div>
 				</main>
 			</div>
