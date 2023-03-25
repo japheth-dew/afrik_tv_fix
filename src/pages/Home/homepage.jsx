@@ -124,11 +124,13 @@ function Homepage() {
 			</div>
 
 			<div className="min-h-screen ">
-				<div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-5">
-					<img className="p-10 rounded-lg" src={womanTouchImage} />
-					<img className="p-10 rounded-lg" src={womanTouchImage} />
-					<img className="p-10 rounded-lg" src={womanTouchImage} />
-				</div>
+				<div className='flex justify-center items-center'>
+					<div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-3 p-5">
+						<img className="p-10 rounded-lg" src={womanTouchImage} />
+						<img className="p-10 rounded-lg" src={womanTouchImage} />
+						<img className="p-10 rounded-lg" src={womanTouchImage} />
+					</div>
+
 
 				<div className="overflow-hidden bg-white py-24 sm:py-32">
 					<div className="mx-auto max-w-7xl px-6 lg:px-8">
