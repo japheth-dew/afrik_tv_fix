@@ -124,7 +124,7 @@ function Homepage() {
 			</div>
 
 			<div className="min-h-screen ">
-				<div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-3 p-5">
+				<div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-5">
 					<img className="p-10 rounded-lg" src={womanTouchImage} />
 					<img className="p-10 rounded-lg" src={womanTouchImage} />
 					<img className="p-10 rounded-lg" src={womanTouchImage} />
