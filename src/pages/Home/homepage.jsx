@@ -76,15 +76,13 @@ function Homepage() {
 							<div className="lg:pr-8 lg:pt-4">
 								<div className="lg:max-w-lg ">
 									<p className="mt-2 text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-										AfrikTV is a movie streaming platform for African Movies
+									Unlock the world of African Movies with AfrikTV
 									</p>
 									<p className="mt-6 text-lg leading-8 text-gray-600">
-										Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-										Maiores impedit perferendis suscipit eaque, iste dolor
-										cupiditate blanditiis ratione.
+									Explore the best African movies from all over Africa. Instantly stream movies to your device, wherever you are in the world.
 									</p>
 
-									<a className="btn right-btn" href="#">
+									<a className="btn right-btn" href="javascript:void(0)">
 										<img
 											src={googleBadge}
 											className="google-play"
@@ -92,7 +90,7 @@ function Homepage() {
 										/>
 									</a>
 
-									<a className="btn right-btn" href="#">
+									<a className="btn right-btn" href="javascript:void(0)">
 										<img
 											src={appstoreBadge}
 											className="google-play"
@@ -138,13 +136,11 @@ function Homepage() {
 							<div className="lg:pr-8 lg:pt-4">
 								<div className="lg:max-w-lg">
 									<p className="mt-2 text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-										Discover the best entertainment movies
+ Stream anytime & anywhere 
 									</p>
 									<p className="mt-6 text-lg leading-8 text-gray-600">
-										Whether you want to stream live TV or catch up on your
-										missed shows, binge watch your favourite series with
-										AfrikTV. Catch up with the fun in African movies and feel
-										the passion of blacks in the industries
+									
+Enjoy African movies anytime, anywhere on your favorite devices. With an AfrikTV subscription, you will never be far from an African movie. 
 									</p>
 									<br />
 									<a href="/auth/signup">
