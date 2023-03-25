@@ -19,6 +19,7 @@ import Chooseprofile from './pages/Profile/chooseprofile'
 import Newprofile from './pages/Profile/newprofile'
 
 import Moviepage from './pages/Movies/moviepage'
+import Searchresults from './pages/Movies/searchresults'
 
 import Dashboard from './pages/userdashboard/billing'
 import Planform from './pages/auth/planform'
@@ -55,6 +56,7 @@ const router = createBrowserRouter(
 			<Route path="/auth/planform" element={<Planform />} />
 			<Route path="/auth/billing" element={<Billing />} />
 			<Route path="/movie/moviepage" element={<Moviepage />} />
+			<Route path="/movie/searchresults" element={<Searchresults />} />
 			<Route path="in" element={<In />}>
 				<Route path="" element={<InDashboard />} />
 				<Route path="billing" element={<InBilling />} />
