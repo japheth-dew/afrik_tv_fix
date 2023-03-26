@@ -9,4 +9,12 @@ import MovieCard from '../../components/Moviecard'
 function Searchresults() {
 }
 
+			<div>
+				<Navbar />
+			
+				</div>
+		
+
+
+
 export default Searchresults
