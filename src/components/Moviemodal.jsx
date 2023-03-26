@@ -51,14 +51,24 @@ export default function MyModal({click}) {
                 leaveTo="opacity-0 scale-95"
               >
                 <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
-                  <Dialog.Title
-                    as="h3"
-                    className="text-lg font-medium leading-6 text-gray-900 text-center mb-2"
-                  >
-                    Operation Fortune
-                  </Dialog.Title>
+                
 				  <div className='bg-gray-100 w-full h-60 flex items-center justify-center'>Trailer</div>
+                
+                 
                   <div className="mt-2">
+                  <button
+                      type="button"
+                      className=" inline-flex mr-2 md-5 object-cover rounded-full w-10  justify-center border-transparent bg-gray-800 px-4 py-2 text-sm font-medium text-white focus:outline-none focus-visible:ring-1 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
+                      onClick={close}
+                    ><PlayArrowIcon/></button>
+
+<button
+                      type="button"
+                      className=" inline-flex object-cover rounded-full w-10  justify-center border-transparent bg-gray-800 px-4 py-2 text-sm font-medium text-white focus:outline-none focus-visible:ring-1 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
+                      onClick={close}
+                    ><PlayArrowIcon/></button>
+
+
                     <p className="text-sm text-gray-500 mb-2">
                       While trying to maintain a stable family, Jason comes across many enemies seeking for revenge
                     </p>
@@ -67,15 +77,7 @@ export default function MyModal({click}) {
                     </p>
                   </div>
 
-                  <div className="mt-4">
-                    <button
-                      type="button"
-                      className="w-full inline-flex justify-center rounded-md border border-transparent bg-blue-100 px-4 py-2 text-sm font-medium text-blue-900 hover:bg-blue-200 focus:outline-none focus-visible:ring-1 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
-                      onClick={close}
-                    >
-                      <PlayArrowIcon/> Play
-                    </button>
-                  </div>
+            
                 </Dialog.Panel>
               </Transition.Child>
             </div>
