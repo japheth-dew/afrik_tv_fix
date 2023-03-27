@@ -18,9 +18,9 @@ function Sidebar() {
 				{Object.entries(LINKS).map(([name, { icon, url }], index) => {
 					const className = ({ isActive, isPending }) =>
 						cn(
-							'flex gap-4 items-center hover:bg-[#060825]/[0.03] px-7 py-3 rounded-xl cursor-pointer transition duration-500',
+							'flex gap-4 items-center lg:hover:bg-[#060825]/[0.03] px-7 py-3 rounded-xl cursor-pointer transition duration-500',
 							'fill-[#757984] color-[#757984]',
-							{ 'bg-[#060825]/[0.03]': isActive || isPending }
+							{ 'lg:bg-[#060825]/[0.03]': isActive || isPending }
 						)
 					return (
 						<li key={index}>
@@ -35,7 +35,7 @@ function Sidebar() {
 									return (
 										<>
 											<Icon name={icon} fill="red" className={iconClassName} />
-											<span className={textClassName}>{name}</span>
+											<span className={`${textClassName} hidden lg:block`}>{name}</span>
 										</>
 									)
 								}}
