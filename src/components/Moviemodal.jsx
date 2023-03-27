@@ -77,9 +77,9 @@ export default function MyModal({click}) {
                <hr/>
                <p className="text-2xl font-bold mt-2 mb-4">Additional Information</p>
 
-               <p className="font-bold">Casts: </p>
-               <p className="font-bold">Release Date:</p>
-               <p className="font-bold">Genre:</p>
+               <p className="font-semibold">Casts: </p>
+               <p className="font-semibold">Release Date:</p>
+               <p className="font-semibold">Genre:</p>
                   </div>
 
             
