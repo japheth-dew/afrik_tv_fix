@@ -100,10 +100,10 @@ function ProfileEdit() {
 						Cancel
 					</button>
 					<button
-						className={`text-sm border-2  px-3 md:text-lg font-bold rounded-xl flex justify-center items-center  ${
+						className={`text-sm border-2 bg-red-700 text-white  px-3 md:text-lg font-bold rounded-xl flex justify-center items-center  ${
 							active === '3'
-								? 'bg-[#060825] text-white'
-								: 'bg-white text-[#060825] border-[#060825] border-2 rounded-xl'
+								? 'bg-[#b91c1c] text-white'
+								: ''
 						}`}
 						id="3"
 						onClick={(e) => {
