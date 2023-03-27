@@ -8,7 +8,7 @@ const LINKS = [
 
 export const Settings = () => {
 	return (
-		<section className="flex flex-col gap-7 md:flex-row mb-8">
+		<section className="flex flex-col gap-7 md:flex-row mb-8 ml-16 lg:ml-0">
 			<div className="w-full md:w-[19.5rem] max-w-full">
 				<header className="flex flex-gap items-center gap-6 justify-between">
 					<div className="flex flex-gap items-center gap-6">
