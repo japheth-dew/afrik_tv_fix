@@ -6,15 +6,21 @@ import PlaylistAddIcon from '@mui/icons-material/PlaylistAdd'
 import Search from '../../components/Searchmodal'
 import MovieCard from '../../components/Moviecard'
 
-function Searchresults() {
-}
-
+function searchresults() {
+	return (
+	
 			<div>
 				<Navbar />
 			
+
+            <p className="text-3xl mt-6 container mx-auto px-4 font-bold">Showing Results for: </p>
+
+            
 				</div>
 		
 
 
+	)
+}
 
-export default Searchresults
+export default searchresults
