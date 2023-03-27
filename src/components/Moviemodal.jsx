@@ -1,6 +1,7 @@
 import { Dialog, Transition } from '@headlessui/react'
 import { Fragment, useState } from 'react'
 import PlayArrowIcon from '@mui/icons-material/PlayArrow'
+import AddIcon from '@mui/icons-material/Add';
 
 export default function MyModal({click}) {
   let [isOpen, setIsOpen] = useState(true)
@@ -50,15 +51,15 @@ export default function MyModal({click}) {
                 leaveFrom="opacity-100 scale-100"
                 leaveTo="opacity-0 scale-95"
               >
-                <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
+                <Dialog.Panel className="w-full max-w-lg transform overflow-hidden rounded-xl bg-white p-6 text-left align-middle shadow-xl transition-all">
                 
 				  <div className='bg-gray-100 w-full h-60 flex items-center justify-center'>Trailer</div>
                 
                  
-                  <div className="mt-2">
+                  <div className="">
                   <button
                       type="button"
-                      className=" inline-flex mr-2 md-5 object-cover rounded-full w-10  justify-center border-transparent bg-gray-800 px-4 py-2 text-sm font-medium text-white focus:outline-none focus-visible:ring-1 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
+                      className=" inline-flex mr-2 mt-3 mb-2 object-cover rounded-full w-10  justify-center border-transparent bg-gray-800 px-4 py-2 text-sm font-medium text-white focus:outline-none focus-visible:ring-1 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
                       onClick={close}
                     ><PlayArrowIcon/></button>
 
@@ -66,15 +67,19 @@ export default function MyModal({click}) {
                       type="button"
                       className=" inline-flex object-cover rounded-full w-10  justify-center border-transparent bg-gray-800 px-4 py-2 text-sm font-medium text-white focus:outline-none focus-visible:ring-1 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
                       onClick={close}
-                    ><PlayArrowIcon/></button>
+                    ><AddIcon/></button>
 
-
+                    <p className="text-2xl font-bold mt-2 mb-4">Movie Title</p>
                     <p className="text-sm text-gray-500 mb-2">
                       While trying to maintain a stable family, Jason comes across many enemies seeking for revenge
                     </p>
-                    <p className="text-sm text-gray-500">
-                      CASTS: Jason Statham, Dwayne Johnson, Emma Thompson, Albert Einstein
-                    </p>
+                    <br />
+               <hr/>
+               <p className="text-2xl font-bold mt-2 mb-4">Additional Information</p>
+
+               <p className="font-bold">Casts: </p>
+               <p className="font-bold">Release Date:</p>
+               <p className="font-bold">Genre:</p>
                   </div>
 
             
