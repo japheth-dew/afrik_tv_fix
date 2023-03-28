@@ -64,24 +64,7 @@ const billing = () => {
 								className="w-full  p-4 text-white-500 bg-white rounded-lg dark:bg-white-800 dark:text-black-400"
 								role="alert"
 							>
-								<div className="flex">
-									<div className="ml-3 text-sm font-normal">
-										<span className="mb-1 text-sm font-semibold text-black-900 dark:text-black">
-											$5.99/mo
-										</span>
-										<div className="mb-2 text-sm font-normal">Basic Plan</div>
-										<div className="grid grid-cols-2 gap-2">
-											<div>
-												<a
-													href="#"
-													className="inline-flex justify-center w-full px-2 py-1.5 text-xs font-medium text-center text-white login-btn rounded-lg hover:bg-blue-700 focus:ring-4 focus:outline-none"
-												>
-													Change
-												</a>
-											</div>
-										</div>
-									</div>
-								</div>
+					
 							</div>
 							<label htmlFor="MarketingAccept" className="flex gap-4">
 								<input
