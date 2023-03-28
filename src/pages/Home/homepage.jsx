@@ -156,7 +156,7 @@ function Homepage() {
 									</div>
 								</div>
 
-								<p className="contain-right flex justify-center items-center">
+								<p className="contain-right">
 									<img src={afterHeroImage} alt="Product screenshot" />
 								</p>
 							</div>
