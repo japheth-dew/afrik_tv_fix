@@ -4,7 +4,7 @@ import './moviestyle.css'
 import PlayArrowIcon from '@mui/icons-material/PlayArrow'
 import PlaylistAddIcon from '@mui/icons-material/PlaylistAdd'
 import Search from '../../components/Searchmodal'
-import MovieCard from '../../components/Moviecard'
+import Searchcard from '../../components/Searchcard'
 
 function searchresults() {
 	return (
@@ -15,7 +15,8 @@ function searchresults() {
 
             <p className="text-3xl mt-6 container mx-auto px-4 font-bold">Showing Results for: </p>
 
-            
+            <Searchcard />
+            <Search />
 				</div>
 		
 
