@@ -6,7 +6,7 @@ import {
 	registerWithEmailAndPassword,
 	verifyOTP,
 } from '../features/user'
-import { saveToken } from './storage'
+import { removeToken, saveToken } from './storage'
 
 const handleAuthResponse = async (response) => {
 	const { user, token } = response
@@ -27,8 +27,8 @@ const registerFn = async (credentials) => {
 }
 
 const logoutFn = async () => {
-	const response = await logout()
-	return response
+	await logout()
+  removeToken()
 }
 
 const userFn = async () => {
