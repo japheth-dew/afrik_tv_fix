@@ -61,7 +61,7 @@ const planform = () => {
 										</span>
 									</p>
 
-									<a href="billing" className="">
+									<a href="/profile/new" className="">
 										<p className="w-full py-4 login-btn mt-8 rounded-xl text-white text-center">
 											<span className="font-medium">Choose Plan</span>
 										</p>
@@ -95,7 +95,7 @@ const planform = () => {
 										</span>
 									</p>
 									
-									<a href="billing" className="">
+									<a href="/profile/new" className="">
 										<p className="w-full py-4 border border-gray-800 mt-8 rounded-xl text-white text-center">
 											<span className="font-medium">Choose Plan</span>
 										</p>
@@ -130,7 +130,7 @@ const planform = () => {
 										</span>
 									</p>
 
-									<a href="billing" className="">
+									<a href="/profile/new" className="">
 										<p className="w-full py-4 login-btn mt-8 rounded-xl text-white text-center">
 											<span className="font-medium">Choose Plan</span>
 										</p>
