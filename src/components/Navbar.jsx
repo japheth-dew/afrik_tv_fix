@@ -7,19 +7,14 @@ import profileImage from '../assets/profile.png'
 import clownImage from '../assets/clown.png'
 import vengeImage from '../assets/venge.png'
 
-const ITEM_HEIGHT = 80;
-
 function Navbar() {
-	const [openBell, bellMenu, handleBellClick, handleBellClose] = useMenu();
-	const [openUser, userMenu, handleUserClick, handleUserClose] = useMenu();
-
 	return (
 		<nav className="sticky top-0 z-10 bg-white border-gray-200 px-2 sm:px-4 py-2.5">
 			<div className="max-w-8xl flex flex-wrap items-center justify-between mx-auto">
 				<span className="flex items-center logo cursor-pointer">
 					<img src={logoImage} height="40px" alt="AfrikTV Logo" />
 				</span>
-				<div class="flex md:order-2 gap-6">
+				<div className="flex md:order-2 gap-6">
 					{/* Notifications */}
 					{/* <Popover className="relative">
 						<>
@@ -69,12 +64,22 @@ function Navbar() {
 								{new Array(5).fill(0).map((_, i) => (
 									<Menu.Item key={i}>
 										{({ active }) => (
-											<div role="button" className={`${active ? 'bg-[#f5f5f5]' : ''} flex px-5 py-2 gap-4 cursor-pointer hover:bg-[#f5f5f5] w-full`}>
-												<img src={vengeImage} className="w-20 h-20 rounded-xl" />
+											<div
+												role="button"
+												className={`${
+													active ? 'bg-[#f5f5f5]' : ''
+												} flex px-5 py-2 gap-4 cursor-pointer hover:bg-[#f5f5f5] w-full`}
+											>
+												<img
+													src={vengeImage}
+													className="w-20 h-20 rounded-xl"
+												/>
 												<div className="flex flex-col">
 													<h2 className="font-light">Reminder: new arrival</h2>
 													<h2>Venge</h2>
-													<small className="mt-auto font-light">2 hrs ago</small>
+													<small className="mt-auto font-light">
+														2 hrs ago
+													</small>
 												</div>
 											</div>
 										)}
@@ -99,39 +104,48 @@ function Navbar() {
 						>
 							<Menu.Items className="absolute right-0 mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
 								<div className="px-1 py-1 ">
-									{["Ope", "Immanuel"].map((name) => (
-										<Menu.Item>
+									{['Ope', 'Immanuel'].map((name) => (
+										<Menu.Item key={name}>
 											{({ active }) => (
 												<button
-													className={`${active ? 'bg-[#f5f5f5]' : ''} group flex gap-2 w-full items-center rounded-md px-2 py-2 text-sm`}
+													className={`${
+														active ? 'bg-[#f5f5f5]' : ''
+													} group flex gap-2 w-full items-center rounded-md px-2 py-2 text-sm`}
 												>
-													<img src={clownImage} className="w-8 h-7 rounded-lg" />
+													<img
+														src={clownImage}
+														className="w-8 h-7 rounded-lg"
+													/>
 													<h2 className="font-base">{name}</h2>
 												</button>
 											)}
 										</Menu.Item>
 									))}
 
-<Menu.Item>
+									<Menu.Item>
 										{({ active }) => (
 											<a href="/in">
-											<button
-												className={`${active ? 'bg-[#f5f5f5]' : ''} w-full rounded-md px-2 py-2 text-sm font-medium`}
-											>
-												Dashboard
-											</button>
+												<button
+													className={`${
+														active ? 'bg-[#f5f5f5]' : ''
+													} w-full rounded-md px-2 py-2 text-sm font-medium`}
+												>
+													Dashboard
+												</button>
 											</a>
 										)}
 									</Menu.Item>
 
 									<Menu.Item>
 										{({ active }) => (
-											<a href="/profile/manageprofile">
-											<button
-												className={`${active ? 'bg-[#f5f5f5]' : ''} w-full rounded-md px-2 py-2 text-sm font-medium`}
-											>
-												Manage profiles
-											</button>
+											<a href="/profile/manage">
+												<button
+													className={`${
+														active ? 'bg-[#f5f5f5]' : ''
+													} w-full rounded-md px-2 py-2 text-sm font-medium`}
+												>
+													Manage profiles
+												</button>
 											</a>
 										)}
 									</Menu.Item>
@@ -139,21 +153,24 @@ function Navbar() {
 									<Menu.Item>
 										{({ active }) => (
 											<a href="/movie/moviepage">
-											<button
-												className={`${active ? 'bg-[#f5f5f5]' : ''} w-full rounded-md px-2 py-2 text-sm font-medium`}
-											>
-												Explore Movies 
-											</button>
+												<button
+													className={`${
+														active ? 'bg-[#f5f5f5]' : ''
+													} w-full rounded-md px-2 py-2 text-sm font-medium`}
+												>
+													Explore Movies
+												</button>
 											</a>
 										)}
 									</Menu.Item>
-
 								</div>
 								<div className="px-1 py-1">
 									<Menu.Item>
 										{({ active }) => (
 											<button
-												className={`${active ? 'bg-[#dc2626]' : ''} bg-red-700 text-white w-full rounded-md px-2 py-2 text-sm font-medium`}
+												className={`${
+													active ? 'bg-[#dc2626]' : ''
+												} bg-red-700 text-white w-full rounded-md px-2 py-2 text-sm font-medium`}
 											>
 												Sign out
 											</button>
@@ -164,8 +181,6 @@ function Navbar() {
 						</Transition>
 					</Menu>
 				</div>
-
-
 			</div>
 		</nav>
 	)

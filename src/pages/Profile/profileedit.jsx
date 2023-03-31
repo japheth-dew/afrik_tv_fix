@@ -101,9 +101,7 @@ function ProfileEdit() {
 					</button>
 					<button
 						className={`text-sm border-2 bg-red-700 text-white  px-3 md:text-lg font-bold rounded-xl flex justify-center items-center  ${
-							active === '3'
-								? 'bg-[#b91c1c] text-white'
-								: ''
+							active === '3' ? 'bg-[#b91c1c] text-white' : ''
 						}`}
 						id="3"
 						onClick={(e) => {

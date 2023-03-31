@@ -1,24 +1,24 @@
 import { Dialog, Transition } from '@headlessui/react'
 import { Fragment, useState } from 'react'
 import PlayArrowIcon from '@mui/icons-material/PlayArrow'
-import AddIcon from '@mui/icons-material/Add';
-import ThumbUpOffAltIcon from '@mui/icons-material/ThumbUpOffAlt';
-import ThumbDownOffAltIcon from '@mui/icons-material/ThumbDownOffAlt';
+import AddIcon from '@mui/icons-material/Add'
+import ThumbUpOffAltIcon from '@mui/icons-material/ThumbUpOffAlt'
+import ThumbDownOffAltIcon from '@mui/icons-material/ThumbDownOffAlt'
 
-export default function MyModal({click}) {
-  let [isOpen, setIsOpen] = useState(true)
+export default function MyModal({ click }) {
+	let [isOpen, setIsOpen] = useState(true)
 
-//   function closeModal() {
-//     setIsOpen(false)
-//   }
+	//   function closeModal() {
+	//     setIsOpen(false)
+	//   }
 
-//   function openModal() {
-//     setIsOpen(true)
-//   }
+	//   function openModal() {
+	//     setIsOpen(true)
+	//   }
 
-  return (
-    <>
-      {/* <div className="fixed inset-0 flex items-center justify-center">
+	return (
+		<>
+			{/* <div className="fixed inset-0 flex items-center justify-center">
         <button
           type="button"
           onClick={openModal}
@@ -28,83 +28,92 @@ export default function MyModal({click}) {
         </button>
       </div> */}
 
-      <Transition appear show={isOpen} as={Fragment}>
-        <Dialog as="div" className="relative z-10" onClose={click}>
-          <Transition.Child
-            as={Fragment}
-            enter="ease-out duration-300"
-            enterFrom="opacity-0"
-            enterTo="opacity-100"
-            leave="ease-in duration-200"
-            leaveFrom="opacity-100"
-            leaveTo="opacity-0"
-          >
-            <div className="fixed inset-0 bg-black bg-opacity-25" />
-          </Transition.Child>
+			<Transition appear show={isOpen} as={Fragment}>
+				<Dialog as="div" className="relative z-10" onClose={click}>
+					<Transition.Child
+						as={Fragment}
+						enter="ease-out duration-300"
+						enterFrom="opacity-0"
+						enterTo="opacity-100"
+						leave="ease-in duration-200"
+						leaveFrom="opacity-100"
+						leaveTo="opacity-0"
+					>
+						<div className="fixed inset-0 bg-black bg-opacity-25" />
+					</Transition.Child>
 
-          <div className="fixed inset-0 overflow-y-auto">
-            <div className="flex min-h-full items-center justify-center p-4 text-center">
-              <Transition.Child
-                as={Fragment}
-                enter="ease-out duration-300"
-                enterFrom="opacity-0 scale-95"
-                enterTo="opacity-100 scale-100"
-                leave="ease-in duration-200"
-                leaveFrom="opacity-100 scale-100"
-                leaveTo="opacity-0 scale-95"
-              >
-                <Dialog.Panel className="w-full max-w-lg transform overflow-hidden rounded-xl bg-white p-6 text-left align-middle shadow-xl transition-all">
-                
-				  <div className='bg-gray-100 w-full h-60 flex items-center justify-center'>Trailer</div>
-                
-                 
-                  <div className="">
-                  <button
-                      type="button"
-                      className=" inline-flex mr-2 mt-3 mb-2 object-cover rounded-full w-10  justify-center border-transparent bg-gray-800 px-4 py-2 text-sm font-medium text-white focus:outline-none focus-visible:ring-1 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
-                      onClick={close}
-                    ><PlayArrowIcon/></button>
+					<div className="fixed inset-0 overflow-y-auto">
+						<div className="flex min-h-full items-center justify-center p-4 text-center">
+							<Transition.Child
+								as={Fragment}
+								enter="ease-out duration-300"
+								enterFrom="opacity-0 scale-95"
+								enterTo="opacity-100 scale-100"
+								leave="ease-in duration-200"
+								leaveFrom="opacity-100 scale-100"
+								leaveTo="opacity-0 scale-95"
+							>
+								<Dialog.Panel className="w-full max-w-lg transform overflow-hidden rounded-xl bg-white p-6 text-left align-middle shadow-xl transition-all">
+									<div className="bg-gray-100 w-full h-60 flex items-center justify-center">
+										Trailer
+									</div>
 
-<button
-                      type="button"
-                      className=" inline-flex mr-2 mt-3 mb-2 object-cover rounded-full w-10  justify-center border-transparent bg-gray-800 px-4 py-2 text-sm font-medium text-white focus:outline-none focus-visible:ring-1 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
-                      onClick={close}
-                    ><ThumbUpOffAltIcon/></button>
+									<div className="">
+										<button
+											type="button"
+											className=" inline-flex mr-2 mt-3 mb-2 object-cover rounded-full w-10  justify-center border-transparent bg-gray-800 px-4 py-2 text-sm font-medium text-white focus:outline-none focus-visible:ring-1 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
+											onClick={close}
+										>
+											<PlayArrowIcon />
+										</button>
 
-<button
-                      type="button"
-                      className=" inline-flex mr-2 mt-3 mb-2 object-cover rounded-full w-10  justify-center border-transparent bg-gray-800 px-4 py-2 text-sm font-medium text-white focus:outline-none focus-visible:ring-1 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
-                      onClick={close}
-                    ><ThumbDownOffAltIcon/></button>
+										<button
+											type="button"
+											className=" inline-flex mr-2 mt-3 mb-2 object-cover rounded-full w-10  justify-center border-transparent bg-gray-800 px-4 py-2 text-sm font-medium text-white focus:outline-none focus-visible:ring-1 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
+											onClick={close}
+										>
+											<ThumbUpOffAltIcon />
+										</button>
 
-<button
-                      type="button"
-                      className=" inline-flex object-cover rounded-full w-10  justify-center border-transparent bg-gray-800 px-4 py-2 text-sm font-medium text-white focus:outline-none focus-visible:ring-1 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
-                      onClick={close}
-                    ><AddIcon/></button>
+										<button
+											type="button"
+											className=" inline-flex mr-2 mt-3 mb-2 object-cover rounded-full w-10  justify-center border-transparent bg-gray-800 px-4 py-2 text-sm font-medium text-white focus:outline-none focus-visible:ring-1 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
+											onClick={close}
+										>
+											<ThumbDownOffAltIcon />
+										</button>
 
-                    <p className="text-2xl font-bold mt-2 mb-4">Movie Title</p>
-                    <p className="text-sm text-gray-500 mb-2">
-                      While trying to maintain a stable family, Jason comes across many enemies seeking for revenge
-                    </p>
-                    <br />
-               <hr/>
-               <p className="text-2xl font-bold mt-2 mb-4">Additional Information</p>
+										<button
+											type="button"
+											className=" inline-flex object-cover rounded-full w-10  justify-center border-transparent bg-gray-800 px-4 py-2 text-sm font-medium text-white focus:outline-none focus-visible:ring-1 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
+											onClick={close}
+										>
+											<AddIcon />
+										</button>
 
-               <p className="font-semibold">Casts: </p>
-               <p className="font-semibold">Release Date:</p>
-               <p className="font-semibold">Genre:</p>
-                  </div>
+										<p className="text-2xl font-bold mt-2 mb-4">Movie Title</p>
+										<p className="text-sm text-gray-500 mb-2">
+											While trying to maintain a stable family, Jason comes
+											across many enemies seeking for revenge
+										</p>
+										<br />
+										<hr />
+										<p className="text-2xl font-bold mt-2 mb-4">
+											Additional Information
+										</p>
 
-            
-                </Dialog.Panel>
-              </Transition.Child>
-            </div>
-          </div>
-        </Dialog>
-      </Transition>
-    </>
-  )
+										<p className="font-semibold">Casts: </p>
+										<p className="font-semibold">Release Date:</p>
+										<p className="font-semibold">Genre:</p>
+									</div>
+								</Dialog.Panel>
+							</Transition.Child>
+						</div>
+					</div>
+				</Dialog>
+			</Transition>
+		</>
+	)
 }
 // import React from 'react'
 // import CloseIcon from '@mui/icons-material/Close'

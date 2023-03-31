@@ -1,9 +1,19 @@
-import { NavLink, Outlet } from "react-router-dom"
-import Icon from "../../components/Icon"
+import { NavLink, Outlet } from 'react-router-dom'
+import Icon from '../../components/Icon'
 
 const LINKS = [
-	{ label: "Account Settings", desc: "Personal Information", to: "", icon: "person" },
-	{ label: "Parental Controls", desc: "Managed signed-in profiles", to: "parental", icon: "person" },
+	{
+		label: 'Account Settings',
+		desc: 'Personal Information',
+		to: '',
+		icon: 'person',
+	},
+	{
+		label: 'Parental Controls',
+		desc: 'Managed signed-in profiles',
+		to: 'parental',
+		icon: 'person',
+	},
 ]
 
 export const Settings = () => {
@@ -21,9 +31,12 @@ export const Settings = () => {
 				<div className="bg-[#07092C] px-6 py-5 mt-10 rounded-xl text-white">
 					<h2 className="font-bold text-lg">Premium Subscription</h2>
 					<p className="text-sm mt-3">
-						Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
+						Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
+						sint.
 					</p>
-					<button className="w-full font-medium mt-8 py-2 bg-white rounded-md text-[#07092C]">Change Plan</button>
+					<button className="w-full font-medium mt-8 py-2 bg-white rounded-md text-[#07092C]">
+						Change Plan
+					</button>
 				</div>
 				<div className="mt-10">
 					{LINKS.map(({ label, desc, to, icon }) => (

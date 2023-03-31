@@ -16,9 +16,7 @@ const planform = () => {
 							alt="AfrikTV Logo"
 						/>
 					</a>
-					<div className="flex md:order-2">
-			
-					</div>
+					<div className="flex md:order-2"></div>
 				</div>
 			</nav>
 
@@ -94,7 +92,7 @@ const planform = () => {
 											Download up to 10 movies in a month
 										</span>
 									</p>
-									
+
 									<a href="/profile/new" className="">
 										<p className="w-full py-4 border border-gray-800 mt-8 rounded-xl text-white text-center">
 											<span className="font-medium">Choose Plan</span>
