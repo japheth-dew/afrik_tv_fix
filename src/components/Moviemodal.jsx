@@ -67,13 +67,13 @@ export default function MyModal({click}) {
 
 <button
                       type="button"
-                      className=" inline-flex object-cover rounded-full w-10  justify-center border-transparent bg-gray-800 px-4 py-2 text-sm font-medium text-white focus:outline-none focus-visible:ring-1 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
+                      className=" inline-flex mr-2 mt-3 mb-2 object-cover rounded-full w-10  justify-center border-transparent bg-gray-800 px-4 py-2 text-sm font-medium text-white focus:outline-none focus-visible:ring-1 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
                       onClick={close}
                     ><ThumbUpOffAltIcon/></button>
 
 <button
                       type="button"
-                      className=" inline-flex object-cover rounded-full w-10  justify-center border-transparent bg-gray-800 px-4 py-2 text-sm font-medium text-white focus:outline-none focus-visible:ring-1 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
+                      className=" inline-flex mr-2 mt-3 mb-2 object-cover rounded-full w-10  justify-center border-transparent bg-gray-800 px-4 py-2 text-sm font-medium text-white focus:outline-none focus-visible:ring-1 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
                       onClick={close}
                     ><ThumbDownOffAltIcon/></button>
 
