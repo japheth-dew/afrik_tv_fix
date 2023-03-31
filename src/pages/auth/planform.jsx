@@ -33,7 +33,7 @@ const planform = () => {
 				<div className="all-page">
 					<div className="text-center font-semibold">
 						<h1 className="text-3xl">
-							<span>Choose your plan</span>
+							<span>Choose your plan 🙈</span>
 						</h1>
 						<p className="pt-6 text-xl text-gray-400 font-normal w-full px-8 md:w-full">
 							For all of these options, you can watch ad-free movies seamlessly.
