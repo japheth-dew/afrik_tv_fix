@@ -4,7 +4,7 @@ import Icon from '../../components/Icon'
 
 export const Dashboard = () => {
 	return (
-		<div className='ml-14 lg:ml-0'>
+		<div className='ml-16 lg:ml-0'>
 			<h1 className="text-3xl font-bold">Hi, Obiabo 👋🏽</h1>
 			<div className="flex flex-wrap gap-8 mt-8">
 				<Plan className="bg-[#07092C] text-white" />
