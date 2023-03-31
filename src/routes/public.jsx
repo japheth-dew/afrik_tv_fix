@@ -1,5 +1,5 @@
 import { Outlet } from 'react-router-dom'
-import { Auth } from '../pages/Auth'
+import { Auth } from '../pages/auth'
 
 const Public = ({ children }) => {
 	return children
