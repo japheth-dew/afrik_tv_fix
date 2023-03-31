@@ -1,5 +1,6 @@
 import React from 'react'
 import './style.css'
+import afrikLogo from '../../assets/afriklogo.png'
 
 const planform = () => {
 	return (
@@ -8,7 +9,7 @@ const planform = () => {
 				<div className="container flex flex-wrap items-center justify-between mx-auto">
 					<a href="javascript:void(0)" className="flex items-center logo">
 						<img
-							src="assets/afriklogo.png"
+							src={afrikLogo}
 							className=""
 							height="40px"
 							width=""
