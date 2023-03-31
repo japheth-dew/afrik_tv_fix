@@ -15,13 +15,9 @@ const resetpassword = () => {
 							/>
 						</a>
 
-						<h2 className="mt-6 text-2xl font-bold text-white sm:text-3xl md:text-4xl">
-							Reset Password - AfrikTV
-						</h2>
+						<h2 className="mt-6 text-2xl font-bold text-white sm:text-3xl md:text-4xl">Reset Password - AfrikTV</h2>
 
-						<p className="mt-4 leading-relaxed text-white/90">
-							Now, you can reset your password with the form.
-						</p>
+						<p className="mt-4 leading-relaxed text-white/90">Now, you can reset your password with the form.</p>
 					</div>
 				</section>
 

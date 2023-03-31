@@ -15,13 +15,11 @@ const billing = () => {
 							/>
 						</a>
 
-						<h2 className="mt-6 text-2xl font-bold text-white sm:text-3xl md:text-4xl">
-							Billing - AfrikTV
-						</h2>
+						<h2 className="mt-6 text-2xl font-bold text-white sm:text-3xl md:text-4xl">Billing - AfrikTV</h2>
 
 						<p className="mt-4 leading-relaxed text-white/90">
-							End to end encryption process for payment. Inout your credit card
-							details to start your subscription with AfrikTV.
+							End to end encryption process for payment. Inout your credit card details to start your subscription with
+							AfrikTV.
 						</p>
 						<img
 							className="h-20 start-img max-w-lg rounded-lg"
@@ -72,11 +70,10 @@ const billing = () => {
 							/>
 
 							<span className="text-sm text-gray-700">
-								By checking the checkbox below, you agree to our Terms of Use,
-								Privacy Statement, and that you are over 13. AfrikTV will
-								automatically continue your membership and charge the membership
-								fee (currently $5.99/month) to your payment method until you
-								cancel. You may cancel at any time to avoid future charges.
+								By checking the checkbox below, you agree to our Terms of Use, Privacy Statement, and that you are over
+								13. AfrikTV will automatically continue your membership and charge the membership fee (currently
+								$5.99/month) to your payment method until you cancel. You may cancel at any time to avoid future
+								charges.
 							</span>
 						</label>
 

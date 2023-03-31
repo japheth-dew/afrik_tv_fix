@@ -8,7 +8,7 @@ import vengeImage from '../assets/venge.png'
 import { useLogout } from '../lib/auth'
 
 function Navbar() {
-	const logout = useLogout();
+	const logout = useLogout()
 
 	return (
 		<nav className="sticky top-0 z-10 bg-white border-gray-200 px-2 sm:px-4 py-2.5">
@@ -72,16 +72,11 @@ function Navbar() {
 													active ? 'bg-[#f5f5f5]' : ''
 												} flex px-5 py-2 gap-4 cursor-pointer hover:bg-[#f5f5f5] w-full`}
 											>
-												<img
-													src={vengeImage}
-													className="w-20 h-20 rounded-xl"
-												/>
+												<img src={vengeImage} className="w-20 h-20 rounded-xl" />
 												<div className="flex flex-col">
 													<h2 className="font-light">Reminder: new arrival</h2>
 													<h2>Venge</h2>
-													<small className="mt-auto font-light">
-														2 hrs ago
-													</small>
+													<small className="mt-auto font-light">2 hrs ago</small>
 												</div>
 											</div>
 										)}
@@ -114,10 +109,7 @@ function Navbar() {
 														active ? 'bg-[#f5f5f5]' : ''
 													} group flex gap-2 w-full items-center rounded-md px-2 py-2 text-sm`}
 												>
-													<img
-														src={clownImage}
-														className="w-8 h-7 rounded-lg"
-													/>
+													<img src={clownImage} className="w-8 h-7 rounded-lg" />
 													<h2 className="font-base">{name}</h2>
 												</button>
 											)}
@@ -128,9 +120,7 @@ function Navbar() {
 										{({ active }) => (
 											<a href="/in">
 												<button
-													className={`${
-														active ? 'bg-[#f5f5f5]' : ''
-													} w-full rounded-md px-2 py-2 text-sm font-medium`}
+													className={`${active ? 'bg-[#f5f5f5]' : ''} w-full rounded-md px-2 py-2 text-sm font-medium`}
 												>
 													Dashboard
 												</button>
@@ -142,9 +132,7 @@ function Navbar() {
 										{({ active }) => (
 											<a href="/profile/manage">
 												<button
-													className={`${
-														active ? 'bg-[#f5f5f5]' : ''
-													} w-full rounded-md px-2 py-2 text-sm font-medium`}
+													className={`${active ? 'bg-[#f5f5f5]' : ''} w-full rounded-md px-2 py-2 text-sm font-medium`}
 												>
 													Manage profiles
 												</button>
@@ -156,9 +144,7 @@ function Navbar() {
 										{({ active }) => (
 											<a href="/movies">
 												<button
-													className={`${
-														active ? 'bg-[#f5f5f5]' : ''
-													} w-full rounded-md px-2 py-2 text-sm font-medium`}
+													className={`${active ? 'bg-[#f5f5f5]' : ''} w-full rounded-md px-2 py-2 text-sm font-medium`}
 												>
 													Explore Movies
 												</button>

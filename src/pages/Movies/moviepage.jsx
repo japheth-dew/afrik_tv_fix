@@ -16,10 +16,8 @@ function Moviepage() {
 						<p className="text-7xl font-bold ">Movie Title</p>
 						<p className="my-2">No.1 on movies today</p>
 						<p className="mb-4 movie_des">
-							Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga
-							repellendus soluta corrupti ducimus omnis, dolorem, quo
-							repudiandae, sed delectus quisquam quod reprehenderit sunt modi
-							facere.
+							Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga repellendus soluta corrupti ducimus omnis,
+							dolorem, quo repudiandae, sed delectus quisquam quod reprehenderit sunt modi facere.
 						</p>
 						<div className="flex ">
 							<button

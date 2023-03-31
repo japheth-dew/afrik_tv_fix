@@ -27,12 +27,7 @@ function Manageprofile() {
 							>
 								<div className="w-full h-full bg-gray-900 hover:opacity-80"></div>
 								<p className={`absolute ${hover2 && 'opacity-60'}`}>😊</p>
-								{hover2 && (
-									<EditIcon
-										className="absolute"
-										style={{ color: 'white', width: '60px' }}
-									/>
-								)}
+								{hover2 && <EditIcon className="absolute" style={{ color: 'white', width: '60px' }} />}
 							</div>
 							<p className="text-3xl text-center font-bold mt-4">Obiabo</p>
 						</div>
@@ -50,12 +45,7 @@ function Manageprofile() {
 							>
 								<div className="w-full h-full bg-[#F39C11] hover:bg-[#6a4407] "></div>
 								<p className={`absolute ${hover && 'opacity-60'}`}> 🤡</p>
-								{hover && (
-									<EditIcon
-										className="absolute"
-										style={{ color: 'white', width: '60px' }}
-									/>
-								)}
+								{hover && <EditIcon className="absolute" style={{ color: 'white', width: '60px' }} />}
 							</div>
 							<p className="text-3xl text-center font-bold mt-4">Disu</p>
 						</div>

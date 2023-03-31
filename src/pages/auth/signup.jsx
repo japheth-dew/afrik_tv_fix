@@ -58,13 +58,10 @@ const SignUp = () => {
 							/>
 						</a>
 
-						<h2 className="mt-6 text-2xl font-bold text-white sm:text-3xl md:text-4xl">
-							Create your AfrikTV account
-						</h2>
+						<h2 className="mt-6 text-2xl font-bold text-white sm:text-3xl md:text-4xl">Create your AfrikTV account</h2>
 
 						<p className="mt-4 leading-relaxed text-white/90">
-							You can now create your AfrikTV account, shhhhh... your secret is
-							safe 😅
+							You can now create your AfrikTV account, shhhhh... your secret is safe 😅
 						</p>
 					</div>
 				</section>
@@ -88,8 +85,7 @@ const SignUp = () => {
 							</h1>
 
 							<p className="mt-4 leading-relaxed text-gray-500">
-								Now, fill in the required credentials to get started with
-								AfrikTV
+								Now, fill in the required credentials to get started with AfrikTV
 							</p>
 						</div>
 						<br />

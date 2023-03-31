@@ -15,14 +15,8 @@ export const Input = forwardRef((props, ref) => {
 
 	return (
 		<div className={rootClasses}>
-			{label && (
-				<label className="text-sm font-light text-[#292D32]">{label}</label>
-			)}
-			<input
-				ref={mergeRefs([localRef, ref])}
-				className={inputClasses}
-				{...rest}
-			/>
+			{label && <label className="text-sm font-light text-[#292D32]">{label}</label>}
+			<input ref={mergeRefs([localRef, ref])} className={inputClasses} {...rest} />
 		</div>
 	)
 })

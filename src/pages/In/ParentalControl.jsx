@@ -13,10 +13,7 @@ export const ParentalControl = () => {
 					<Disclosure>
 						<Disclosure.Button className="py-2 w-full">
 							<div className="flex flex-row gap-5 items-start gap-2 cursor-pointer">
-								<img
-									className="w-16 h-16 rounded-lg cover"
-									src={profileImage}
-								/>
+								<img className="w-16 h-16 rounded-lg cover" src={profileImage} />
 								<div className="flex flex-col items-start gap-px grow">
 									<h2 className="font-bold text-lg">Opemipo Disu</h2>
 									<div className="text-[#757984]">All maturity ratings</div>
@@ -41,9 +38,7 @@ export const ParentalControl = () => {
 											<div>Language used</div>
 											<div className="text-[#757984] text-sm">English</div>
 										</div>
-										<button className="border border-[#E9E9E9] py-2 px-7 rounded-md">
-											Change
-										</button>
+										<button className="border border-[#E9E9E9] py-2 px-7 rounded-md">Change</button>
 									</div>
 									<div className="grid grid-cols-2 gap-2 mt-6">
 										<div className="flex items-center gap-3">

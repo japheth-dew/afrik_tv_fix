@@ -54,9 +54,7 @@ export default function MyModal({ click }) {
 								leaveTo="opacity-0 scale-95"
 							>
 								<Dialog.Panel className="w-full max-w-lg transform overflow-hidden rounded-xl bg-white p-6 text-left align-middle shadow-xl transition-all">
-									<div className="bg-gray-100 w-full h-60 flex items-center justify-center">
-										Trailer
-									</div>
+									<div className="bg-gray-100 w-full h-60 flex items-center justify-center">Trailer</div>
 
 									<div className="">
 										<button
@@ -93,14 +91,11 @@ export default function MyModal({ click }) {
 
 										<p className="text-2xl font-bold mt-2 mb-4">Movie Title</p>
 										<p className="text-sm text-gray-500 mb-2">
-											While trying to maintain a stable family, Jason comes
-											across many enemies seeking for revenge
+											While trying to maintain a stable family, Jason comes across many enemies seeking for revenge
 										</p>
 										<br />
 										<hr />
-										<p className="text-2xl font-bold mt-2 mb-4">
-											Additional Information
-										</p>
+										<p className="text-2xl font-bold mt-2 mb-4">Additional Information</p>
 
 										<p className="font-semibold">Casts: </p>
 										<p className="font-semibold">Release Date:</p>

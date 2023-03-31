@@ -11,9 +11,7 @@ function searchresults() {
 		<div>
 			<Navbar />
 
-			<p className="text-3xl mt-6 container mx-auto px-4 font-bold">
-				Showing Results for:{' '}
-			</p>
+			<p className="text-3xl mt-6 container mx-auto px-4 font-bold">Showing Results for: </p>
 
 			<Searchcard />
 			<Search />

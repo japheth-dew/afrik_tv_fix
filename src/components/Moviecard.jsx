@@ -4,9 +4,7 @@ import './styles.css'
 
 function MovieCard({ title }) {
 	const [showModal, setShowModal] = useState(false)
-	showModal
-		? (document.body.style.overflow = 'hidden')
-		: (document.body.style.overflow = 'auto')
+	showModal ? (document.body.style.overflow = 'hidden') : (document.body.style.overflow = 'auto')
 	return (
 		<div className="ml-5 mt-12">
 			<p className="text-4xl font-semibold">{title}</p>

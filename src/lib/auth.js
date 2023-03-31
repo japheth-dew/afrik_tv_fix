@@ -1,11 +1,5 @@
 import { configureAuth } from 'react-query-auth'
-import {
-	loginWithEmailAndPassword,
-	logout,
-	me,
-	registerWithEmailAndPassword,
-	verifyOTP,
-} from '../features/user'
+import { loginWithEmailAndPassword, logout, me, registerWithEmailAndPassword, verifyOTP } from '../features/user'
 import { removeToken, saveToken } from './storage'
 
 const handleAuthResponse = async (response) => {
@@ -28,7 +22,7 @@ const registerFn = async (credentials) => {
 
 const logoutFn = async () => {
 	await logout()
-  removeToken()
+	removeToken()
 }
 
 const userFn = async () => {
@@ -36,10 +30,9 @@ const userFn = async () => {
 	return response
 }
 
-export const { useLogin, useRegister, useUser, useLogout, AuthLoader } =
-	configureAuth({
-		loginFn,
-		logoutFn,
-		registerFn,
-		userFn,
-	})
+export const { useLogin, useRegister, useUser, useLogout, AuthLoader } = configureAuth({
+	loginFn,
+	logoutFn,
+	registerFn,
+	userFn,
+})

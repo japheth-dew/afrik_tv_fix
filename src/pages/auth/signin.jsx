@@ -34,9 +34,7 @@ const SignIn = () => {
 							Sign In to your AfrikTV account
 						</h2>
 
-						<p className="mt-4 leading-relaxed text-white/90">
-							We're excited to see you here again...
-						</p>
+						<p className="mt-4 leading-relaxed text-white/90">We're excited to see you here again...</p>
 					</div>
 				</section>
 
@@ -59,8 +57,7 @@ const SignIn = () => {
 							</h1>
 
 							<p className="mt-4 leading-relaxed text-gray-500">
-								Now, sign in to your AfrikTV account to watch the best African
-								Blockbuster movies...
+								Now, sign in to your AfrikTV account to watch the best African Blockbuster movies...
 							</p>
 						</div>
 						<br />

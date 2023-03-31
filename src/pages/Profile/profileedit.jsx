@@ -9,17 +9,11 @@ function ProfileEdit() {
 
 	return (
 		<div>
-			<div
-				className={`flex flex-col justify-center items-center mx-4 md:mx-0 h-screen `}
-			>
-				<div
-					className={`md:w-[451px] w-full mb-8 ${isClicked && 'opacity-60'}`}
-				>
+			<div className={`flex flex-col justify-center items-center mx-4 md:mx-0 h-screen `}>
+				<div className={`md:w-[451px] w-full mb-8 ${isClicked && 'opacity-60'}`}>
 					<div className="mb-16 text-3xl font-black">Edit Profiles</div>
 					<div className="grid grid-cols-2 gap-4">
-						<div className="w-28 h-28 bg-[#F39C11] flex justify-center items-center">
-							🤡
-						</div>
+						<div className="w-28 h-28 bg-[#F39C11] flex justify-center items-center">🤡</div>
 						<div className="flex flex-col justify-between">
 							<input
 								className="h-16 rounded-lg bg-[##FAFAFA] outline-none py-5 px-4 border border-[#E3E0E0]"
@@ -45,9 +39,7 @@ function ProfileEdit() {
 							))}
 						</select>
 					</div>
-					<div className="mt-16 mb-5 text-3xl font-black">
-						Maturity Settings
-					</div>
+					<div className="mt-16 mb-5 text-3xl font-black">Maturity Settings</div>
 					<div className="border w-full border-[#E9E9E9] mb-10"></div>
 					<div className="grid grid-cols-2 gap-x-px  gap-y-6">
 						<div className="">
@@ -68,11 +60,7 @@ function ProfileEdit() {
 						</div>
 					</div>
 				</div>
-				<div
-					className={`flex justify-between h-[40px] w-full md:w-[600px] ${
-						isClicked && 'opacity-60'
-					}`}
-				>
+				<div className={`flex justify-between h-[40px] w-full md:w-[600px] ${isClicked && 'opacity-60'}`}>
 					<button
 						className={`text-sm flex justify-center items-center px-3 md:text-lg font-bold rounded-xl ${
 							active === '1'

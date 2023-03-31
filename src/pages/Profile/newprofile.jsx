@@ -23,12 +23,7 @@ function Newprofile() {
 							}}
 						>
 							<div>🤡</div>
-							{hover && (
-								<EditIcon
-									className="absolute"
-									style={{ color: 'white', width: '60px' }}
-								/>
-							)}
+							{hover && <EditIcon className="absolute" style={{ color: 'white', width: '60px' }} />}
 						</button>
 
 						<input

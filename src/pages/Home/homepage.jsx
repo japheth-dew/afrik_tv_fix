@@ -14,13 +14,7 @@ function Homepage() {
 			<nav className="bg-white border-gray-200 px-2 sm:px-4 py-2.5">
 				<div className="container flex flex-wrap items-center justify-between mx-auto">
 					<a href="javascript:void(0)" className="flex items-center logo">
-						<img
-							src={afrikLogo}
-							className=""
-							height="40px"
-							width=""
-							alt="AfrikTV Logo"
-						/>
+						<img src={afrikLogo} className="" height="40px" width="" alt="AfrikTV Logo" />
 					</a>
 					<div className="flex md:order-2">
 						<a href="/auth/signin">
@@ -79,41 +73,24 @@ function Homepage() {
 										Unlock the world of African Movies with AfrikTV
 									</p>
 									<p className="mt-6 text-lg leading-8 text-gray-600">
-										Explore the best African movies from all over Africa.
-										Instantly stream movies to your device, wherever you are in
-										the world.
+										Explore the best African movies from all over Africa. Instantly stream movies to your device,
+										wherever you are in the world.
 									</p>
 
 									<a className="btn right-btn" href="javascript:void(0)">
-										<img
-											src={googleBadge}
-											className="google-play"
-											width="200px"
-										/>
+										<img src={googleBadge} className="google-play" width="200px" />
 									</a>
 
 									<a className="btn right-btn" href="javascript:void(0)">
-										<img
-											src={appstoreBadge}
-											className="google-play"
-											width="200px"
-										/>
+										<img src={appstoreBadge} className="google-play" width="200px" />
 									</a>
 								</div>
 							</div>
 						</section>
 
 						<p className="contain">
-							<img
-								src={firstImage}
-								alt="Product screenshot"
-								className="img-real down"
-							/>
-							<img
-								src={secondImage}
-								alt="Product screenshot"
-								className="img-real"
-							/>
+							<img src={firstImage} alt="Product screenshot" className="img-real down" />
+							<img src={secondImage} alt="Product screenshot" className="img-real" />
 						</p>
 					</div>
 				</div>
@@ -143,9 +120,8 @@ function Homepage() {
 										Stream anytime & anywhere
 									</p>
 									<p className="mt-6 text-lg leading-8 text-gray-600">
-										Enjoy African movies anytime, anywhere on your favorite
-										devices. With an AfrikTV subscription, you will never be far
-										from an African movie.
+										Enjoy African movies anytime, anywhere on your favorite devices. With an AfrikTV subscription, you
+										will never be far from an African movie.
 									</p>
 									<br />
 									<a href="/auth/signup">
@@ -169,9 +145,7 @@ function Homepage() {
 
 			<footer className="flex justify-center px-4 text-gray-800 bg-white dark:text-white dark:bg-gray-900">
 				<div className="container px-6 py-6">
-					<h1 className="text-lg font-bold text-center lg:text-5xl">
-						Frequently Asked questions
-					</h1>
+					<h1 className="text-lg font-bold text-center lg:text-5xl">Frequently Asked questions</h1>
 					<br />
 
 					<br />
@@ -190,17 +164,11 @@ function Homepage() {
 											stroke="currentColor"
 											className="block h-5 w-5 transition-all duration-300 group-open:-rotate-90"
 										>
-											<path
-												strokeLinecap="round"
-												strokeLinejoin="round"
-												d="M8.25 4.5l7.5 7.5-7.5 7.5"
-											/>
+											<path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
 										</svg>
 									</div>
 								</summary>
-								<div className="px-6 pb-6 text-secondary-500">
-									We're looking for a description here.
-								</div>
+								<div className="px-6 pb-6 text-secondary-500">We're looking for a description here.</div>
 							</details>
 							<details className="group rounded-xl shadow-[0_10px_100px_10px_rgba(0,0,0,0.05)]">
 								<summary className="flex cursor-pointer list-none items-center justify-between p-6 text-lg font-medium text-secondary-900">
@@ -214,17 +182,11 @@ function Homepage() {
 											stroke="currentColor"
 											className="block h-5 w-5 transition-all duration-300 group-open:-rotate-90"
 										>
-											<path
-												strokeLinecap="round"
-												strokeLinejoin="round"
-												d="M8.25 4.5l7.5 7.5-7.5 7.5"
-											/>
+											<path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
 										</svg>
 									</div>
 								</summary>
-								<div className="px-6 pb-6 text-secondary-500">
-									We're looking for a description here.
-								</div>
+								<div className="px-6 pb-6 text-secondary-500">We're looking for a description here.</div>
 							</details>
 							<details className="group rounded-xl shadow-[0_10px_100px_10px_rgba(0,0,0,0.05)]">
 								<summary className="flex cursor-pointer list-none items-center justify-between p-6 text-lg font-medium text-secondary-900">
@@ -238,17 +200,11 @@ function Homepage() {
 											stroke="currentColor"
 											className="block h-5 w-5 transition-all duration-300 group-open:-rotate-90"
 										>
-											<path
-												strokeLinecap="round"
-												strokeLinejoin="round"
-												d="M8.25 4.5l7.5 7.5-7.5 7.5"
-											/>
+											<path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
 										</svg>
 									</div>
 								</summary>
-								<div className="px-6 pb-6 text-secondary-500">
-									We're looking a description here.
-								</div>
+								<div className="px-6 pb-6 text-secondary-500">We're looking a description here.</div>
 							</details>
 						</div>
 					</div>

@@ -15,13 +15,10 @@ const forgotpassword = () => {
 							/>
 						</a>
 
-						<h2 className="mt-6 text-2xl font-bold text-white sm:text-3xl md:text-4xl">
-							Forgotten Password - AfrikTV
-						</h2>
+						<h2 className="mt-6 text-2xl font-bold text-white sm:text-3xl md:text-4xl">Forgotten Password - AfrikTV</h2>
 
 						<p className="mt-4 leading-relaxed text-white/90">
-							Urgh, just input your email address in the input field - we're
-							here to help you out!
+							Urgh, just input your email address in the input field - we're here to help you out!
 						</p>
 					</div>
 				</section>
@@ -45,8 +42,7 @@ const forgotpassword = () => {
 							</h1>
 
 							<p className="mt-4 leading-relaxed text-gray-500">
-								Don't worry - we're here to help. Fill in the form with your
-								registered email address.
+								Don't worry - we're here to help. Fill in the form with your registered email address.
 							</p>
 						</div>
 						<br />

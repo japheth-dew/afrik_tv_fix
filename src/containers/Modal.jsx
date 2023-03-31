@@ -1,11 +1,6 @@
 import { Fragment } from 'react'
 
-export default function Modal({
-	show = false,
-	onClose = () => {},
-	children,
-	title,
-}) {
+export default function Modal({ show = false, onClose = () => {}, children, title }) {
 	return (
 		<Transition appear show={show} as={Fragment}>
 			<Dialog as="div" className="relative z-10" onClose={onClose}>
@@ -34,10 +29,7 @@ export default function Modal({
 						>
 							<Dialog.Panel className="w-full max-w-xl transform overflow-hidden rounded-2xl bg-white py-10 px-16 text-left align-middle shadow-xl transition-all relative">
 								{title && (
-									<Dialog.Title
-										as="h3"
-										className="text-lg font-bold leading-6 text-gray-900"
-									>
+									<Dialog.Title as="h3" className="text-lg font-bold leading-6 text-gray-900">
 										{title}
 									</Dialog.Title>
 								)}
