@@ -10,7 +10,7 @@ const movies = [
 
 export const WatchLater = () => {
 	return (
-		<div>
+		<div className='ml-16 lg:ml-0'>
 			<header className="flex flex-gap items-center gap-6">
 				<NavLink to="/in">
 					<Icon name="back" />
