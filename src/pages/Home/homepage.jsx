@@ -17,7 +17,7 @@ function Homepage() {
 						<img src={afrikLogo} className="" height="40px" width="" alt="AfrikTV Logo" />
 					</a>
 					<div className="flex md:order-2">
-						<a href="/auth/signin">
+						<a href="/auth/login">
 							{' '}
 							<button
 								type="button"
