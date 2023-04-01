@@ -15,9 +15,7 @@ const otp = () => {
 							/>
 						</a>
 
-						<h2 className="mt-6 text-2xl font-bold text-white sm:text-3xl md:text-4xl">
-							OTP Veriffication - AfrikTV
-						</h2>
+						<h2 className="mt-6 text-2xl font-bold text-white sm:text-3xl md:text-4xl">OTP Veriffication - AfrikTV</h2>
 
 						<p className="mt-4 leading-relaxed text-white/90">
 							Now, let's verify your OTP code sent in your email address.
@@ -39,9 +37,7 @@ const otp = () => {
 								<img src="https://res.cloudinary.com/dwdb9tvii/image/upload/v1677522265/Screenshot_2023-02-27_at_19.23_Background_Removed.56_jxr9z5.png" />
 							</a>
 
-							<h1 className="mt-2 text-2xl font-bold text-gray-900 sm:text-3xl md:text-4xl">
-								OTP Verification{' '}
-							</h1>
+							<h1 className="mt-2 text-2xl font-bold text-gray-900 sm:text-3xl md:text-4xl">OTP Verification </h1>
 							<br />
 							<div className="flex flex-row text-sm font-medium text-gray-400">
 								<p>We have sent a code to your email emai***@gmail.com.</p>
@@ -59,7 +55,8 @@ const otp = () => {
 													type="text"
 													name=""
 													id=""
-												required />
+													required
+												/>
 											</div>
 											<div className="w-16 h-16 ">
 												<input
@@ -67,7 +64,8 @@ const otp = () => {
 													type="text"
 													name=""
 													id=""
-												required />
+													required
+												/>
 											</div>
 											<div className="w-16 h-16 ">
 												<input
@@ -75,7 +73,8 @@ const otp = () => {
 													type="text"
 													name=""
 													id=""
-												required />
+													required
+												/>
 											</div>
 											<div className="w-16 h-16 ">
 												<input
@@ -83,22 +82,23 @@ const otp = () => {
 													type="text"
 													name=""
 													id=""
-												required />
+													required
+												/>
 											</div>
 										</div>
 
 										<div className="flex flex-col space-y-5">
 											<div>
 												<a href="/auth/billing">
-												<button className="flex flex-row items-center justify-center text-center w-full border rounded-xl outline-none py-5 login-btn border-none text-white text-sm shadow-sm ">
-													Verify Account
-												</button>
+													<button className="flex flex-row items-center justify-center text-center w-full border rounded-xl outline-none py-5 login-btn border-none text-white text-sm shadow-sm ">
+														Verify Account
+													</button>
 												</a>
 											</div>
 										</div>
 
 										<div className="flex flex-row items-center justify-center text-center text-sm font-medium space-x-1 text-gray-500">
-											<p>Didn't recieve code?</p>{' '}
+											<p>Didn't receive code?</p>{' '}
 											<a
 												className="flex flex-row items-center text-blue-600"
 												href="http://"

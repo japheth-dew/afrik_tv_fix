@@ -9,7 +9,6 @@ function Newprofile() {
 
 	return (
 		<div>
-
 			<Navbar />
 			<div className={`flex flex-col items-center h-screen `}>
 				<div className={`w-[350px] md:w-[521px] ${isClicked && 'opacity-60'}`}>
@@ -24,12 +23,7 @@ function Newprofile() {
 							}}
 						>
 							<div>🤡</div>
-							{hover && (
-								<EditIcon
-									className="absolute"
-									style={{ color: 'white', width: '60px' }}
-								/>
-							)}
+							{hover && <EditIcon className="absolute" style={{ color: 'white', width: '60px' }} />}
 						</button>
 
 						<input
@@ -44,9 +38,9 @@ function Newprofile() {
 					</div>
 					<div className="flex justify-between w-72">
 						<a href="/profile/chooseprofile">
-						<button className="bg-[#060825] text-white flex justify-center items-center py-2 px-3 text-lg font-bold rounded-xl">
-							Add Profile
-						</button>
+							<button className="bg-[#060825] text-white flex justify-center items-center py-2 px-3 text-lg font-bold rounded-xl">
+								Add Profile
+							</button>
 						</a>
 						<button className="bg-inherit text-[#060825] border-[#060825] border-2 py-2 px-3 text-lg font-bold rounded-xl flex justify-center items-center">
 							Cancel

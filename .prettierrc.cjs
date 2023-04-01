@@ -1,6 +1,6 @@
 module.exports = {
   "endOfLine": "lf",
-  "printWidth": 80,
+  "printWidth": 120,
   "trailingComma": "es5",
   "semi": false,
   "jsxSingleQuote": false,

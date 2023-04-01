@@ -26,9 +26,7 @@ const ICONS = {
 	chevronRight: ChevronRight,
 }
 
-const Oops = () => (
-	<span className="w-6 h-6 font-bold justify-center items-center">?</span>
-)
+const Oops = () => <span className="w-6 h-6 font-bold justify-center items-center">?</span>
 
 const Icon = ({ name, ...props }) => {
 	const Component = ICONS[name] || Oops

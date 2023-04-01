@@ -10,7 +10,7 @@ const movies = [
 
 export const RecentlyWatched = () => {
 	return (
-		<div className='ml-16 lg:ml-0'>
+		<div className="ml-16 lg:ml-0">
 			<header className="flex flex-gap items-center gap-6">
 				<NavLink to="/in">
 					<Icon name="back" />
@@ -18,7 +18,9 @@ export const RecentlyWatched = () => {
 				<h2 className="font-bold text-xl">Recently Watched</h2>
 			</header>
 			<div className="flex flex-wrap gap-8 mt-12">
-				{movies.map((movie) => <Movie key={movie.title} {...movie} />)}
+				{movies.map((movie) => (
+					<Movie key={movie.title} {...movie} />
+				))}
 			</div>
 		</div>
 	)

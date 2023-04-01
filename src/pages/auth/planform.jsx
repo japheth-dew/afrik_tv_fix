@@ -1,5 +1,6 @@
 import React from 'react'
 import './style.css'
+import afrikLogo from '../../assets/afriklogo.png'
 
 const planform = () => {
 	return (
@@ -7,25 +8,9 @@ const planform = () => {
 			<nav className="bg-white border-gray-200 px-2 sm:px-4 py-2.5">
 				<div className="container flex flex-wrap items-center justify-between mx-auto">
 					<a href="javascript:void(0)" className="flex items-center logo">
-						<img
-							src="assets/afriklogo.png"
-							className=""
-							height="40px"
-							width=""
-							alt="AfrikTV Logo"
-						/>
+						<img src={afrikLogo} className="" height="40px" width="" alt="AfrikTV Logo" />
 					</a>
-					<div className="flex md:order-2">
-					<a href="#">
-							{' '}
-							<button
-								type="button"
-								className="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700"
-							>
-								Sign Out
-							</button>
-						</a>
-					</div>
+					<div className="flex md:order-2"></div>
 				</div>
 			</nav>
 
@@ -36,8 +21,7 @@ const planform = () => {
 							<span>Choose your plan 🙈</span>
 						</h1>
 						<p className="pt-6 text-xl text-gray-400 font-normal w-full px-8 md:w-full">
-							For all of these options, you can watch ad-free movies seamlessly.
-							Pick any plan that works best for you.
+							For all of these options, you can watch ad-free movies seamlessly. Pick any plan that works best for you.
 						</p>
 					</div>
 
@@ -53,22 +37,16 @@ const planform = () => {
 								<br />
 								<div className="pt-8">
 									<p className="font-semibold text-black-400 text-left">
-										<span className="material-icons align-middle">
-											Up to 2 devices
-										</span>
+										<span className="material-icons align-middle">Up to 2 devices</span>
 									</p>
 									<p className="font-semibold text-black-400 text-left pt-5">
-										<span className="material-icons align-middle">
-											480p resolution
-										</span>
+										<span className="material-icons align-middle">480p resolution</span>
 									</p>
 									<p className="font-semibold text-black-400 text-left pt-5">
-										<span className="material-icons align-middle">
-											Download up to 5 movies in a month
-										</span>
+										<span className="material-icons align-middle">Download up to 5 movies in a month</span>
 									</p>
 
-									<a href="billing" className="">
+									<a href="/profile/new" className="">
 										<p className="w-full py-4 login-btn mt-8 rounded-xl text-white text-center">
 											<span className="font-medium">Choose Plan</span>
 										</p>
@@ -85,24 +63,18 @@ const planform = () => {
 								</p>
 								<div className="pt-8">
 									<p className="font-semibold text-white-400 text-left pt-5">
-										<span className="material-icons align-middle">
-											Up to 8 devices
-										</span>
+										<span className="material-icons align-middle">Up to 8 devices</span>
 									</p>
 
 									<p className="font-semibold text-white-400 text-left pt-5">
-										<span className="material-icons align-middle">
-											720p video resolution
-										</span>
+										<span className="material-icons align-middle">720p video resolution</span>
 									</p>
 
 									<p className="font-semibold text-white-400 text-left pt-5">
-										<span className="material-icons align-middle">
-											Download up to 10 movies in a month
-										</span>
+										<span className="material-icons align-middle">Download up to 10 movies in a month</span>
 									</p>
-									
-									<a href="billing" className="">
+
+									<a href="/profile/new" className="">
 										<p className="w-full py-4 border border-gray-800 mt-8 rounded-xl text-white text-center">
 											<span className="font-medium">Choose Plan</span>
 										</p>
@@ -120,24 +92,18 @@ const planform = () => {
 
 								<div className="pt-8">
 									<p className="font-semibold text-white-400 text-left pt-5">
-										<span className="material-icons align-middle">
-											Up to 15 devices
-										</span>
+										<span className="material-icons align-middle">Up to 15 devices</span>
 									</p>
 
 									<p className="font-semibold text-white-400 text-left pt-5">
-										<span className="material-icons align-middle">
-											1080p video resolution
-										</span>
+										<span className="material-icons align-middle">1080p video resolution</span>
 									</p>
 
 									<p className="font-semibold text-white-400 text-left pt-5">
-										<span className="material-icons align-middle">
-											Download up to 20 movies in a month
-										</span>
+										<span className="material-icons align-middle">Download up to 20 movies in a month</span>
 									</p>
 
-									<a href="billing" className="">
+									<a href="/profile/new" className="">
 										<p className="w-full py-4 login-btn mt-8 rounded-xl text-white text-center">
 											<span className="font-medium">Choose Plan</span>
 										</p>
