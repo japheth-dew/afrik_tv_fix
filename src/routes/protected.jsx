@@ -12,7 +12,7 @@ const Protected = ({ children }) => {
 		return (
 			<div className="h-screen w-full flex items-center justify-center">
 				<div className="flex flex-col items-center space-y-4">
-					<div className="w-12 h-12 border-2 border-gray-300 rounded-full animate-spin" />
+					<div className="w-12 h-12 border-2 border-gray-300 border-t-black rounded-full animate-spin" />
 					<div className="text-gray-500">Loading...</div>
 				</div>
 			</div>

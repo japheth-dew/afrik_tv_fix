@@ -1,27 +1,31 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './style.css'
 import useForm from '../../hooks/useForm'
-import { useRegister } from '../../lib/auth'
 import { useNavigate } from 'react-router-dom'
 import { Button } from '../../components/ui'
+import { registerWithEmailAndPassword } from '../../features/user'
 
 const SignUp = () => {
+	const [loading, setLoading] = useState(false)
 	const [values, onChange, reset] = useForm()
-	const register = useRegister()
 	const navigate = useNavigate()
 
-	const handleSubmit = (e) => {
+	const handleSubmit = async (e) => {
 		e.preventDefault()
 		const body = getValues()
 		if (body.error) {
 			return
 		}
-		register.mutate(body, {
-			onSuccess: () => {
-				reset()
-				navigate('/auth/otp')
-			},
-		})
+		try {
+			setLoading(true)
+			await registerWithEmailAndPassword(body)
+			setLoading(false)
+			reset()
+			navigate('/in')
+		} catch (err) {
+			console.log(err)
+			setLoading(false)
+		}
 	}
 
 	const getValues = () => {
@@ -194,6 +198,7 @@ const SignUp = () => {
 							<Button
 								className="login-btn inline-block shrink-0 rounded-md border px-12 py-3 text-sm font-medium text-white transition focus:outline-none focus:ring"
 								type="submit"
+								loading={loading}
 							>
 								Create an account
 							</Button>

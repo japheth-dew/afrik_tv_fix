@@ -4,16 +4,24 @@ import { useLogin } from '../../lib/auth'
 import './style.css'
 import { useNavigate } from 'react-router-dom'
 import { Button } from '../../components/ui'
+import { useNotifications } from '../../hooks/useNotifications'
 
 const SignIn = () => {
 	const [values, onChange, reset] = useForm()
 	const login = useLogin()
 	const navigate = useNavigate()
+	const { addNotification } = useNotifications()
 
 	const handleSubmit = (e) => {
 		e.preventDefault()
 		login.mutate(values, {
-			onSuccess: () => navigate('/in'),
+			onSuccess: () => {
+				addNotification({
+					message: `Login Successful`,
+					type: 'success',
+				})
+				navigate('/in')
+			}
 		})
 	}
 

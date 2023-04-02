@@ -1,13 +1,15 @@
 import { useState } from 'react'
 import useForm from '../../hooks/useForm'
 import { Input, Modal } from '../../components/ui'
+import { useUser } from '../../lib/auth'
 
 export const AccountSettings = () => {
+	const user = useUser()
 	const [values, onChange] = useForm({
-		firstName: 'Opemipo',
-		lastName: 'Disu',
-		email: 'opemipodisu@gmail.com',
-		phone: '08123456789',
+		firstName: user.data?.fullname.split(' ')[0] || '',
+		lastName: user.data?.fullname.split(' ')[1] || '',
+		email: user.data?.email,
+		phone: user.data?.phone || '',
 	})
 	const [values2, onChange2] = useForm()
 	const [showModal, setShowModal] = useState(false)
@@ -19,7 +21,7 @@ export const AccountSettings = () => {
 				<div className="grid grid-cols-2 gap-4 mt-14">
 					<Input label="First name" name="firstName" onChange={onChange} value={values.firstName} />
 					<Input label="Last name" name="lastName" onChange={onChange} value={values.lastName} />
-					<Input label="Email Address" name="email" className="col-span-2" onChange={onChange} value={values.email} />
+					<Input label="Email Address" name="email" className="col-span-2" onChange={onChange} disabled value={values.email} />
 					<Input label="Phone Number" name="phone" className="col-span-2" onChange={onChange} value={values.phone} />
 				</div>
 				<div className="mt-7">
