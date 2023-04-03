@@ -1,6 +1,7 @@
 import React from 'react'
 import { createRoutesFromElements, createBrowserRouter, RouterProvider, Route } from 'react-router-dom'
 import Homepage from './pages/Home/homepage'
+import Waitlist from './pages/Waitlist/wait'
 import SignIn from './pages/auth/signin'
 import SignUp from './pages/auth/signup'
 import Otp from './pages/auth/otp'
@@ -36,7 +37,8 @@ import { HelmetProvider } from 'react-helmet-async'
 const router = createBrowserRouter(
 	createRoutesFromElements(
 		<Route>
-			<Route path="/" element={<Homepage />} />
+			<Route path="/" element={<Waitlist />} />
+			<Route path="/home" element={<Homepage />} />
 			<Route path="/auth/signin" element={<SignIn />} />
 			<Route path="/auth/signup" element={<SignUp />} />
 			<Route path="/auth/otp" element={<Otp />} />

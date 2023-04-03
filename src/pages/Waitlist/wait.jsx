@@ -1,4 +1,4 @@
-import { Helmet } from 'react-helmet'
+import { Helmet } from 'react-helmet-async'
 
 export default function App() {
 	return (
@@ -38,6 +38,7 @@ export default function App() {
 			</footer>
 
 			<Helmet>
+				<title>AfrikTV - Join the Waitlist</title>
 				<script src="https://getlaunchlist.com/js/widget.js" type="text/javascript" defer />
 			</Helmet>
 
