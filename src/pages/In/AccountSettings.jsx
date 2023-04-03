@@ -21,11 +21,9 @@ export const AccountSettings = () => {
 				</div>
 				<div className="mt-7">
 					<a href="/auth/resetpassword">
-					<span
-						className="border-b-2 border-[#07092C] text-[#07092C] font-medium cursor-pointer"
-					>
-						Change Password
-					</span>
+						<span className="border-b-2 border-[#07092C] text-[#07092C] font-medium cursor-pointer">
+							Change Password
+						</span>
 					</a>
 				</div>
 			</div>

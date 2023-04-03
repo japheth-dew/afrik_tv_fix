@@ -1,17 +1,11 @@
 import React from 'react'
-import {
-	createRoutesFromElements,
-	createBrowserRouter,
-	RouterProvider,
-	Route,
-} from 'react-router-dom'
+import { createRoutesFromElements, createBrowserRouter, RouterProvider, Route } from 'react-router-dom'
 import Homepage from './pages/Home/homepage'
 import SignIn from './pages/auth/signin'
 import SignUp from './pages/auth/signup'
 import Otp from './pages/auth/otp'
 import Forgotpassword from './pages/auth/forgotpassword'
 import Repassword from './pages/auth/resetpassword'
-
 
 import Manageprofile from './pages/Profile/manageprofile'
 import ProfileEdit from './pages/Profile/profileedit'
@@ -74,7 +68,9 @@ const router = createBrowserRouter(
 
 function App() {
 	return (
-		<HelmetProvider><RouterProvider router={router} /></HelmetProvider>
+		<HelmetProvider>
+			<RouterProvider router={router} />
+		</HelmetProvider>
 	)
 }
 

@@ -5,8 +5,8 @@ import { Button } from '../../components/ui'
 import { Head } from '../../components/common'
 
 const billing = () => {
-	const [checked, setChecked] = React.useState(false);
-	const [loading, setLoading] = React.useState(false);
+	const [checked, setChecked] = React.useState(false)
+	const [loading, setLoading] = React.useState(false)
 
 	const handlePayment = async () => {}
 
@@ -68,7 +68,13 @@ const billing = () => {
 							role="alert"
 						></div>
 						<label htmlFor="MarketingAccept" className="flex gap-4">
-							<Checkbox id="MarketingAccept" name="marketing_accept" className="self-start" checked={checked} onChange={(e) => setChecked(e.target.checked)} />
+							<Checkbox
+								id="MarketingAccept"
+								name="marketing_accept"
+								className="self-start"
+								checked={checked}
+								onChange={(e) => setChecked(e.target.checked)}
+							/>
 
 							<span className="text-sm text-gray-700">
 								By checking the checkbox below, you agree to our Terms of Use, Privacy Statement, and that you are over
@@ -79,7 +85,11 @@ const billing = () => {
 						</label>
 
 						<br />
-						<Button className="login-btn inline-block shrink-0 rounded-md border px-12 py-3 text-sm font-medium text-white transition focus:outline-none focus:ring" disabled={!checked} to="/profile/chooseprofile">
+						<Button
+							className="login-btn inline-block shrink-0 rounded-md border px-12 py-3 text-sm font-medium text-white transition focus:outline-none focus:ring"
+							disabled={!checked}
+							to="/profile/chooseprofile"
+						>
 							Pay Now
 						</Button>
 					</div>

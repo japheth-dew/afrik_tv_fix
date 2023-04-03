@@ -5,7 +5,7 @@ import { Spinner } from './Spinner'
 export const Button = ({ children, className, loading, disabled, ...props }) => {
 	const Component = props.to ? NavLink : 'button'
 	const classes = cn('button', className, {
-		"opacity-50": disabled,
+		'opacity-50': disabled,
 	})
 	return (
 		<Component className={classes} {...props} disabled={disabled}>
