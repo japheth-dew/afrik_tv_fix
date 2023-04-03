@@ -3,7 +3,6 @@ import './style.css'
 import useForm from '../../hooks/useForm'
 import { useNavigate } from 'react-router-dom'
 import { Button } from '../../components/ui'
-import { registerWithEmailAndPassword } from '../../features/user'
 
 const SignUp = () => {
 	const [loading, setLoading] = useState(false)
@@ -12,20 +11,7 @@ const SignUp = () => {
 
 	const handleSubmit = async (e) => {
 		e.preventDefault()
-		const body = getValues()
-		if (body.error) {
-			return
-		}
-		try {
-			setLoading(true)
-			await registerWithEmailAndPassword(body)
-			setLoading(false)
-			reset()
-			navigate('/in')
-		} catch (err) {
-			console.log(err)
-			setLoading(false)
-		}
+		navigate('/auth/otp')
 	}
 
 	const getValues = () => {

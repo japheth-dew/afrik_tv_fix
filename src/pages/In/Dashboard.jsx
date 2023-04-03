@@ -1,14 +1,11 @@
 import { NavLink } from 'react-router-dom'
 import Plan from '../../components/Plan'
 import Icon from '../../components/Icon'
-import { useUser } from '../../lib/auth'
 
 export const Dashboard = () => {
-	const user = useUser()
-
 	return (
 		<div className="ml-16 lg:ml-0">
-			<h1 className="text-3xl font-bold">Hi, {user.data?.fullname} 👋🏽</h1>
+			<h1 className="text-3xl font-bold">Hi, Disu 👋🏽</h1>
 			<div className="flex flex-wrap gap-8 mt-8">
 				<Plan className="bg-[#07092C] text-white" />
 				<Plan className="bg-[#492406] text-white" />
