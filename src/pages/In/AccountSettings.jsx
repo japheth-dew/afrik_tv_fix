@@ -6,7 +6,6 @@ export const AccountSettings = () => {
 	const [values, onChange] = useForm({
 		fullname: 'Disu',
 		email: 'opemipodisu@gmail.com',
-		phone: '08123456789',
 	})
 	const [values2, onChange2] = useForm()
 	const [showModal, setShowModal] = useState(false)
