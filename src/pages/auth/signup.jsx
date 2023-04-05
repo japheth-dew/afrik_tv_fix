@@ -164,7 +164,7 @@ const SignUp = () => {
 									type="checkbox"
 									id="MarketingAccept"
 									name="marketing_accept"
-									className="h-5 w-5 rounded-md border-gray-200 bg-white shadow-sm"
+									className="h-5 w-5 rounded-md border-gray-200 bg-white shadow-sm cursor-pointer"
 								/>
 
 								<span className="text-sm text-gray-700">
