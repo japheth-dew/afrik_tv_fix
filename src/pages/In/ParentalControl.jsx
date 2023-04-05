@@ -56,11 +56,6 @@ export const ParentalControl = () => {
 											<Checkbox defaultChecked />
 											<div className="text-[#07092C]">Lock Profile</div>
 										</div>
-										<div className="flex items-center gap-3">
-											{/* Check box */}
-											<Checkbox defaultChecked />
-											<div className="text-[#07092C]">All Maturing Rating</div>
-										</div>
 									</div>
 								</div>
 							</Disclosure.Panel>

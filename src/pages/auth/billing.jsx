@@ -1,9 +1,18 @@
 import React from 'react'
 import './style.css'
+import { Checkbox } from '@mui/material'
+import { Button } from '../../components/ui'
+import { Head } from '../../components/common'
 
 const billing = () => {
+	const [checked, setChecked] = React.useState(false)
+	const [loading, setLoading] = React.useState(false)
+
+	const handlePayment = async () => {}
+
 	return (
 		<section className="bg-white">
+			<Head title="Billing - AfrikTV" />
 			<div className="lg:grid lg:min-h-screen lg:grid-cols-12">
 				<section className="relative flex h-32  bg-gray-900 lg:col-span-5 lg:h-full xl:col-span-6">
 					<div className="hidden lg:relative lg:block lg:p-12 contain-in">
@@ -14,11 +23,9 @@ const billing = () => {
 								width="10%"
 							/>
 						</a>
-
 						<h2 className="mt-6 text-2xl font-bold text-white sm:text-3xl md:text-4xl">Billing - AfrikTV</h2>
-
 						<p className="mt-4 leading-relaxed text-white/90">
-							End to end encryption process for payment. Inout your credit card details to start your subscription with
+							End to end encryption process for payment. Input your credit card details to start your subscription with
 							AfrikTV.
 						</p>
 						<img
@@ -28,7 +35,6 @@ const billing = () => {
 						/>
 					</div>
 				</section>
-
 				<main
 					aria-label="Main"
 					className="flex items-center justify-center px-8 py-8 sm:px-12 lg:col-span-7 lg:py-12 lg:px-16 xl:col-span-6 contain-all"
@@ -62,11 +68,12 @@ const billing = () => {
 							role="alert"
 						></div>
 						<label htmlFor="MarketingAccept" className="flex gap-4">
-							<input
-								type="checkbox"
+							<Checkbox
 								id="MarketingAccept"
 								name="marketing_accept"
-								className="h-5 w-5 rounded-md border-gray-200 bg-white shadow-sm"
+								className="self-start"
+								checked={checked}
+								onChange={(e) => setChecked(e.target.checked)}
 							/>
 
 							<span className="text-sm text-gray-700">
@@ -78,11 +85,13 @@ const billing = () => {
 						</label>
 
 						<br />
-						<a href="/auth/planform">
-							<button className="login-btn inline-block shrink-0 rounded-md border px-12 py-3 text-sm font-medium text-white transition focus:outline-none focus:ring">
-								Pay Now
-							</button>
-						</a>
+						<Button
+							className="login-btn inline-block shrink-0 rounded-md border px-12 py-3 text-sm font-medium text-white transition focus:outline-none focus:ring"
+							disabled={!checked}
+							to="/profile/chooseprofile"
+						>
+							Pay Now
+						</Button>
 					</div>
 				</main>
 			</div>

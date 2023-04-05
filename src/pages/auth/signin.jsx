@@ -1,20 +1,16 @@
 import React from 'react'
 import useForm from '../../hooks/useForm'
-import { useLogin } from '../../lib/auth'
 import './style.css'
 import { useNavigate } from 'react-router-dom'
 import { Button } from '../../components/ui'
 
 const SignIn = () => {
 	const [values, onChange, reset] = useForm()
-	const login = useLogin()
 	const navigate = useNavigate()
 
 	const handleSubmit = (e) => {
 		e.preventDefault()
-		login.mutate(values, {
-			onSuccess: () => navigate('/in'),
-		})
+		navigate('/in')
 	}
 
 	return (
@@ -117,7 +113,6 @@ const SignIn = () => {
 							<Button
 								className="login-btn inline-block shrink-0 rounded-md border px-12 py-3 text-sm font-medium text-white transition focus:outline-none focus:ring"
 								type="submit"
-								loading={login.isLoading}
 							>
 								Sign In
 							</Button>

@@ -5,11 +5,8 @@ import logoImage from '../assets/afriklogo.png'
 import profileImage from '../assets/profile.png'
 import clownImage from '../assets/clown.png'
 import vengeImage from '../assets/venge.png'
-import { useLogout } from '../lib/auth'
 
 function Navbar() {
-	const logout = useLogout()
-
 	return (
 		<nav className="sticky top-0 z-10 bg-white border-gray-200 px-2 sm:px-4 py-2.5">
 			<div className="max-w-8xl flex flex-wrap items-center justify-between mx-auto">
@@ -159,9 +156,8 @@ function Navbar() {
 												className={`${
 													active ? 'bg-[#dc2626]' : ''
 												} bg-red-700 text-white w-full rounded-md px-2 py-2 text-sm font-medium`}
-												onClick={logout.mutate}
 											>
-												{logout.isLoading ? 'Logging out...' : 'Sign out'}
+											Sign Out
 											</button>
 										)}
 									</Menu.Item>
