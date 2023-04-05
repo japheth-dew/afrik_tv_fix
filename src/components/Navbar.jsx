@@ -157,7 +157,7 @@ function Navbar() {
 													active ? 'bg-[#dc2626]' : ''
 												} bg-red-700 text-white w-full rounded-md px-2 py-2 text-sm font-medium`}
 											>
-												{logout.isLoading ? 'Logging out...' : 'Sign out'}
+											Sign Out
 											</button>
 										)}
 									</Menu.Item>
