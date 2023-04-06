@@ -1,5 +1,7 @@
 import React from 'react'
 import './style.css'
+import logoImage from '../../assets/afriklogo.png';
+
 
 const Nop = () => {
 	return (
@@ -7,7 +9,7 @@ const Nop = () => {
 			<nav className="bg-white border-gray-200 px-2 sm:px-4 py-2.5">
 				<div className="container flex flex-wrap items-center justify-between mx-auto">
 					<a href="/" className="flex items-center logo">
-						<img src="assets/afriklogo.png" className="" height="40px" width="" alt="AfrikTV Logo" />
+						<img src={logoImage} className="" height="40px" width="" alt="AfrikTV Logo" />
 					</a>
 				</div>
 			</nav>
