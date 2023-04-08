@@ -14,11 +14,12 @@ import Chooseprofile from './pages/Profile/chooseprofile'
 import Newprofile from './pages/Profile/newprofile'
 
 import Moviepage from './pages/Movies/moviepage'
+import SearchResult from './pages/Movies/searchresults'
 
 import Dashboard from './pages/userdashboard/billing'
 import Planform from './pages/auth/planform'
 import Billing from './pages/auth/billing'
-import SearchResult from './pages/movies/searchresults'
+
 import {
 	Root as In,
 	Dashboard as InDashboard,
