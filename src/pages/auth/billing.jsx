@@ -88,7 +88,7 @@ const billing = () => {
 						<Button
 							className="login-btn inline-block shrink-0 rounded-md border px-12 py-3 text-sm font-medium text-white transition focus:outline-none focus:ring"
 							disabled={!checked}
-							to="/profile/chooseprofile"
+							to="/auth/planform"
 						>
 							Pay Now
 						</Button>
