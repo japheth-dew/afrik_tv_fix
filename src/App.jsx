@@ -18,6 +18,7 @@ import Moviepage from './pages/Movies/moviepage'
 import Dashboard from './pages/userdashboard/billing'
 import Planform from './pages/auth/planform'
 import Billing from './pages/auth/billing'
+import SearchResult from './pages/movies/searchresults'
 import {
 	Root as In,
 	Dashboard as InDashboard,
@@ -47,6 +48,7 @@ const router = createBrowserRouter(
 			<Route path="/profile/manageprofile" element={<Manageprofile />} />
 			<Route path="/profile/chooseprofile" element={<Chooseprofile />} />
 			<Route path="/profile/profileedit" element={<ProfileEdit />} />
+			<Route path="/movie/searchresults" element={<SearchResult />} />
 			<Route path="/profile/new" element={<Newprofile />} />
 			<Route path="/userdashboard/billing" element={<Dashboard />} />
 			<Route path="/auth/planform" element={<Planform />} />
