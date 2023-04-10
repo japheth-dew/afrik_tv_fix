@@ -35,7 +35,7 @@ export const Settings = () => {
 				</div>
 				<div className="mt-10">
 					{LINKS.map(({ label, desc, to, icon }) => (
-						<NavLink key={to} to={to} className="flex flex-row gap-6 items-start gap-2 py-5 border-b border-[#E9E9E9]">
+						<NavLink key={to} to={to} className="flex flex-row gap-6 items-start py-5 border-b border-[#E9E9E9]">
 							<span className="w-9 h-9 flex justify-center items-center rounded-lg bg-[#F2F2F2] text-white mt-2">
 								<Icon name={icon} />
 							</span>
