@@ -32,6 +32,15 @@ import {
 import Nop from './pages/404/error'
 import { HelmetProvider } from 'react-helmet-async'
 
+import FallBackUI from './pages/FallBackUI.jsx/error'
+
+// Providers
+import { NotificationProvider } from './provider/NotificationProvider';
+import Notification from './components/ui/Notification'
+import { AppProvider } from './provider'
+import { ApiProvider } from './provider/call-service/index'
+import { UserProvider } from './provider/state-manager/userProvider'
+
 // import ResetPassword from './pages/auth/resetpassword'
 
 const router = createBrowserRouter(
@@ -70,9 +79,20 @@ const router = createBrowserRouter(
 
 function App() {
 	return (
-		<HelmetProvider>
-			<RouterProvider router={router} />
-		</HelmetProvider>
+		<FallBackUI>
+			<HelmetProvider>
+				<NotificationProvider>
+					<UserProvider>
+						<AppProvider>
+							<ApiProvider>
+								<Notification />
+								<RouterProvider router={router} />
+							</ApiProvider>
+						</AppProvider>
+					</UserProvider>
+				</NotificationProvider >
+			</HelmetProvider>
+		</FallBackUI>
 	)
 }
 

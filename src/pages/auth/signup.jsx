@@ -1,39 +1,51 @@
-import React, { useState } from 'react'
-import './style.css'
+
+// hooks
+import React, { useState, useContext } from 'react'
 import useForm from '../../hooks/useForm'
 import { useNavigate } from 'react-router-dom'
+
+// ui
 import { Button } from '../../components/ui'
+import VisibilityOutlinedIcon from '@mui/icons-material/VisibilityOutlined';
+import VisibilityOffOutlinedIcon from '@mui/icons-material/VisibilityOffOutlined';
+
+// Providers
+import AppContext from '../../provider'
+import ApiContext from '../../provider/call-service'
+
+import './style.css'
 
 const SignUp = () => {
-	const [loading, setLoading] = useState(false)
+	const [showPassword, setShowPassword] = useState(false)
+	const [type, setType] = useState('password')
+
 	const [values, onChange, reset] = useForm()
 	const navigate = useNavigate()
 
-	const handleSubmit = async (e) => {
-		e.preventDefault()
-		navigate('/auth/otp')
+	const { signup } = useContext(ApiContext)
+	const { loading } = useContext(AppContext)
+
+	// function to check if password and confirm password match
+	function check(event) {
+		if (event.target.value !== values.password) {
+			event.target.setCustomValidity('Passwords must match'); // Set an error message
+		} else {
+			event.target.setCustomValidity(''); // Reset the error message
+		}
 	}
 
-	const getValues = () => {
-		// get email, fullname, password from values and validated
-		const { email, fullname, password, rePassword } = values
-		if (!email) {
-			return {
-				error: 'Email is required',
-			}
+	const handleSubmit = async (e) => {
+		e.preventDefault()
+		// check if password and confirm password match
+
+		const res = await signup(values.fullname, values.email, values.password)
+
+		if (res) {
+			navigate('/auth/otp');
+			reset();
 		}
-		if (!fullname) {
-			return {
-				error: 'Fullname is required',
-			}
-		}
-		if (password !== rePassword) {
-			return {
-				error: 'Password does not match',
-			}
-		}
-		return { email, fullname, password }
 	}
+
 
 	return (
 		<section className="bg-white">
@@ -85,8 +97,12 @@ const SignUp = () => {
 								type="text"
 								name="fullname"
 								id="fullname"
+								value={values.fullname}
 								className="block py-2.5 px-0 w-full text-sm text-black  bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-dark dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
 								placeholder=" "
+								pattern="[a-zA-Z]+\s[a-zA-Z]+"
+								autoComplete="off"
+								required
 								onChange={onChange}
 							/>
 							<label
@@ -104,6 +120,9 @@ const SignUp = () => {
 								id="email"
 								className="block py-2.5 px-0 w-full text-sm text-black  bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-dark dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
 								placeholder=" "
+								autoComplete='off'
+								value={values.email}
+								required
 								onChange={onChange}
 							/>
 							<label
@@ -116,13 +135,25 @@ const SignUp = () => {
 
 						<div className="relative z-0 w-full mb-6 group">
 							<input
-								type="password"
+								type={showPassword ? 'text' : 'password'}
 								name="password"
-								id="password"
+								id='password'
+								autoComplete='off'
+								pattern=".{8,}"
+								required
+								value={values.password}
 								className="block py-2.5 px-0 w-full text-sm text-black  bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-dark dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
 								placeholder=" "
 								onChange={onChange}
 							/>
+
+							<div className='absolute top-2 right-2 cursor-pointer' onClick={() => setShowPassword(!showPassword)}>
+								{showPassword ?
+									<VisibilityOutlinedIcon /> :
+									<VisibilityOffOutlinedIcon />
+								}
+							</div>
+
 							<label
 								htmlFor="password"
 								className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
@@ -133,13 +164,26 @@ const SignUp = () => {
 
 						<div className="relative z-0 w-full mb-6 group">
 							<input
-								type="password"
-								name="rePassword"
-								id="rePassword"
+								type={showPassword ? 'text' : 'password'}
+								name="confirmPassword"
+								id="confirmPassword"
+								autoComplete='off'
 								className="block py-2.5 px-0 w-full text-sm text-black  bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-dark dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
 								placeholder=" "
+								pattern="[a-zA-Z]+"
+								required
+								value={values.confirmPassword}
 								onChange={onChange}
+								onInput={check}
 							/>
+
+							<div className='absolute top-2 right-2 cursor-pointer' onClick={() => setShowPassword(!showPassword)}>
+								{showPassword ?
+									<VisibilityOutlinedIcon /> :
+									<VisibilityOffOutlinedIcon />
+								}
+							</div>
+
 							<label
 								htmlFor="rePassword"
 								className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
