@@ -1,8 +1,16 @@
+import { useEffect, useContext } from 'react'
 import { NavLink } from 'react-router-dom'
 import Plan from '../../components/Plan'
 import Icon from '../../components/Icon'
+import UserContext from '../../provider/state-manager/userProvider'
 
 export const Dashboard = () => {
+	const { recoverUser } = useContext(UserContext)
+
+	useEffect(() => {
+		document.title = 'In | Dashboard'
+		recoverUser();
+	}, [])
 	return (
 		<div className="ml-16 lg:ml-0">
 			<h1 className="text-3xl font-bold">Hi, Disu 👋🏽</h1>

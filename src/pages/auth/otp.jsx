@@ -1,7 +1,43 @@
-import React from 'react'
-import './style.css'
+import React, { useEffect, useState } from 'react'
+import './style.css';
+import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
+
 
 const otp = () => {
+	const email = localStorage.getItem("email");
+	const navigate = useNavigate();
+
+	useEffect(() => {
+		if (!email && !email) {
+			navigate("/auth/signup");
+		}
+
+		return () => {
+			localStorage.removeItem("email");
+		}
+	}, [])
+
+	const [inputValues, setInputValues] = useState(["", "", "", ""]);
+
+
+	const handleInputChange = (event, index) => {
+		const newInputValues = [...inputValues];
+		newInputValues[index] = event.target.value;
+		setInputValues(newInputValues);
+		// console.log(getOtpCode())
+	};
+
+	const getOtpCode = () => {
+		return inputValues.join("");
+	};
+
+	const handleSubmit = async (e) => {
+		e.preventDefault();
+		const response = await axios.post("/authenticate/otp", { email, otp: inputValues });
+		console.log(response.data);
+	}
+
 	return (
 		<section className="bg-white">
 			<div className="lg:grid lg:min-h-screen lg:grid-cols-12">
@@ -56,6 +92,9 @@ const otp = () => {
 													name=""
 													id=""
 													required
+													maxLength="1"
+													value={inputValues[0]}
+													onChange={(event) => handleInputChange(event, 0)}
 												/>
 											</div>
 											<div className="w-16 h-16 ">
@@ -64,6 +103,9 @@ const otp = () => {
 													type="text"
 													name=""
 													id=""
+													maxLength="1"
+													value={inputValues[1]}
+													onChange={(event) => handleInputChange(event, 1)}
 													required
 												/>
 											</div>
@@ -73,6 +115,9 @@ const otp = () => {
 													type="text"
 													name=""
 													id=""
+													maxLength="1"
+													value={inputValues[2]}
+													onChange={(event) => handleInputChange(event, 2)}
 													required
 												/>
 											</div>
@@ -82,6 +127,9 @@ const otp = () => {
 													type="text"
 													name=""
 													id=""
+													maxLength="1"
+													value={inputValues[3]}
+													onChange={(event) => handleInputChange(event, 3)}
 													required
 												/>
 											</div>

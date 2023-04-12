@@ -1,16 +1,35 @@
-import React from 'react'
+import React, { useContext, useState } from 'react'
 import useForm from '../../hooks/useForm'
 import './style.css'
 import { useNavigate } from 'react-router-dom'
 import { Button } from '../../components/ui'
 
+import VisibilityOutlinedIcon from '@mui/icons-material/VisibilityOutlined';
+import VisibilityOffOutlinedIcon from '@mui/icons-material/VisibilityOffOutlined';
+
+import UserContext from '../../provider/state-manager/userProvider'
+import ApiContext from "../../provider/call-service/index"
+import AppContext from '../../provider'
+
+
 const SignIn = () => {
 	const [values, onChange, reset] = useForm()
+	const [showPassword, setShowPassword] = useState(false)
+	const [type, setType] = useState('password')
+
+	const { signin } = useContext(ApiContext)
+	const { loading } = useContext(AppContext)
+
 	const navigate = useNavigate()
 
-	const handleSubmit = (e) => {
+	const handleSubmit = async (e) => {
 		e.preventDefault()
-		navigate('/in')
+
+		const res = await signin("obadimuoluwafemi1@gmail.com", "1234567890");
+
+		if (res) {
+			navigate('/in')
+		}
 	}
 
 	return (
@@ -62,9 +81,11 @@ const SignIn = () => {
 							<input
 								type="email"
 								name="email"
-								id="email"
+								// value={values.email}
+								value="obadimuoluwafemi1@gmail.com"
 								className="block py-2.5 px-0 w-full text-sm text-black  bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-dark dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
-								placeholder=" "
+								placeholder="Enter your email"
+								autoComplete='off'
 								onChange={onChange}
 							/>
 							<label
@@ -77,13 +98,23 @@ const SignIn = () => {
 
 						<div className="relative z-0 w-full mb-6 group">
 							<input
-								type="password"
+								type={showPassword ? 'text' : 'password'}
 								name="password"
-								id="password"
-								className="block py-2.5 px-0 w-full text-sm text-black  bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-dark dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
-								placeholder=" "
+								autoComplete='off'
+								// value={values.password}
+								value="1234567890"
+								className="block py-3 px-0 w-full text-sm text-black bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-dark dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+								placeholder="Enter your passsword"
 								onChange={onChange}
 							/>
+
+							<div className='absolute top-2 right-2 cursor-pointer' onClick={() => setShowPassword(!showPassword)}>
+								{showPassword ?
+									<VisibilityOutlinedIcon /> :
+									<VisibilityOffOutlinedIcon />
+								}
+							</div>
+
 							<label
 								htmlFor="floating_pwd"
 								className="peer-focus:font-medium absolute text-sm text-gray-600 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
@@ -102,7 +133,7 @@ const SignIn = () => {
 							<p className="mt-4 text-sm text-gray-500 sm:mt-0">
 								{' '}
 								New to AfrikTV{' '}
-								<a href="/auth/signup" className="text-gray-500">
+								<a href="/auth/signup" className="text-gray-500 font-bold hover:underline">
 									Sign Up now
 								</a>
 							</p>
@@ -113,6 +144,8 @@ const SignIn = () => {
 							<Button
 								className="login-btn inline-block shrink-0 rounded-md border px-12 py-3 text-sm font-medium text-white transition focus:outline-none focus:ring"
 								type="submit"
+								loading={loading}
+								disabled={loading}
 							>
 								Sign In
 							</Button>
