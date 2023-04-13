@@ -1,15 +1,14 @@
 import { Helmet } from 'react-helmet-async'
-import logoImage from '../../assets/afriktv.svg'
 
 export default function App() {
 	return (
 		<div className="App">
 
 
-<nav class="bg-white border-gray-200 dark:bg-gray-900">
+<nav class="">
   <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
     <a href="" class="flex items-center">
-        <img src={logoImage} height="40px" alt="AfrikTV Logo" />
+        <img src="https://res.cloudinary.com/dwdb9tvii/image/upload/v1681378338/afriktv_xc49xb.png" width={150} alt="AfrikTV Logo" />
     </a>
    
   </div>
@@ -28,7 +27,7 @@ export default function App() {
 									</h1>
 									<p class="mt-3 text-base text-gray-400 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
 										Explore the best African movies from all over Africa. Instantly stream movies to your device,
-										wherever you are in the world. Type your email to join the waitlist.
+										wherever you are in the world. Input your email to join the waitlist.
 									</p>
 									<div class="mt-10 sm:mt-12">
 										<div class="launchlist-widget" data-key-id="031wad" data-height="180px"></div>
