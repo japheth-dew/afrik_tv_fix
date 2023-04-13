@@ -1,5 +1,5 @@
 import { Helmet } from 'react-helmet-async'
-import logoImage from '../../assets/afriklogo.png'
+import logoImage from '../../assets/afriktv.svg'
 
 export default function App() {
 	return (
@@ -9,8 +9,7 @@ export default function App() {
 <nav class="bg-white border-gray-200 dark:bg-gray-900">
   <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
     <a href="" class="flex items-center">
-        <img src={logoImage} height="40px" alt="Flowbite Logo" />
-        <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
+        <img src={logoImage} height="40px" alt="AfrikTV Logo" />
     </a>
    
   </div>
