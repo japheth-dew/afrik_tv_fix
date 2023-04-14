@@ -54,7 +54,7 @@ function Navbar() {
 					</Popover> */}
 					<Menu as="div" className="relative inline-block text-left">
 						<Menu.Button className="focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
-							<Icon name="bell" className="h-8 w-8" />
+							<Icon name="bell" className="h-8 w-8 m-0 mt-[5.33px]" />
 						</Menu.Button>
 						<Transition
 							as={Fragment}
@@ -90,7 +90,7 @@ function Navbar() {
 					{/* Account */}
 					<Menu as="div" className="relative inline-block text-left">
 						<Menu.Button className="focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
-							<img className="w-8 h-8 rounded-lg" src={profileImage} />
+							<img className="w-8 h-8 m-0 mt-[5.33px] rounded-lg" src={profileImage} />
 						</Menu.Button>
 						<Transition
 							as={Fragment}
