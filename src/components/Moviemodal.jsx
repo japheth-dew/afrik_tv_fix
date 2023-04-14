@@ -56,38 +56,38 @@ export default function MyModal({ click }) {
 								<Dialog.Panel className="w-full max-w-lg transform overflow-hidden rounded-xl bg-white p-6 text-left align-middle shadow-xl transition-all">
 									<div className="bg-gray-100 w-full h-60 flex items-center justify-center">Trailer</div>
 
-									<div className="">
-										<button
-											type="button"
-											className=" inline-flex mr-2 mt-3 mb-2 object-cover rounded-full w-10  justify-center border-transparent bg-gray-800 px-4 py-2 text-sm font-medium text-white focus:outline-none focus-visible:ring-1 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
-											onClick={close}
-										>
-											<PlayArrowIcon />
-										</button>
+									<div className="mt-4">
+											<div className='bg-gray-800 inline-flex p-3 rounded-full mr-2'>
+												<button
+												type="button"
+												onClick={close}>
+													<PlayArrowIcon className='m-0 text-white'/>
+												</button>
+											</div>
 
-										<button
-											type="button"
-											className=" inline-flex mr-2 mt-3 mb-2 object-cover rounded-full w-10  justify-center border-transparent bg-gray-800 px-4 py-2 text-sm font-medium text-white focus:outline-none focus-visible:ring-1 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
-											onClick={close}
-										>
-											<ThumbUpOffAltIcon />
-										</button>
+											<div className='bg-gray-800 inline-flex p-3 rounded-full mr-2'>
+												<button
+												type="button"
+												onClick={close}>
+													<ThumbUpOffAltIcon className='m-0 text-white'/>
+												</button>
+											</div>
 
-										<button
-											type="button"
-											className=" inline-flex mr-2 mt-3 mb-2 object-cover rounded-full w-10  justify-center border-transparent bg-gray-800 px-4 py-2 text-sm font-medium text-white focus:outline-none focus-visible:ring-1 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
-											onClick={close}
-										>
-											<ThumbDownOffAltIcon />
-										</button>
+											<div className='bg-gray-800 inline-flex p-3 rounded-full mr-2'>
+												<button
+												type="button"
+												onClick={close}>
+													<ThumbDownOffAltIcon className='m-0 text-white'/>
+												</button>
+											</div>
 
-										<button
-											type="button"
-											className=" inline-flex object-cover rounded-full w-10  justify-center border-transparent bg-gray-800 px-4 py-2 text-sm font-medium text-white focus:outline-none focus-visible:ring-1 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
-											onClick={close}
-										>
-											<AddIcon />
-										</button>
+											<div className='bg-gray-800 inline-flex p-3 rounded-full'>
+												<button
+												type="button"
+												onClick={close}>
+													<AddIcon className='m-0 text-white'/>
+												</button>
+											</div>
 
 										<p className="text-2xl font-bold mt-2 mb-4">Movie Title</p>
 										<p className="text-sm text-gray-500 mb-2">

@@ -17,7 +17,7 @@ function Manageprofile() {
 					<Link to={'/profile/profileedit'}>
 						<div>
 							<div
-								className="w-52 h-48 flex justify-center items-center text-4xl"
+								className="w-32 h-32 sm:w-48 sm:h-48 flex justify-center items-center text-4xl"
 								onMouseOver={() => {
 									setHover2(true)
 								}}
@@ -35,7 +35,7 @@ function Manageprofile() {
 					<Link to={'/profile/profileedit'}>
 						<div>
 							<div
-								className="w-52 h-48 flex justify-center items-center text-4xl "
+								className="w-32 h-32 sm:w-48 sm:h-48 flex justify-center items-center text-4xl "
 								onMouseOver={() => {
 									setHover(true)
 								}}
