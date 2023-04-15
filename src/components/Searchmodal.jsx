@@ -54,7 +54,6 @@ export default function MyModal() {
 										Search Movie 🙈{' '}
 									</Dialog.Title>
 									<div className="mt-2">
-										<form>
 											<label
 												htmlFor="default-search"
 												className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"
@@ -80,7 +79,6 @@ export default function MyModal() {
 													</button>
 												</a>
 											</div>
-										</form>
 									</div>
 								</Dialog.Panel>
 							</Transition.Child>

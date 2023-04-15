@@ -54,7 +54,7 @@ function Navbar() {
 					</Popover> */}
 					<Menu as="div" className="relative inline-block text-left">
 						<Menu.Button className="focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
-							<Icon name="bell" className="h-8 w-8" />
+							<Icon name="bell" className="h-8 w-8 m-0 mt-[5.33px]" />
 						</Menu.Button>
 						<Transition
 							as={Fragment}
@@ -90,7 +90,7 @@ function Navbar() {
 					{/* Account */}
 					<Menu as="div" className="relative inline-block text-left">
 						<Menu.Button className="focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
-							<img className="w-8 h-8 rounded-lg" src={profileImage} />
+							<img className="w-8 h-8 m-0 mt-[5.33px] rounded-lg" src={profileImage} />
 						</Menu.Button>
 						<Transition
 							as={Fragment}
@@ -131,7 +131,7 @@ function Navbar() {
 
 									<Menu.Item>
 										{({ active }) => (
-											<a href="/profile/manage">
+											<a href="/profile/manageprofile">
 												<button
 													className={`${active ? 'bg-[#f5f5f5]' : ''} w-full rounded-md px-2 py-2 text-sm font-medium`}
 												>
@@ -143,7 +143,7 @@ function Navbar() {
 
 									<Menu.Item>
 										{({ active }) => (
-											<a href="/movies">
+											<a href="/movie/moviepage">
 												<button
 													className={`${active ? 'bg-[#f5f5f5]' : ''} w-full rounded-md px-2 py-2 text-sm font-medium`}
 												>
