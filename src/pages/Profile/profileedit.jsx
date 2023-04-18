@@ -13,7 +13,7 @@ function ProfileEdit() {
 				<div className={`md:w-[451px] w-full mb-8 ${isClicked && 'opacity-60'}`}>
 					<div className="mb-16 text-3xl font-black">Edit Profiles</div>
 					<div className="grid grid-cols-2 gap-4">
-						<div className="w-28 h-28 bg-[#F39C11] flex justify-center items-center">🤡</div>
+						<div className="w-28 h-28 bg-[#F39C11] flex justify-center items-center cursor-default">🤡</div>
 						<div className="flex flex-col justify-between">
 							<input
 								className="h-16 rounded-lg bg-[##FAFAFA] outline-none py-5 px-4 border border-[#E3E0E0]"
@@ -60,12 +60,12 @@ function ProfileEdit() {
 						</div>
 					</div>
 				</div>
-				<div className={`flex justify-between h-[40px] w-full md:w-[600px] ${isClicked && 'opacity-60'}`}>
+				<div className={`flex justify-between w-full md:w-[600px] ${isClicked && 'opacity-60'}`}>
 					<button
-						className={`text-sm flex justify-center items-center px-3 md:text-lg font-bold rounded-xl ${
+						className={`text-xs flex justify-center items-center px-2 md:px-3 py-2 md:text-lg font-bold rounded-xl border-2 border-[#060825] ${
 							active === '1'
-								? 'bg-[#060825] text-white'
-								: 'bg-white text-[#060825] border-[#060825] border-2 rounded-xl'
+								? 'bg-[#060825] text-white '
+								: 'bg-white text-[#060825] '
 						}`}
 						id="1"
 						onClick={(e) => {
@@ -75,10 +75,10 @@ function ProfileEdit() {
 						Save Changes
 					</button>
 					<button
-						className={`text-sm border-2  px-3 md:text-lg font-bold rounded-xl flex justify-center items-center  ${
+						className={`text-xs border-2  px-2 md:px-3 md:text-lg font-bold rounded-xl flex justify-center items-center border-[#060825] ${
 							active === '2'
-								? 'bg-[#060825] text-white'
-								: 'bg-white text-[#060825] border-[#060825] border-2 rounded-xl'
+								? 'bg-[#060825] text-white '
+								: 'bg-white text-[#060825] '
 						}`}
 						id="2"
 						onClick={(e) => {
@@ -88,8 +88,8 @@ function ProfileEdit() {
 						Cancel
 					</button>
 					<button
-						className={`text-sm border-2 bg-red-700 text-white  px-3 md:text-lg font-bold rounded-xl flex justify-center items-center  ${
-							active === '3' ? 'bg-[#b91c1c] text-white' : ''
+						className={`text-xs border-2 px-2 md:px-3 md:text-lg font-bold rounded-xl flex justify-center items-center border-[#b91c1c] ${
+							active === '3' ? 'bg-[#b91c1c] text-white ' : 'text-[#b91c1c] bg-white'
 						}`}
 						id="3"
 						onClick={(e) => {
