@@ -13,7 +13,7 @@ function Manageprofile() {
 			<Navbar />
 			<div className="flex flex-col justify-center items-center mt-10">
 				<div className="mb-16 text-3xl font-black">Manage Profile</div>
-				<div className="flex gap-16 w-[80%] justify-center">
+				<div className="flex gap-8 md:gap-16 w-[80%] justify-center">
 					<Link to={'/profile/profileedit'}>
 						<div>
 							<div
