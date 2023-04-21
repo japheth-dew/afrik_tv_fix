@@ -11,9 +11,10 @@ import VisibilityOffOutlinedIcon from '@mui/icons-material/VisibilityOffOutlined
 // Providers
 import AppContext from '../../provider'
 import ApiContext from '../../provider/call-service'
+import UserContext from '../../provider/state-manager/userProvider'
 
 import './style.css'
-import UserContext from '../../provider/state-manager/userProvider'
+import { check } from './passwordChecker'
 
 const SignUp = () => {
 	const [showPassword, setShowPassword] = useState(false)
@@ -26,15 +27,6 @@ const SignUp = () => {
 	const { loading } = useContext(AppContext)
 	const { setProperties } = useContext(UserContext)
 
-	// function to check if password and confirm password match
-	function check(event) {
-		if (event.target.value !== values.password) {
-			event.target.setCustomValidity('Passwords must match') // Set an error message
-		} else {
-			event.target.setCustomValidity('') // Reset the error message
-		}
-	}
-
 	const handleSubmit = async (e) => {
 		e.preventDefault()
 		// check if password and confirm password match
@@ -43,7 +35,12 @@ const SignUp = () => {
 		const res = await signup(values.fullname, values.email, values.password)
 
 		if (res) {
-			navigate('/auth/otp')
+			navigate('/auth/otp', {
+				state: {
+					url: '/auth/authenticate/otp',
+					type: 'signup',
+				},
+			})
 			reset()
 		}
 	}

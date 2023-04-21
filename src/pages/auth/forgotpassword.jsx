@@ -1,7 +1,39 @@
-import React from 'react'
+import React, { useContext, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import './style.css'
+import ApiContext from '../../provider/call-service'
+import AppContext from '../../provider'
 
 const forgotpassword = () => {
+	const navigate = useNavigate()
+
+	const { forgotPassword } = useContext(ApiContext)
+	const { loading } = useContext(AppContext)
+
+	const [inputValue, setInputValue] = useState('')
+
+	const handleInputChange = (event) => {
+		setInputValue(event.target.value)
+	}
+
+	const handleSubmit = async (e) => {
+		e.preventDefault()
+
+		if (!inputValue) return
+
+		const res = await forgotPassword(inputValue)
+
+		if (res) {
+			console.log('Before navigate')
+			navigate('/auth/otp', {
+				state: {
+					url: '/auth/validate/reset',
+					type: 'reset',
+				},
+			})
+		}
+	}
+
 	return (
 		<section className="bg-white">
 			<div className="lg:grid lg:min-h-screen lg:grid-cols-12">
@@ -51,6 +83,8 @@ const forgotpassword = () => {
 							<input
 								type="email"
 								name="floating_email"
+								value={inputValue}
+								onChange={handleInputChange}
 								id="email"
 								className="block py-2.5 px-0 w-full text-sm text-black  bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-dark dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
 								placeholder=" "
@@ -64,11 +98,13 @@ const forgotpassword = () => {
 						</div>
 
 						<div className="col-span-6 sm:flex sm:items-center sm:gap-4">
-							<a href="resetpassword">
-								<button className="inline-block shrink-0 login-btn rounded-md border  px-12 py-3 text-sm font-medium text-white transition focus:outline-none ">
-									Forgotten Password
-								</button>
-							</a>
+							<button
+								disabled={loading}
+								onClick={handleSubmit}
+								className="inline-block shrink-0 login-btn rounded-md border  px-12 py-3 text-sm font-medium text-white transition focus:outline-none "
+							>
+								{loading ? 'Working...' : 'Forgotten Password'}
+							</button>
 						</div>
 					</div>
 				</main>

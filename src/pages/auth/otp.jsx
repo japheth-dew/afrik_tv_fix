@@ -1,13 +1,15 @@
 import React, { useContext, useEffect, useState } from 'react'
 import './style.css'
-import { useNavigate } from 'react-router-dom'
-import axios from 'axios'
+import { useLocation, useNavigate } from 'react-router-dom'
 import ApiContext from '../../provider/call-service'
 import AppContext from '../../provider'
 
 const otp = () => {
 	const email = localStorage.getItem('email')
 	const navigate = useNavigate()
+
+	const location = useLocation()
+	const data = location.state
 
 	const { verifyOTP } = useContext(ApiContext)
 	const { loading } = useContext(AppContext)
@@ -34,11 +36,14 @@ const otp = () => {
 	const handleSubmit = async (e) => {
 		e.preventDefault()
 		if (!email || !inputValues) return
-		const response = await verifyOTP(email, getOtpCode(inputValues))
+		const response = await verifyOTP(email, getOtpCode(inputValues), data.url)
 
 		if (response) {
-			navigate('/auth/signin')
-			localStorage.removeItem('email')
+			if (data.type === 'reset') navigate('/auth/resetpassword')
+			else if (data.type === 'signup') {
+				navigate('/auth/signin')
+				localStorage.removeItem('email')
+			}
 		}
 		console.log(response)
 	}

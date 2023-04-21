@@ -1,7 +1,45 @@
-import React from 'react'
+import React, { useContext, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
+import useForm from '../../hooks/useForm'
 import './style.css'
 
+// providers
+import AppContext from '../../provider'
+import ApiContext from '../../provider/call-service'
+import UserContext from '../../provider/state-manager/userProvider'
+
+// ui
+import VisibilityOutlinedIcon from '@mui/icons-material/VisibilityOutlined'
+import VisibilityOffOutlinedIcon from '@mui/icons-material/VisibilityOffOutlined'
+
+// helpers
+import { check } from './passwordChecker'
+import { CircularProgress } from '@mui/material'
+
 const resetpassword = () => {
+	const email = localStorage.getItem('email')
+	const [showPassword, setShowPassword] = useState(false)
+	const [type, setType] = useState('password')
+	const [values, onChange, reset] = useForm()
+	const navigate = useNavigate()
+
+	const { resetPassword } = useContext(ApiContext)
+	const { loading } = useContext(AppContext)
+	const { setProperties } = useContext(UserContext)
+
+	const handleSubmit = async (e) => {
+		e.preventDefault()
+		// check if password and confirm password match
+
+		const res = await resetPassword(email, values.password)
+
+		if (res) {
+			navigate('/auth/signin')
+			localStorage.removeItem('email')
+			reset()
+		}
+	}
+
 	return (
 		<section className="bg-white">
 			<div className="lg:grid lg:min-h-screen lg:grid-cols-12">
@@ -43,44 +81,65 @@ const resetpassword = () => {
 
 						<div className="relative z-0 w-full mb-6 group">
 							<input
-								type="password"
-								name="floating_pwd"
-								id="pwd"
+								type={showPassword ? 'text' : 'password'}
+								name="password"
+								id="password"
+								autoComplete="off"
+								pattern=".{8,}"
+								required
+								value={values.password}
 								className="block py-2.5 px-0 w-full text-sm text-black  bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-dark dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
 								placeholder=" "
-								required
+								onChange={onChange}
 							/>
+
+							<div className="absolute top-2 right-2 cursor-pointer" onClick={() => setShowPassword(!showPassword)}>
+								{showPassword ? <VisibilityOutlinedIcon /> : <VisibilityOffOutlinedIcon />}
+							</div>
+
 							<label
-								htmlFor="floating_pwd"
+								htmlFor="password"
 								className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
 							>
-								New Password
+								Password
 							</label>
 						</div>
 
 						<div className="relative z-0 w-full mb-6 group">
 							<input
-								type="password"
-								name="floating_repwd"
-								id="repwd"
+								type={showPassword ? 'text' : 'password'}
+								name="confirmPassword"
+								id="confirmPassword"
+								autoComplete="off"
 								className="block py-2.5 px-0 w-full text-sm text-black  bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-dark dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
 								placeholder=" "
+								pattern=".{8,}"
+								// pattern="[a-zA-Z]+"
 								required
+								value={values.confirmPassword}
+								onChange={onChange}
+								onInput={check}
 							/>
+
+							<div className="absolute top-2 right-2 cursor-pointer" onClick={() => setShowPassword(!showPassword)}>
+								{showPassword ? <VisibilityOutlinedIcon /> : <VisibilityOffOutlinedIcon />}
+							</div>
+
 							<label
-								htmlFor="floating_repwd"
+								htmlFor="rePassword"
 								className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
 							>
 								Confirm Password
 							</label>
 						</div>
-
 						<div className="col-span-6 sm:flex sm:items-center sm:gap-4">
-							<a href="signin">
-								<button className="inline-block shrink-0 login-btn rounded-md border  px-12 py-3 text-sm font-medium text-white transition focus:outline-none ">
-									Reset Password
-								</button>
-							</a>
+							<button
+								disabled={loading}
+								onClick={handleSubmit}
+								className="inline-block shrink-0 login-btn rounded-md border  px-12 py-3 text-sm font-medium text-white transition focus:outline-none "
+							>
+								{loading ? <CircularProgress size={20} color="inherit" /> : 'Reset Password'}
+							</button>
 						</div>
 					</div>
 				</main>
