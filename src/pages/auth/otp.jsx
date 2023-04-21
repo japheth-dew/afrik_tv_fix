@@ -1,41 +1,55 @@
-import React, { useEffect, useState } from 'react'
-import './style.css';
-import { useNavigate } from 'react-router-dom';
-import axios from 'axios';
-
+import React, { useContext, useEffect, useState } from 'react'
+import './style.css'
+import { useNavigate } from 'react-router-dom'
+import axios from 'axios'
+import ApiContext from '../../provider/call-service'
+import AppContext from '../../provider'
 
 const otp = () => {
-	const email = localStorage.getItem("email");
-	const navigate = useNavigate();
+	const email = localStorage.getItem('email')
+	const navigate = useNavigate()
+
+	const { verifyOTP } = useContext(ApiContext)
+	const { loading } = useContext(AppContext)
 
 	useEffect(() => {
 		if (!email && !email) {
-			navigate("/auth/signup");
-		}
-
-		return () => {
-			localStorage.removeItem("email");
+			navigate('/auth/signup')
 		}
 	}, [])
 
-	const [inputValues, setInputValues] = useState(["", "", "", ""]);
-
+	const [inputValues, setInputValues] = useState(['', '', '', ''])
 
 	const handleInputChange = (event, index) => {
-		const newInputValues = [...inputValues];
-		newInputValues[index] = event.target.value;
-		setInputValues(newInputValues);
+		const newInputValues = [...inputValues]
+		newInputValues[index] = event.target.value
+		setInputValues(newInputValues)
 		// console.log(getOtpCode())
-	};
+	}
 
 	const getOtpCode = () => {
-		return inputValues.join("");
-	};
+		return inputValues.join('')
+	}
 
 	const handleSubmit = async (e) => {
-		e.preventDefault();
-		const response = await axios.post("/authenticate/otp", { email, otp: inputValues });
-		console.log(response.data);
+		e.preventDefault()
+		if (!email || !inputValues) return
+		const response = await verifyOTP(email, getOtpCode(inputValues))
+
+		if (response) {
+			navigate('/auth/signin')
+			localStorage.removeItem('email')
+		}
+		console.log(response)
+	}
+
+	function hideEmail(email) {
+		if (!email) return ''
+		const [username, domain] = email.split('@')
+		const middleStart = Math.floor((username.length - 5) / 2)
+		const hiddenPart = '*'.repeat(5)
+		const visibleUsername = username.substring(0, middleStart) + hiddenPart + username.substring(middleStart + 5)
+		return `${visibleUsername}@${domain}`
 	}
 
 	return (
@@ -76,7 +90,7 @@ const otp = () => {
 							<h1 className="mt-2 text-2xl font-bold text-gray-900 sm:text-3xl md:text-4xl">OTP Verification </h1>
 							<br />
 							<div className="flex flex-row text-sm font-medium text-gray-400">
-								<p>We have sent a code to your email emai***@gmail.com.</p>
+								<p>We have sent a code to your email {hideEmail(email)}.</p>
 							</div>
 
 							<div className="mx-auto flex w-full max-w-md flex-col space-y-16">
@@ -137,11 +151,13 @@ const otp = () => {
 
 										<div className="flex flex-col space-y-5">
 											<div>
-												<a href="/auth/billing">
-													<button className="flex flex-row items-center justify-center text-center w-full border rounded-xl outline-none py-5 login-btn border-none text-white text-sm shadow-sm ">
-														Verify Account
-													</button>
-												</a>
+												<button
+													onClick={handleSubmit}
+													disabled={loading}
+													className="flex flex-row items-center justify-center text-center w-full border rounded-xl outline-none py-5 login-btn border-none text-white text-sm shadow-sm "
+												>
+													{loading ? 'Verifing account...' : 'Verify Account'}
+												</button>
 											</div>
 										</div>
 

@@ -1,19 +1,19 @@
-
 // hooks
-import React, { useState, useContext } from 'react'
+import React, { useState, useContext, useEffect } from 'react'
 import useForm from '../../hooks/useForm'
 import { useNavigate } from 'react-router-dom'
 
 // ui
 import { Button } from '../../components/ui'
-import VisibilityOutlinedIcon from '@mui/icons-material/VisibilityOutlined';
-import VisibilityOffOutlinedIcon from '@mui/icons-material/VisibilityOffOutlined';
+import VisibilityOutlinedIcon from '@mui/icons-material/VisibilityOutlined'
+import VisibilityOffOutlinedIcon from '@mui/icons-material/VisibilityOffOutlined'
 
 // Providers
 import AppContext from '../../provider'
 import ApiContext from '../../provider/call-service'
 
 import './style.css'
+import UserContext from '../../provider/state-manager/userProvider'
 
 const SignUp = () => {
 	const [showPassword, setShowPassword] = useState(false)
@@ -24,13 +24,14 @@ const SignUp = () => {
 
 	const { signup } = useContext(ApiContext)
 	const { loading } = useContext(AppContext)
+	const { setProperties } = useContext(UserContext)
 
 	// function to check if password and confirm password match
 	function check(event) {
 		if (event.target.value !== values.password) {
-			event.target.setCustomValidity('Passwords must match'); // Set an error message
+			event.target.setCustomValidity('Passwords must match') // Set an error message
 		} else {
-			event.target.setCustomValidity(''); // Reset the error message
+			event.target.setCustomValidity('') // Reset the error message
 		}
 	}
 
@@ -38,14 +39,14 @@ const SignUp = () => {
 		e.preventDefault()
 		// check if password and confirm password match
 
+		await setProperties('email', values.email)
 		const res = await signup(values.fullname, values.email, values.password)
 
 		if (res) {
-			navigate('/auth/otp');
-			reset();
+			navigate('/auth/otp')
+			reset()
 		}
 	}
-
 
 	return (
 		<section className="bg-white">
@@ -120,7 +121,7 @@ const SignUp = () => {
 								id="email"
 								className="block py-2.5 px-0 w-full text-sm text-black  bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-dark dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
 								placeholder=" "
-								autoComplete='off'
+								autoComplete="off"
 								value={values.email}
 								required
 								onChange={onChange}
@@ -137,8 +138,8 @@ const SignUp = () => {
 							<input
 								type={showPassword ? 'text' : 'password'}
 								name="password"
-								id='password'
-								autoComplete='off'
+								id="password"
+								autoComplete="off"
 								pattern=".{8,}"
 								required
 								value={values.password}
@@ -147,11 +148,8 @@ const SignUp = () => {
 								onChange={onChange}
 							/>
 
-							<div className='absolute top-2 right-2 cursor-pointer' onClick={() => setShowPassword(!showPassword)}>
-								{showPassword ?
-									<VisibilityOutlinedIcon /> :
-									<VisibilityOffOutlinedIcon />
-								}
+							<div className="absolute top-2 right-2 cursor-pointer" onClick={() => setShowPassword(!showPassword)}>
+								{showPassword ? <VisibilityOutlinedIcon /> : <VisibilityOffOutlinedIcon />}
 							</div>
 
 							<label
@@ -167,21 +165,19 @@ const SignUp = () => {
 								type={showPassword ? 'text' : 'password'}
 								name="confirmPassword"
 								id="confirmPassword"
-								autoComplete='off'
+								autoComplete="off"
 								className="block py-2.5 px-0 w-full text-sm text-black  bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-dark dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
 								placeholder=" "
-								pattern="[a-zA-Z]+"
+								pattern=".{8,}"
+								// pattern="[a-zA-Z]+"
 								required
 								value={values.confirmPassword}
 								onChange={onChange}
 								onInput={check}
 							/>
 
-							<div className='absolute top-2 right-2 cursor-pointer' onClick={() => setShowPassword(!showPassword)}>
-								{showPassword ?
-									<VisibilityOutlinedIcon /> :
-									<VisibilityOffOutlinedIcon />
-								}
+							<div className="absolute top-2 right-2 cursor-pointer" onClick={() => setShowPassword(!showPassword)}>
+								{showPassword ? <VisibilityOutlinedIcon /> : <VisibilityOffOutlinedIcon />}
 							</div>
 
 							<label

@@ -4,13 +4,12 @@ import './style.css'
 import { useNavigate } from 'react-router-dom'
 import { Button } from '../../components/ui'
 
-import VisibilityOutlinedIcon from '@mui/icons-material/VisibilityOutlined';
-import VisibilityOffOutlinedIcon from '@mui/icons-material/VisibilityOffOutlined';
+import VisibilityOutlinedIcon from '@mui/icons-material/VisibilityOutlined'
+import VisibilityOffOutlinedIcon from '@mui/icons-material/VisibilityOffOutlined'
 
 import UserContext from '../../provider/state-manager/userProvider'
-import ApiContext from "../../provider/call-service/index"
+import ApiContext from '../../provider/call-service/index'
 import AppContext from '../../provider'
-
 
 const SignIn = () => {
 	const [values, onChange, reset] = useForm()
@@ -25,7 +24,7 @@ const SignIn = () => {
 	const handleSubmit = async (e) => {
 		e.preventDefault()
 
-		const res = await signin("obadimuoluwafemi1@gmail.com", "1234567890");
+		const res = await signin(values.email, values.password)
 
 		if (res) {
 			navigate('/in')
@@ -81,11 +80,11 @@ const SignIn = () => {
 							<input
 								type="email"
 								name="email"
-								// value={values.email}
-								value="obadimuoluwafemi1@gmail.com"
+								value={values.email}
+								// value="obadimuoluwafemi1@gmail.com"
 								className="block py-2.5 px-0 w-full text-sm text-black  bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-dark dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
-								placeholder="Enter your email"
-								autoComplete='off'
+								// placeholder="Enter your email"
+								autoComplete="off"
 								onChange={onChange}
 							/>
 							<label
@@ -100,19 +99,16 @@ const SignIn = () => {
 							<input
 								type={showPassword ? 'text' : 'password'}
 								name="password"
-								autoComplete='off'
-								// value={values.password}
-								value="1234567890"
+								autoComplete="off"
+								value={values.password}
+								// value="1234567890"
 								className="block py-3 px-0 w-full text-sm text-black bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-dark dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
-								placeholder="Enter your passsword"
+								// placeholder="Enter your passsword"
 								onChange={onChange}
 							/>
 
-							<div className='absolute top-2 right-2 cursor-pointer' onClick={() => setShowPassword(!showPassword)}>
-								{showPassword ?
-									<VisibilityOutlinedIcon /> :
-									<VisibilityOffOutlinedIcon />
-								}
+							<div className="absolute top-2 right-2 cursor-pointer" onClick={() => setShowPassword(!showPassword)}>
+								{showPassword ? <VisibilityOutlinedIcon /> : <VisibilityOffOutlinedIcon />}
 							</div>
 
 							<label

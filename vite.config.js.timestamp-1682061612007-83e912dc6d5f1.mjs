@@ -1,0 +1,21 @@
+// vite.config.js
+import { defineConfig } from "file:///home/weevil/Documents/web_apps/afriktv-main/node_modules/vite/dist/node/index.js";
+import react from "file:///home/weevil/Documents/web_apps/afriktv-main/node_modules/@vitejs/plugin-react/dist/index.mjs";
+import svgr from "file:///home/weevil/Documents/web_apps/afriktv-main/node_modules/vite-plugin-svgr/dist/index.mjs";
+var vite_config_default = defineConfig({
+  plugins: [svgr(), react()],
+  server: {
+    host: "0.0.0.0",
+    port: 5e3,
+    open: true,
+    origin: "http://127.0.0.1:5000"
+  },
+  preview: {
+    host: "0.0.0.0",
+    port: 3333
+  }
+});
+export {
+  vite_config_default as default
+};
+//# sourceMappingURL=data:application/json;base64,ewogICJ2ZXJzaW9uIjogMywKICAic291cmNlcyI6IFsidml0ZS5jb25maWcuanMiXSwKICAic291cmNlc0NvbnRlbnQiOiBbImNvbnN0IF9fdml0ZV9pbmplY3RlZF9vcmlnaW5hbF9kaXJuYW1lID0gXCIvaG9tZS93ZWV2aWwvRG9jdW1lbnRzL3dlYl9hcHBzL2FmcmlrdHYtbWFpblwiO2NvbnN0IF9fdml0ZV9pbmplY3RlZF9vcmlnaW5hbF9maWxlbmFtZSA9IFwiL2hvbWUvd2VldmlsL0RvY3VtZW50cy93ZWJfYXBwcy9hZnJpa3R2LW1haW4vdml0ZS5jb25maWcuanNcIjtjb25zdCBfX3ZpdGVfaW5qZWN0ZWRfb3JpZ2luYWxfaW1wb3J0X21ldGFfdXJsID0gXCJmaWxlOi8vL2hvbWUvd2VldmlsL0RvY3VtZW50cy93ZWJfYXBwcy9hZnJpa3R2LW1haW4vdml0ZS5jb25maWcuanNcIjtpbXBvcnQgeyBkZWZpbmVDb25maWcgfSBmcm9tICd2aXRlJ1xuaW1wb3J0IHJlYWN0IGZyb20gJ0B2aXRlanMvcGx1Z2luLXJlYWN0J1xuaW1wb3J0IHN2Z3IgZnJvbSAndml0ZS1wbHVnaW4tc3ZncidcblxuLy8gaHR0cHM6Ly92aXRlanMuZGV2L2NvbmZpZy9cbmV4cG9ydCBkZWZhdWx0IGRlZmluZUNvbmZpZyh7XG5cdHBsdWdpbnM6IFtzdmdyKCksIHJlYWN0KCldLFxuXHRzZXJ2ZXI6IHtcblx0XHRob3N0OiAnMC4wLjAuMCcsXG5cdFx0cG9ydDogNTAwMCxcblx0XHRvcGVuOiB0cnVlLFxuXHRcdG9yaWdpbjogJ2h0dHA6Ly8xMjcuMC4wLjE6NTAwMCcsXG5cdH0sXG5cdHByZXZpZXc6IHtcblx0XHRob3N0OiAnMC4wLjAuMCcsXG5cdFx0cG9ydDogMzMzMyxcblx0fSxcbn0pXG4iXSwKICAibWFwcGluZ3MiOiAiO0FBQXNULFNBQVMsb0JBQW9CO0FBQ25WLE9BQU8sV0FBVztBQUNsQixPQUFPLFVBQVU7QUFHakIsSUFBTyxzQkFBUSxhQUFhO0FBQUEsRUFDM0IsU0FBUyxDQUFDLEtBQUssR0FBRyxNQUFNLENBQUM7QUFBQSxFQUN6QixRQUFRO0FBQUEsSUFDUCxNQUFNO0FBQUEsSUFDTixNQUFNO0FBQUEsSUFDTixNQUFNO0FBQUEsSUFDTixRQUFRO0FBQUEsRUFDVDtBQUFBLEVBQ0EsU0FBUztBQUFBLElBQ1IsTUFBTTtBQUFBLElBQ04sTUFBTTtBQUFBLEVBQ1A7QUFDRCxDQUFDOyIsCiAgIm5hbWVzIjogW10KfQo=
