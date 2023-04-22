@@ -9,7 +9,8 @@ export const Dashboard = () => {
 
 	useEffect(() => {
 		document.title = 'In | Dashboard'
-		recoverUser();
+		recoverUser()
+		console.log(recoverUser())
 	}, [])
 	return (
 		<div className="ml-16 lg:ml-0">
