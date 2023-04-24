@@ -18,7 +18,7 @@ export const Billing = () => {
 				<header className="flex flex-gap items-center gap-6 justify-between">
 					<div className="flex items-center gap-6">
 						<NavLink to="/in">
-							<Icon name="back" className={'mb-0'}/>
+							<Icon name="back" className="mb-0"/>
 						</NavLink>
 						<h2 className="font-bold text-xl">Billings</h2>
 					</div>
