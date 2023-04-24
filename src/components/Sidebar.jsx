@@ -34,7 +34,7 @@ function Sidebar() {
 									})
 									return (
 										<>
-											<Icon name={icon} fill="red" className={iconClassName} />
+											<Icon name={icon} fill="red" className={`${iconClassName} mb-0`} />
 											<span className={`${textClassName} hidden lg:block`}>{name}</span>
 										</>
 									)

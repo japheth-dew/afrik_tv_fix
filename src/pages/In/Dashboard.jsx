@@ -35,7 +35,7 @@ export const Dashboard = () => {
 								className="px-5 py-3 rounded flex gap-4 items-center cursor-pointer hover:bg-white"
 							>
 								<span className="bg-[#F0F1FE] w-8 h-8 flex justify-center items-center rounded-lg">
-									<Icon name="playBox" />
+									<Icon name="playBox" className="mb-0"/>
 								</span>
 								Watch Later
 							</NavLink>
@@ -44,13 +44,13 @@ export const Dashboard = () => {
 								className="px-5 py-3 rounded flex gap-4 items-center cursor-pointer hover:bg-white"
 							>
 								<span className="bg-[#F0F1FE] w-8 h-8 flex justify-center items-center rounded-lg">
-									<Icon name="tv" />
+									<Icon name="tv" className="mb-0"/>
 								</span>
 								Recently watched
 							</NavLink>
 							<div className="px-5 py-3 rounded flex gap-4 items-center cursor-pointer hover:bg-white">
 								<span className="bg-[#F0F1FE] w-8 h-8 flex justify-center items-center rounded-lg">
-									<Icon name="clock" />
+									<Icon name="clock" className="mb-0"/>
 								</span>
 								Recently played
 							</div>
