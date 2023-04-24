@@ -1,10 +1,8 @@
 import { Helmet } from 'react-helmet-async'
-import './style.css'
 
 export default function App() {
 	return (
 		<div className="App">
-
 
 <nav class="">
   <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">

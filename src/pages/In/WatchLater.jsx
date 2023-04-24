@@ -13,7 +13,7 @@ export const WatchLater = () => {
 		<div className="ml-16 lg:ml-0">
 			<header className="flex flex-gap items-center gap-6">
 				<NavLink to="/in">
-					<Icon name="back" />
+					<Icon name="back" className="mb-0"/>
 				</NavLink>
 				<h2 className="font-bold text-xl">Watch Later</h2>
 			</header>
