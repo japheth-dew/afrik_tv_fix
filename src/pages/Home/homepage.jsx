@@ -6,7 +6,7 @@ import afrikLogo from '../../assets/afriklogo.png'
 import firstImage from '../../assets/first-img.png'
 import secondImage from '../../assets/second-img.png'
 import womanTouchImage from '../../assets/woman-touch.png'
-import afterHeroImage from 'https://res.cloudinary.com/dwdb9tvii/image/upload/v1682431588/white-transparent-removebg-preview_zab73e.png'
+import afterHeroImage from '../../assets/whiteimg.png'
 
 function Homepage() {
 	return (
