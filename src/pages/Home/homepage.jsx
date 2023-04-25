@@ -2,11 +2,11 @@ import React from 'react'
 import './style.css'
 import googleBadge from '../../assets/google-play-badge.png'
 import appstoreBadge from '../../assets/appstore-badge.png'
-import afrikLogo from '../../assets/afriklogo.png'
+import afrikLogo from '../../assets/whiteimg.png'
 import firstImage from '../../assets/first-img.png'
 import secondImage from '../../assets/second-img.png'
 import womanTouchImage from '../../assets/woman-touch.png'
-import afterHeroImage from '../../assets/whiteimg.png'
+import afterHeroImage from '../../assets/after-hero.png'
 
 function Homepage() {
 	return (
