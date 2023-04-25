@@ -2,7 +2,8 @@ import React from 'react'
 import './style.css'
 import googleBadge from '../../assets/google-play-badge.png'
 import appstoreBadge from '../../assets/appstore-badge.png'
-import afrikLogo from '../../assets/afriklogo.png'
+import afrikWhiteLogo from '../../assets/whiteimg.png'
+import afrikBlackLogo from '../../assets/logo.png'
 import firstImage from '../../assets/first-img.png'
 import secondImage from '../../assets/second-img.png'
 import womanTouchImage from '../../assets/woman-touch.png'
@@ -14,7 +15,7 @@ function Homepage() {
 			<nav className="bg-white border-gray-200 px-2 sm:px-4 py-2.5">
 				<div className="container flex flex-wrap items-center justify-between mx-auto">
 					<a href="javascript:void(0)" className="flex items-center logo">
-						<img src={afrikLogo} className="" height="40px" width="" alt="AfrikTV Logo" />
+						<img src={afrikBlackLogo} className="" width={150} alt="AfrikTV Logo" />
 					</a>
 					<div className="flex md:order-2">
 						<a href="/auth/signin">
@@ -217,7 +218,7 @@ function Homepage() {
 							placeholder="Email Address"
 						/>
 
-						<button className="w-full px-6 py-2.5 border-2 border-white-000 text-sm font-medium tracking-wider  text-white transition-colors duration-300 transform md:w-auto md:mx-4 focus:outline-none bg-black rounded-lg hover:bg-gray-700 focus:ring focus:ring-gray-300 focus:ring-opacity-80">
+						<button className="w-full px-6 py-2.5 border-2 border-white-000 text-sm font-medium tracking-wider  text-white transition-colors duration-300 transform md:w-auto md:mx-4 focus:outline-none bg-black rounded-lg hover:bg-black focus:ring focus:ring-black focus:ring-opacity-80">
 							Subscribe for updates 🚀
 						</button>
 					</div>
@@ -226,7 +227,7 @@ function Homepage() {
 
 					<div className="flex flex-col items-center justify-between md:flex-row">
 						<a href="#">
-							<img className="w-auto h-7" src={afrikLogo} alt="AfrikTV Logo" />
+							<img className="w-auto h-7" src={afrikWhiteLogo} alt="AfrikTV Logo" />
 						</a>
 
 						<div className="flex mt-4 md:m-0">
@@ -253,7 +254,7 @@ function Homepage() {
 									href="#"
 									className="px-4 text-sm text-gray-600 transition-colors duration-300 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 hover:underline"
 								>
-									Contact Us 📧
+									Contact
 								</a>
 								<a
 									href="#"
