@@ -6,7 +6,7 @@ import afrikLogo from '../../assets/afriklogo.png'
 import firstImage from '../../assets/first-img.png'
 import secondImage from '../../assets/second-img.png'
 import womanTouchImage from '../../assets/woman-touch.png'
-import afterHeroImage from '../../assets/after-hero.png'
+import afterHeroImage from 'https://res.cloudinary.com/dwdb9tvii/image/upload/v1682431588/white-transparent-removebg-preview_zab73e.png'
 
 function Homepage() {
 	return (
@@ -217,7 +217,7 @@ function Homepage() {
 							placeholder="Email Address"
 						/>
 
-						<button className="w-full px-6 py-2.5 border-2 border-white-000 text-sm font-medium tracking-wider  text-white transition-colors duration-300 transform md:w-auto md:mx-4 focus:outline-none bg-black rounded-lg hover:bg-gray-700 focus:ring focus:ring-gray-300 focus:ring-opacity-80">
+						<button className="w-full px-6 py-2.5 border-2 border-white-000 text-sm font-medium tracking-wider  text-white transition-colors duration-300 transform md:w-auto md:mx-4 focus:outline-none bg-black rounded-lg hover:bg-black focus:ring focus:ring-black focus:ring-opacity-80">
 							Subscribe for updates 🚀
 						</button>
 					</div>
@@ -253,7 +253,7 @@ function Homepage() {
 									href="#"
 									className="px-4 text-sm text-gray-600 transition-colors duration-300 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 hover:underline"
 								>
-									Contact Us 📧
+									Contact
 								</a>
 								<a
 									href="#"
