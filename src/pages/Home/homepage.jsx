@@ -21,7 +21,7 @@ function Homepage() {
 							{' '}
 							<button
 								type="button"
-								className="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700"
+								className="text-white bg-black hover:bg-black focus:outline-none focus:ring-4 focus:ring-black-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-black dark:hover:bg-black dark:focus:ring-black dark:border-black"
 							>
 								Sign In
 							</button>
@@ -127,7 +127,7 @@ function Homepage() {
 									<a href="/auth/signup">
 										<button
 											type="button"
-											className="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700"
+											className="text-white bg-black hover:bg-black focus:outline-none focus:ring-4 focus:ring-black font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-black-800 dark:hover:bg-black-700 dark:focus:ring-black-700 dark:border-black-700"
 										>
 											Start Watching
 										</button>
@@ -143,7 +143,7 @@ function Homepage() {
 				</div>
 			</div>
 
-			<footer className="flex justify-center px-4 text-gray-800 bg-white dark:text-white dark:bg-gray-900">
+			<footer className="flex justify-center px-4 text-gray-800 bg-black dark:text-white dark:bg-black">
 				<div className="container px-6 py-6">
 					<h1 className="text-lg font-bold text-center lg:text-5xl">Frequently Asked questions</h1>
 					<br />
@@ -213,11 +213,11 @@ function Homepage() {
 						<input
 							id="email"
 							type="text"
-							className="px-4 py-2 text-gray-700 bg-white border rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-opacity-40 focus:ring-blue-300"
+							className="px-4 py-2 text-white-100 border rounded-md dark:bg-black dark:text-white-100 placeholder-white dark:border-white-500 focus:border-gray-400 dark:focus:border-white-100 focus:outline-none focus:ring focus:ring-opacity-40 focus:ring-white-100"
 							placeholder="Email Address"
 						/>
 
-						<button className="w-full px-6 py-2.5 text-sm font-medium tracking-wider text-white transition-colors duration-300 transform md:w-auto md:mx-4 focus:outline-none bg-gray-800 rounded-lg hover:bg-gray-700 focus:ring focus:ring-gray-300 focus:ring-opacity-80">
+						<button className="w-full px-6 py-2.5 border-2 border-white-000 text-sm font-medium tracking-wider  text-white transition-colors duration-300 transform md:w-auto md:mx-4 focus:outline-none bg-black rounded-lg hover:bg-gray-700 focus:ring focus:ring-gray-300 focus:ring-opacity-80">
 							Subscribe for updates 🚀
 						</button>
 					</div>
@@ -259,7 +259,13 @@ function Homepage() {
 									href="#"
 									className="px-4 text-sm text-gray-600 transition-colors duration-300 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 hover:underline"
 								>
-									We're hiring ✨
+									Team
+								</a>
+								<a
+									href="#"
+									className="px-4 text-sm text-gray-600 transition-colors duration-300 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 hover:underline"
+								>
+									Media Kit ✨
 								</a>
 							</div>
 						</div>
