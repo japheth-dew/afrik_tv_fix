@@ -231,44 +231,7 @@ function Homepage() {
 						</a>
 
 						<div className="flex mt-4 md:m-0">
-							<div className="-mx-4">
-								<a
-									href="#"
-									className="px-4 text-sm text-gray-600 transition-colors duration-300 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 hover:underline"
-								>
-									Twitter
-								</a>
-								<a
-									href="#"
-									className="px-4 text-sm text-gray-600 transition-colors duration-300 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 hover:underline"
-								>
-									Instagram
-								</a>
-								<a
-									href="#"
-									className="px-4 text-sm text-gray-600 transition-colors duration-300 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 hover:underline"
-								>
-									Partners
-								</a>
-								<a
-									href="#"
-									className="px-4 text-sm text-gray-600 transition-colors duration-300 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 hover:underline"
-								>
-									Contact
-								</a>
-								<a
-									href="#"
-									className="px-4 text-sm text-gray-600 transition-colors duration-300 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 hover:underline"
-								>
-									Team
-								</a>
-								<a
-									href="#"
-									className="px-4 text-sm text-gray-600 transition-colors duration-300 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 hover:underline"
-								>
-									Media Kit ✨
-								</a>
-							</div>
+							
 						</div>
 					</div>
 				</div>
