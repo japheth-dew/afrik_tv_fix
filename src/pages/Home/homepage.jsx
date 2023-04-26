@@ -223,7 +223,7 @@ function Homepage() {
 						</button>
 					</div>
 
-					<hr className="h-px bg-gray-200 border-none my-7 dark:bg-gray-700" />
+					<hr className="h-px bg-gray-100 border-none my-7 dark:bg-gray-100" />
 
 					<div className="flex flex-col items-center justify-between md:flex-row">
 						<a href="#">
