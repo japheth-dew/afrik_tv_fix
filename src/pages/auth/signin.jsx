@@ -24,11 +24,15 @@ const SignIn = () => {
 	const handleSubmit = async (e) => {
 		e.preventDefault()
 
-		const res = await signin(values.email, values.password)
+		// const res = await signin(values.email, values.password)
+		const res = await signin('obadimuoluwafemi1@gmail.com', 'fizzbuzzer')
+
+		// const res = true
 
 		if (res) {
 			navigate('/in')
 		}
+		console.log(res)
 	}
 
 	return (
@@ -80,7 +84,7 @@ const SignIn = () => {
 							<input
 								type="email"
 								name="email"
-								value={values.email}
+								value={values.email ? values.email : ''}
 								// value="obadimuoluwafemi1@gmail.com"
 								className="block py-2.5 px-0 w-full text-sm text-black  bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-dark dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
 								// placeholder="Enter your email"
@@ -100,8 +104,8 @@ const SignIn = () => {
 								type={showPassword ? 'text' : 'password'}
 								name="password"
 								autoComplete="off"
-								value={values.password}
-								// value="1234567890"
+								value={values.password ? values.password : ''}
+								// value="fizzbuzzer"
 								className="block py-3 px-0 w-full text-sm text-black bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-dark dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
 								// placeholder="Enter your passsword"
 								onChange={onChange}

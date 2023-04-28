@@ -6,12 +6,16 @@ import profileImage from '../assets/profile.png'
 import clownImage from '../assets/clown.png'
 import vengeImage from '../assets/venge.png'
 import UserContext from '../provider/state-manager/userProvider'
+import { useNavigate } from 'react-router-dom'
 
 function Navbar() {
-	const { clearProperties } = useContext(UserContext);
+	const { clearProperties } = useContext(UserContext)
 
-	function logOut() {
-		clearProperties();
+	const navigate = useNavigate()
+
+	async function logOut() {
+		await clearProperties()
+		navigate('/auth/signin')
 	}
 	return (
 		<nav className="sticky top-0 z-10 bg-white border-gray-200 px-2 sm:px-4 py-2.5">
@@ -71,8 +75,9 @@ function Navbar() {
 										{({ active }) => (
 											<div
 												role="button"
-												className={`${active ? 'bg-[#f5f5f5]' : ''
-													} flex px-5 py-2 gap-4 cursor-pointer hover:bg-[#f5f5f5] w-full`}
+												className={`${
+													active ? 'bg-[#f5f5f5]' : ''
+												} flex px-5 py-2 gap-4 cursor-pointer hover:bg-[#f5f5f5] w-full`}
 											>
 												<img src={vengeImage} className="w-20 h-20 rounded-xl" />
 												<div className="flex flex-col">
@@ -107,8 +112,9 @@ function Navbar() {
 										<Menu.Item key={name}>
 											{({ active }) => (
 												<button
-													className={`${active ? 'bg-[#f5f5f5]' : ''
-														} group flex gap-2 w-full items-center rounded-md px-2 py-2 text-sm`}
+													className={`${
+														active ? 'bg-[#f5f5f5]' : ''
+													} group flex gap-2 w-full items-center rounded-md px-2 py-2 text-sm`}
 												>
 													<img src={clownImage} className="w-8 h-7 rounded-lg" />
 													<h2 className="font-base">{name}</h2>
@@ -157,8 +163,9 @@ function Navbar() {
 									<Menu.Item>
 										{({ active }) => (
 											<button
-												className={`${active ? 'bg-[#dc2626]' : ''
-													} bg-red-700 text-white w-full rounded-md px-2 py-2 text-sm font-medium`}
+												className={`${
+													active ? 'bg-[#dc2626]' : ''
+												} bg-red-700 text-white w-full rounded-md px-2 py-2 text-sm font-medium`}
 												onClick={logOut}
 											>
 												Sign Out

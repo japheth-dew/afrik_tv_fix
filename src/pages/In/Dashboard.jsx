@@ -1,20 +1,43 @@
-import { useEffect, useContext } from 'react'
+import { useEffect, useContext, useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import Plan from '../../components/Plan'
 import Icon from '../../components/Icon'
 import UserContext from '../../provider/state-manager/userProvider'
+import { getProfiles } from '../../provider/call-service/hooks'
 
 export const Dashboard = () => {
-	const { recoverUser } = useContext(UserContext)
+	const { state } = useContext(UserContext)
+
+	const [userData, setUserData] = useState()
+
+	function recoverUser() {
+		let token = localStorage.getItem('token')
+		let profile = localStorage.getItem('profile')
+
+		if (!token || (typeof profile === 'string' && Object.keys(JSON.parse(profile)).length === 0)) {
+			// console.log(token, JSON.parse(profile))
+			return false
+		} else {
+			// console.log(token, JSON.parse(profile))
+			setUserData(JSON.parse(profile))
+			return true
+		}
+	}
 
 	useEffect(() => {
 		document.title = 'In | Dashboard'
 		recoverUser()
-		console.log(recoverUser())
 	}, [])
+
+	const usersQuery = getProfiles()
+
+	// console.log(usersQuery)
+
+	if (!userData) return null
+
 	return (
 		<div className="ml-16 lg:ml-0">
-			<h1 className="text-3xl font-bold">Hi, Disu 👋🏽</h1>
+			<h1 className="text-3xl font-bold">Hi, {userData[0]?.fullname} 👋🏽</h1>
 			<div className="flex flex-wrap gap-8 mt-8">
 				<Plan className="bg-[#07092C] text-white" />
 				<Plan className="bg-[#492406] text-white" />

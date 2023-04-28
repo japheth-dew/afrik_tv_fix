@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { createRoutesFromElements, createBrowserRouter, RouterProvider, Route } from 'react-router-dom'
 import Homepage from './pages/Home/homepage'
 import Waitlist from './pages/Waitlist/wait'
@@ -37,13 +37,14 @@ import { HelmetProvider } from 'react-helmet-async'
 import FallBackUI from './pages/FallBackUI.jsx/error'
 
 // Providers
-import { NotificationProvider } from './provider/NotificationProvider';
+import { NotificationProvider } from './provider/NotificationProvider'
 import Notification from './components/ui/Notification'
 import { AppProvider } from './provider'
 import { ApiProvider } from './provider/call-service/index'
 import { UserProvider } from './provider/state-manager/userProvider'
-
-// import ResetPassword from './pages/auth/resetpassword'
+import ProtectedRoutes from './components/ProtectedRoutes'
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
+import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 
 const router = createBrowserRouter(
 	createRoutesFromElements(
@@ -64,16 +65,18 @@ const router = createBrowserRouter(
 			<Route path="/auth/planform" element={<Planform />} />
 			<Route path="/auth/billing" element={<Billing />} />
 			<Route path="/movie/moviepage" element={<Moviepage />} />
-			<Route path="in" element={<In />}>
-				<Route path="" element={<InDashboard />} />
-				<Route path="billing" element={<InBilling />} />
-				<Route path="activities" element={<Activities />} />
-				<Route path="settings" element={<Settings />}>
-					<Route path="" element={<AccountSettings />} />
-					<Route path="parental" element={<ParentalControl />} />
+			<Route element={<ProtectedRoutes />}>
+				<Route path="in" element={<In />}>
+					<Route path="" element={<InDashboard />} />
+					<Route path="billing" element={<InBilling />} />
+					<Route path="activities" element={<Activities />} />
+					<Route path="settings" element={<Settings />}>
+						<Route path="" element={<AccountSettings />} />
+						<Route path="parental" element={<ParentalControl />} />
+					</Route>
+					<Route path="watch-later" element={<WatchLater />} />
+					<Route path="recently-watched" element={<RecentlyWatched />} />
 				</Route>
-				<Route path="watch-later" element={<WatchLater />} />
-				<Route path="recently-watched" element={<RecentlyWatched />} />
 			</Route>
 			<Route path="*" element={<Nop />} />
 		</Route>
@@ -82,20 +85,23 @@ const router = createBrowserRouter(
 
 function App() {
 	return (
-		<FallBackUI>
-			<HelmetProvider>
-				<NotificationProvider>
-					<UserProvider>
-						<AppProvider>
-							<ApiProvider>
-								<Notification />
-								<RouterProvider router={router} />
-							</ApiProvider>
-						</AppProvider>
-					</UserProvider>
-				</NotificationProvider >
-			</HelmetProvider>
-		</FallBackUI>
+		<QueryClientProvider client={new QueryClient()}>
+			<FallBackUI>
+				<HelmetProvider>
+					<NotificationProvider>
+						<UserProvider>
+							<AppProvider>
+								<ApiProvider>
+									<Notification />
+									<RouterProvider router={router} />
+								</ApiProvider>
+							</AppProvider>
+						</UserProvider>
+					</NotificationProvider>
+				</HelmetProvider>
+			</FallBackUI>
+			<ReactQueryDevtools initialIsOpen={false} />
+		</QueryClientProvider>
 	)
 }
 
