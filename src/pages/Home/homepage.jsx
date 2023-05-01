@@ -146,7 +146,7 @@ function Homepage() {
 
 			<footer className="flex justify-center px-4 text-gray-800 bg-black dark:text-white dark:bg-black">
 				<div className="container px-6 py-6">
-					<h1 className="text-lg font-bold text-center lg:text-5xl">Frequently Asked questions</h1>
+					<h1 className="text-lg font-bold text-center lg:text-5xl">Frequently Asked Questions</h1>
 					<br />
 
 					<br />
