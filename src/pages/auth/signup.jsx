@@ -18,6 +18,7 @@ import { check } from './passwordChecker'
 
 const SignUp = () => {
 	const [showPassword, setShowPassword] = useState(false)
+	const [showConfirmPassword, setShowConfirmPassword] = useState(false)
 	const [type, setType] = useState('password')
 
 	const [values, onChange, reset] = useForm()
@@ -159,7 +160,7 @@ const SignUp = () => {
 
 						<div className="relative z-0 w-full mb-6 group">
 							<input
-								type={showPassword ? 'text' : 'password'}
+								type={showConfirmPassword ? 'text' : 'password'}
 								name="confirmPassword"
 								id="confirmPassword"
 								autoComplete="off"
@@ -173,8 +174,8 @@ const SignUp = () => {
 								onInput={check}
 							/>
 
-							<div className="absolute top-2 right-2 cursor-pointer" onClick={() => setShowPassword(!showPassword)}>
-								{showPassword ? <VisibilityOutlinedIcon /> : <VisibilityOffOutlinedIcon />}
+							<div className="absolute top-2 right-2 cursor-pointer" onClick={() => setShowConfirmPassword(!showConfirmPassword)}>
+								{showConfirmPassword ? <VisibilityOutlinedIcon /> : <VisibilityOffOutlinedIcon />}
 							</div>
 
 							<label

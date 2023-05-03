@@ -12,6 +12,8 @@
 		"format": "prettier --write \"**/*.+(js|jsx|json|css|md)\""
 	},
 	"dependencies": {
+		"@cloudinary/react": "^1.11.2",
+		"@cloudinary/url-gen": "^1.10.0",
 		"@emotion/react": "^11.10.6",
 		"@emotion/styled": "^11.10.6",
 		"@headlessui/react": "^1.7.13",

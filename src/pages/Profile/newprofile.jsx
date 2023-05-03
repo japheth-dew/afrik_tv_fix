@@ -10,8 +10,8 @@ function Newprofile() {
 	return (
 		<div>
 			<Navbar />
-			<div className={`flex flex-col items-center h-screen `}>
-				<div className={`w-[350px] md:w-[521px] ${isClicked && 'opacity-60'}`}>
+			<div className={`flex flex-col items-center `}>
+				<div className={`w-full px-4 md:w-[521px] ${isClicked && 'opacity-60'}`}>
 					<div className="mb-16 text-3xl font-black mt-11">New Profiles</div>
 					<div className="flex justify-between items-center mb-11">
 						<button
@@ -27,7 +27,7 @@ function Newprofile() {
 						</button>
 
 						<input
-							className="w-44 md:w-80 h-16 rounded-lg bg-[##FAFAFA] outline-none py-5 px-4 border border-[#E3E0E0]"
+							className="w-40 sm:w-80 h-8 md:h-16 rounded-lg bg-[##FAFAFA] outline-none py-5 px-4 border border-[#E3E0E0]"
 							type="text"
 							placeholder="Name"
 						/>
