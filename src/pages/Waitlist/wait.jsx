@@ -4,7 +4,6 @@ export default function App() {
 	return (
 		<div className="App">
 
-
 <nav class="">
   <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
     <a href="" class="flex items-center">
@@ -27,7 +26,7 @@ export default function App() {
 									</h1>
 									<p class="mt-3 text-base text-gray-400 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
 										Explore the best African movies from all over Africa. Instantly stream movies to your device,
-										wherever you are in the world. Input your email to join the waitlist.
+										wherever you are in the world. Type your email to join the waitlist.
 									</p>
 									<div class="mt-10 sm:mt-12">
 										<div class="launchlist-widget" data-key-id="031wad" data-height="180px"></div>

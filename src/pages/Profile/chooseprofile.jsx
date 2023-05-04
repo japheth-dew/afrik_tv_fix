@@ -11,7 +11,7 @@ function Chooseprofile() {
 			<Navbar />
 			<div className="flex flex-col justify-center items-center mt-10">
 				<div className="mb-16 text-3xl font-black">Choose Profile</div>
-				<div className="grid md:grid-cols-3 grid-cols-2 gap-16 w-[80%] justify-items-center">
+				<div className="grid md:grid-cols-3 grid-cols-2 gap-16 w-4/5 justify-items-center">
 					<Link to={'/movie/moviepage'}>
 						<div>
 							<div className="w-32 h-32 sm:w-48 sm:h-48 bg-gray-900 flex justify-center items-center text-4xl hover:bg-gray-700">
