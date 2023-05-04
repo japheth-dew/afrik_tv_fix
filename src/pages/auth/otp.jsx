@@ -41,7 +41,7 @@ const otp = () => {
 		if (response) {
 			if (data.type === 'reset') navigate('/auth/resetpassword')
 			else if (data.type === 'signup') {
-				navigate('/auth/signin')
+				navigate('/auth/biling')
 				localStorage.removeItem('email')
 			}
 		}

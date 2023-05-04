@@ -1,8 +1,20 @@
 import React from 'react'
 import './style.css'
 import afrikLogo from '../../assets/afriklogo.png'
+import { useNavigate } from 'react-router-dom'
+import makePlan from '../../provider/call-service/hooks/makePlan'
 
-const planform = () => {
+const Planform = () => {
+	const navigate = useNavigate()
+	const { data, isLoading, error } = makePlan('basic')
+
+	const handlePlanSelect = (plan) => {
+		if (!plan) return
+
+		console.log(data)
+
+		// navigate('/auth/planform')
+	}
 	return (
 		<div>
 			<nav className="bg-white border-gray-200 px-2 sm:px-4 py-2.5">
@@ -46,11 +58,12 @@ const planform = () => {
 										<span className="material-icons align-middle">Download up to 5 movies in a month</span>
 									</p>
 
-									<a href="/profile/new" className="">
-										<p className="w-full py-4 login-btn mt-8 rounded-xl text-white text-center">
-											<span className="font-medium">Choose Plan</span>
-										</p>
-									</a>
+									<button
+										onClick={() => handlePlanSelect('basic')}
+										className="w-full py-4 login-btn mt-8 rounded-xl text-white text-center"
+									>
+										<span className="font-medium">Choose Plan</span>
+									</button>
 								</div>
 							</div>
 
@@ -167,4 +180,4 @@ const planform = () => {
 	)
 }
 
-export default planform
+export default Planform
