@@ -16,11 +16,12 @@ const ProtectedAuthRoutes = () => {
 
 	const navigate = useNavigate()
 
-	useEffect(() => {
-		if (isAuth) navigate('/in')
-	}, [isAuth])
+	// useEffect(() => {
+	// 	if (isAuth) navigate('/profile/chooseprofile')
+	// }, [isAuth])
 
-	return isAuth && <Outlet />
+	// return isAuth && <Outlet />
+	return <Outlet />
 }
 
 export default ProtectedAuthRoutes

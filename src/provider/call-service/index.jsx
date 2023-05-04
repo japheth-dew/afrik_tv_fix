@@ -5,6 +5,7 @@ import axios from '../api/axios'
 import NotificationContext from '../NotificationProvider'
 import { AppContext } from '../../provider/index'
 import UserContext from '../state-manager/userProvider'
+import { useMutation } from '@tanstack/react-query'
 
 const ApiContext = createContext()
 
@@ -149,12 +150,40 @@ export const ApiProvider = (props) => {
 		}
 	}
 
+	async function makePlanFnc(plan) {
+		if (!plan) return alert('no plan selected')
+		const extraheaders = localStorage.getItem('token')
+		console.log(plan)
+
+		const response = await axios.get(`/subscribe/paystack/${plan}`, {
+			headers: {
+				'ysu-afriktv-auth-token': extraheaders,
+			},
+		})
+		console.log(response.data)
+		return response.data
+	}
+
+	const useMakePlan = () =>
+		useMutation(makePlanFnc, {
+			onSuccess: () => {
+				addNotification(res?.data?.msg, 'success')
+				setLoading(false)
+			},
+			onError: (error) => {
+				setLoading(false)
+				addNotification(err?.response.data.msg, 'error')
+				console.error(err)
+			},
+		})
+
 	const callActions = {
 		signin,
 		signup,
 		verifyOTP,
 		forgotPassword,
 		resetPassword,
+		useMakePlan,
 	}
 
 	return <ApiContext.Provider value={callActions}>{props.children}</ApiContext.Provider>

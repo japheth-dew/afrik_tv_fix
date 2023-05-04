@@ -11,8 +11,7 @@ const otp = () => {
 	const location = useLocation()
 	const data = location.state
 
-	const { verifyOTP } = useContext(ApiContext)
-	const { loading } = useContext(AppContext)
+	const { verifyOTP, loading } = useContext(ApiContext)
 
 	useEffect(() => {
 		if (!email && !email) {

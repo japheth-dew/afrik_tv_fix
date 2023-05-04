@@ -1,15 +1,20 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import './style.css'
 import afrikLogo from '../../assets/afriklogo.png'
 import { useNavigate } from 'react-router-dom'
 import makePlan from '../../provider/call-service/hooks/makePlan'
+import useMakePlan from '../../provider/call-service/hooks/makePlan'
+import ApiContext from '../../provider/call-service'
 
 const Planform = () => {
 	const navigate = useNavigate()
-	const { data, isLoading, error } = makePlan('basic')
+	const { useMakePlan } = useContext(ApiContext)
 
-	const handlePlanSelect = (plan) => {
+	const { mutate, isLoading, data, error } = useMakePlan()
+
+	const handlePlanSelect = async (plan) => {
 		if (!plan) return
+		const data = await mutate(plan)
 
 		console.log(data)
 
@@ -87,11 +92,12 @@ const Planform = () => {
 										<span className="material-icons align-middle">Download up to 10 movies in a month</span>
 									</p>
 
-									<a href="/profile/new" className="">
-										<p className="w-full py-4 border border-gray-800 mt-8 rounded-xl text-white text-center">
-											<span className="font-medium">Choose Plan</span>
-										</p>
-									</a>
+									<button
+										onClick={() => handlePlanSelect('standard')}
+										className="w-full py-4 border border-gray-800 mt-8 rounded-xl text-white text-center"
+									>
+										<span className="font-medium">Choose Plan</span>
+									</button>
 								</div>
 							</div>
 
@@ -116,11 +122,12 @@ const Planform = () => {
 										<span className="material-icons align-middle">Download up to 20 movies in a month</span>
 									</p>
 
-									<a href="/profile/new" className="">
-										<p className="w-full py-4 login-btn mt-8 rounded-xl text-white text-center">
-											<span className="font-medium">Choose Plan</span>
-										</p>
-									</a>
+									<button
+										onClick={() => handlePlanSelect('premium')}
+										className="w-full py-4 login-btn mt-8 rounded-xl text-white text-center"
+									>
+										<span className="font-medium">Choose Plan</span>
+									</button>
 								</div>
 							</div>
 						</div>
