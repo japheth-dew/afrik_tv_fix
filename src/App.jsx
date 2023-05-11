@@ -18,7 +18,6 @@ import SearchResult from './pages/Movies/searchresults'
 
 import Dashboard from './pages/userdashboard/billing'
 import Planform from './pages/auth/planform'
-import Billing from './pages/auth/billing'
 
 import {
 	Root as In,
@@ -46,6 +45,9 @@ import ProtectedRoutes from './components/ProtectedRoutes'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 import ProtectedAuthRoutes from './components/ProtectedAuthRoute'
+import Verification from './pages/auth/Billing/verification'
+import Billing from './pages/auth/Billing/billing'
+import { RootComp } from './pages/auth/Billing/RootComp'
 
 const router = createBrowserRouter(
 	createRoutesFromElements(
@@ -59,7 +61,10 @@ const router = createBrowserRouter(
 				<Route path="/auth/resetpassword" element={<Repassword />} />
 				<Route path="/auth/forgotpassword" element={<Forgotpassword />} />
 				<Route path="/auth/planform" element={<Planform />} />
-				<Route path="/auth/billing" element={<Billing />} />
+				<Route path="/auth/billing" element={<RootComp />}>
+					<Route path="" element={<Billing />} />
+					<Route path="verfication" element={<Verification />} />
+				</Route>
 			</Route>
 			<Route path="/profile/manageprofile" element={<Manageprofile />} />
 			<Route path="/profile/chooseprofile" element={<Chooseprofile />} />

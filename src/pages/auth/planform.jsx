@@ -2,8 +2,7 @@ import React, { useContext } from 'react'
 import './style.css'
 import afrikLogo from '../../assets/afriklogo.png'
 import { useNavigate } from 'react-router-dom'
-import makePlan from '../../provider/call-service/hooks/makePlan'
-import useMakePlan from '../../provider/call-service/hooks/makePlan'
+
 import ApiContext from '../../provider/call-service'
 
 const Planform = () => {
@@ -12,9 +11,9 @@ const Planform = () => {
 
 	const { mutate, isLoading, data, error } = useMakePlan()
 
-	const handlePlanSelect = async (plan) => {
+	const handlePlanSelect = (plan) => {
 		if (!plan) return
-		const data = await mutate(plan)
+		const data = mutate(plan)
 
 		console.log(data)
 

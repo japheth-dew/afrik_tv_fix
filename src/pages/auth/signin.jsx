@@ -24,8 +24,8 @@ const SignIn = () => {
 	const handleSubmit = async (e) => {
 		e.preventDefault()
 
-		// const res = await signin(values.email, values.password)
-		const res = await signin('obadimuoluwafemi1@gmail.com', 'fizzbuzzer')
+		const res = await signin(values.email, values.password)
+		// const res = await signin('obadimuoluwafemi1@gmail.com', 'fizzbuzzer')
 
 		// const res = true
 

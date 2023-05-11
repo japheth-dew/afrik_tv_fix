@@ -4,7 +4,10 @@ import { Outlet, useNavigate } from 'react-router-dom'
 const useAuth = () => {
 	let token = localStorage.getItem('token')
 	let profile = localStorage.getItem('profile')
-	if (!token || (typeof profile === 'string' && Object.keys(JSON.parse(profile)).length === 0)) {
+	if (
+		!token ||
+		(typeof profile === 'string' && profile !== undefined && Object.keys(JSON.parse(profile)).length === 0)
+	) {
 		return false
 	} else {
 		return true
@@ -12,7 +15,7 @@ const useAuth = () => {
 }
 
 const ProtectedAuthRoutes = () => {
-	const isAuth = useAuth()
+	// const isAuth = useAuth()
 
 	const navigate = useNavigate()
 

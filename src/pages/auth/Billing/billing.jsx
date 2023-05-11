@@ -1,14 +1,19 @@
-import React from 'react'
-import './style.css'
+import React, { useContext } from 'react'
+import '../style.css'
 import { Checkbox } from '@mui/material'
-import { Button } from '../../components/ui'
-import { Head } from '../../components/common'
+import ApiContext from '../../../provider/call-service'
 
-const billing = () => {
+const Billing = () => {
 	const [checked, setChecked] = React.useState(false)
 	const [loading, setLoading] = React.useState(false)
 
-	const handlePayment = async () => {}
+	const { initializePayment } = useContext(ApiContext)
+
+	const { mutate, isLoading, data, error } = initializePayment()
+
+	const handlePayment = async () => {
+		const data = await mutate()
+	}
 
 	return (
 		<section className="bg-white">
@@ -85,15 +90,21 @@ const billing = () => {
 						</label>
 
 						<br />
-						<a href="/auth/planform">
 						<Button
+							onClick={handlePayment}
 							className="login-btn inline-block shrink-0 rounded-md border px-12 py-3 text-sm font-medium text-white transition focus:outline-none focus:ring"
-							disabled={!checked}
-					
+							disabled={!checked || isLoading}
 						>
-							Pay Now
+							{isLoading ? (
+								<div className="flex items-center justify-center">
+									<div className="w-4 h-4 border-2 border-t-2 border-gray-200 rounded-full animate-spin"></div>
+								</div>
+							) : (
+								'Pay Now'
+							)}
 						</Button>
-						</a>
+						{/* <a href="/auth/planform">
+						</a> */}
 					</div>
 				</main>
 			</div>
@@ -101,4 +112,4 @@ const billing = () => {
 	)
 }
 
-export default billing
+export default Billing

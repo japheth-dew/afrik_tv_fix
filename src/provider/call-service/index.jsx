@@ -6,6 +6,7 @@ import NotificationContext from '../NotificationProvider'
 import { AppContext } from '../../provider/index'
 import UserContext from '../state-manager/userProvider'
 import { useMutation } from '@tanstack/react-query'
+import { initializePaymentFunction, makePlanFnc } from './hooks/subscribtion'
 
 const ApiContext = createContext()
 
@@ -81,6 +82,7 @@ export const ApiProvider = (props) => {
 
 			if (res.status === 200 && res?.data?.status === 'valid') {
 				addNotification(res?.data?.msg, 'success')
+				localStorage.setItem('token', res?.data?.token)
 				setLoading(false)
 				return true
 			} else {
@@ -150,20 +152,6 @@ export const ApiProvider = (props) => {
 		}
 	}
 
-	async function makePlanFnc(plan) {
-		if (!plan) return alert('no plan selected')
-		const extraheaders = localStorage.getItem('token')
-		console.log(plan)
-
-		const response = await axios.get(`/subscribe/paystack/${plan}`, {
-			headers: {
-				'ysu-afriktv-auth-token': extraheaders,
-			},
-		})
-		console.log(response.data)
-		return response.data
-	}
-
 	const useMakePlan = () =>
 		useMutation(makePlanFnc, {
 			onSuccess: () => {
@@ -172,7 +160,20 @@ export const ApiProvider = (props) => {
 			},
 			onError: (error) => {
 				setLoading(false)
-				addNotification(err?.response.data.msg, 'error')
+				addNotification(error?.response.data.msg, 'error')
+				console.error(err)
+			},
+		})
+
+	const initializePayment = () =>
+		useMutation(initializePaymentFunction, {
+			onSuccess: () => {
+				addNotification(res?.data?.msg, 'success')
+				setLoading(false)
+			},
+			onError: (error) => {
+				addNotification(error?.response.data.msg, 'error')
+				setLoading(false)
 				console.error(err)
 			},
 		})
@@ -184,6 +185,7 @@ export const ApiProvider = (props) => {
 		forgotPassword,
 		resetPassword,
 		useMakePlan,
+		initializePayment,
 	}
 
 	return <ApiContext.Provider value={callActions}>{props.children}</ApiContext.Provider>
