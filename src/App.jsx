@@ -63,7 +63,7 @@ const router = createBrowserRouter(
 				<Route path="/auth/planform" element={<Planform />} />
 				<Route path="/auth/billing" element={<RootComp />}>
 					<Route path="" element={<Billing />} />
-					<Route path="verfication" element={<Verification />} />
+					<Route path="verification" element={<Verification />} />
 				</Route>
 			</Route>
 			<Route path="/profile/manageprofile" element={<Manageprofile />} />

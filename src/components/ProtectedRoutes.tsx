@@ -4,13 +4,24 @@ import { Outlet, useNavigate } from 'react-router-dom'
 const useAuth = () => {
 	let token = localStorage.getItem('token')
 	let profile = localStorage.getItem('profile')
-	if (!token || (typeof profile === 'string' && Object.keys(JSON.parse(profile)).length === 0)) {
-		return false
-	} else {
-		return true
-	}
-}
 
+	//   if (!token || !profile) {
+	//     return false
+	//   } else {
+	//     try {
+	//       let profileData = JSON.parse(profile)
+	//       if (Object.keys(profileData).length === 0) {
+	//         return false
+	//       } else {
+	//         return true
+	//       }
+	//     } catch (error) {
+	//       console.error(error)
+	//       return false
+	//     }
+	//   }
+	return true
+}
 const ProtectedRoutes = () => {
 	const isAuth = useAuth()
 

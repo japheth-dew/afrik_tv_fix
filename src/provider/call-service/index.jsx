@@ -6,7 +6,7 @@ import NotificationContext from '../NotificationProvider'
 import { AppContext } from '../../provider/index'
 import UserContext from '../state-manager/userProvider'
 import { useMutation } from '@tanstack/react-query'
-import { initializePaymentFunction, makePlanFnc } from './hooks/subscribtion'
+import { initializePaymentFunction, makePlanFnc, verifyPaymentFunction } from './hooks/subscribtion'
 
 const ApiContext = createContext()
 
@@ -178,6 +178,19 @@ export const ApiProvider = (props) => {
 			},
 		})
 
+	const useVerifyPayment = () =>
+		useMutation(verifyPaymentFunction, {
+			onSuccess: () => {
+				addNotification(res?.data?.msg, 'success')
+				setLoading(false)
+			},
+			onError: (error) => {
+				addNotification(error?.response.data.msg, 'error')
+				setLoading(false)
+				console.error(err)
+			},
+		})
+
 	const callActions = {
 		signin,
 		signup,
@@ -186,6 +199,7 @@ export const ApiProvider = (props) => {
 		resetPassword,
 		useMakePlan,
 		initializePayment,
+		useVerifyPayment,
 	}
 
 	return <ApiContext.Provider value={callActions}>{props.children}</ApiContext.Provider>

@@ -2,6 +2,8 @@ import React, { useContext } from 'react'
 import '../style.css'
 import { Checkbox } from '@mui/material'
 import ApiContext from '../../../provider/call-service'
+import { Head } from '../../../components/common/Head'
+import { Button } from '../../../components/ui'
 
 const Billing = () => {
 	const [checked, setChecked] = React.useState(false)

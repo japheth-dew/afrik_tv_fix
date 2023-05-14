@@ -11,16 +11,19 @@ export const Dashboard = () => {
 	const [userData, setUserData] = useState()
 
 	function recoverUser() {
-		let token = localStorage.getItem('token')
-		let profile = localStorage.getItem('profile')
+		try {
+			let token = localStorage.getItem('token')
+			let profile = localStorage.getItem('profile')
 
-		if (!token || (typeof profile === 'string' && Object.keys(JSON.parse(profile)).length === 0)) {
-			// console.log(token, JSON.parse(profile))
+			if (!token || (typeof profile === 'string' && Object.keys(JSON.parse(profile)).length === 0)) {
+				return false
+			} else {
+				setUserData(JSON.parse(profile))
+				return true
+			}
+		} catch (error) {
+			console.error(error)
 			return false
-		} else {
-			// console.log(token, JSON.parse(profile))
-			setUserData(JSON.parse(profile))
-			return true
 		}
 	}
 
@@ -58,7 +61,7 @@ export const Dashboard = () => {
 								className="px-5 py-3 rounded flex gap-4 items-center cursor-pointer hover:bg-white"
 							>
 								<span className="bg-[#F0F1FE] w-8 h-8 flex justify-center items-center rounded-lg">
-									<Icon name="playBox" className="mb-0"/>
+									<Icon name="playBox" className="mb-0" />
 								</span>
 								Watch Later
 							</NavLink>
@@ -67,13 +70,13 @@ export const Dashboard = () => {
 								className="px-5 py-3 rounded flex gap-4 items-center cursor-pointer hover:bg-white"
 							>
 								<span className="bg-[#F0F1FE] w-8 h-8 flex justify-center items-center rounded-lg">
-									<Icon name="tv" className="mb-0"/>
+									<Icon name="tv" className="mb-0" />
 								</span>
 								Recently watched
 							</NavLink>
 							<div className="px-5 py-3 rounded flex gap-4 items-center cursor-pointer hover:bg-white">
 								<span className="bg-[#F0F1FE] w-8 h-8 flex justify-center items-center rounded-lg">
-									<Icon name="clock" className="mb-0"/>
+									<Icon name="clock" className="mb-0" />
 								</span>
 								Recently played
 							</div>
